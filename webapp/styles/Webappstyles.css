@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    background-color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.header{
+    background: linear-gradient(to right,#2c3e50,#3498db);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 40px;
+    font-weight: bold;
+}
+.navbar{
+     background-color: black;
+     padding: 10px;
+     gap: 40px;
+     display: flex;
+     justify-content: center;
+}
+.styles{
+    color: white;
+}
+.container_welcome{
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    margin-left: 300px;
+    margin-top: 30px;
+    }
+.container_login{
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+.display_flex{
+    display: flex;
+    height: 250px;
+}
+.footer{
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.welcome_content{
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+.welcome_label{
+    font-weight: bold;
+    display: block;
+    padding-top: 10px !important;
+}
+.welcome_span{
+    font-size: small;
+    display: block;
+    font-weight: lighter;
+}
+.welcome_clickme{
+    background: #268f26;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+}
+.login-label{
+    font-weight: bold;
+    display: block;
+    padding-top: 10px !important;
+
+}
+.login_login{
+    background: #268f26;
+    color: white;
+    width: 170px;
+    border: none;
+    border-radius: 3px;
+}
+.login_textbox{
+    margin: 7px 0px;
+    
+}
