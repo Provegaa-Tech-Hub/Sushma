@@ -1,0 +1,18 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 30px;
+}
+.card1{
+    background-color: aquamarine;
+}
+.highlighter{
+    color: greenyellow;
+}
+.backimage{
+    background-image: url("https://thumbs.dreamstime.com/b/sample-jpeg-fluffy-white-pomeranian-puppy-sits-looks-camera-colorful-balls-front-364720569.jpg?w=992");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
