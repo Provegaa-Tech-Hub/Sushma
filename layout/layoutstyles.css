@@ -1,18 +1,98 @@
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
     padding: 30px;
 }
-.card1{
-    background-color: aquamarine;
+
+.backimg {
+    background: linear-gradient(to right, #6fbde4, #325adb);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
-.highlighter{
-    color: greenyellow;
-}
-.backimage{
-    background-image: url("https://thumbs.dreamstime.com/b/sample-jpeg-fluffy-white-pomeranian-puppy-sits-looks-camera-colorful-balls-front-364720569.jpg?w=992");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+
+.main-div {
+    display: flex;
+
+    >div {
+        width: 330px;
+        height: 480px;
+        margin: 20px;
+        border-radius: 10px;
+        background-color: white;
+
+        >img {
+            width: 330px;
+            height: 200px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        >div {
+            margin-left: 15px;
+
+            .text-arrange {
+                width: 100px;
+                color: white;
+                border-radius: 10px;
+                text-align: center;
+                padding: 2px;
+                font-size: 14px;
+                margin: 10px 0px;
+            }
+
+            .technology {
+                background: linear-gradient(to bottom, #6fbde4, #325adb);
+                width: 80px;
+            }
+
+            .food {
+                background: orange;
+                width: 50px;
+            }
+
+            .automobile {
+                background: red;
+                width: 80px;
+            }
+
+            .subject {
+                font-size: 26px;
+                font-weight: bold;
+            }
+
+            .message {
+                padding-top: 10px;
+                opacity: .6;
+            }
+        }
+
+        .profile_img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+        }
+
+        .profile-footer {
+            position: fixed;
+            bottom: 60px;
+            display: flex;
+
+            >div {
+                padding-left: 10px;
+
+                .name {
+                    font-weight: bold;
+                }
+
+                .title {
+                    font-size: 12px;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
 }
