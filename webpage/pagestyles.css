@@ -43,6 +43,7 @@
 }
 
 .login_styles {
+    border: none;
     background: #fae191;
     color: black;
     border-radius: 5px;
@@ -225,10 +226,90 @@ ul li {
     padding: 10px 250px;
 
 }
-.image_styles{
+
+.image_styles {
     width: 50px;
     height: 50px;
+    margin-top: 31px;
 }
-.logo_styles{
+
+.micro_styles {
+    width: 170px;
+    height: 107px;
+
+}
+
+.slack_styles {
+    width: 100px;
+    height: 100px;
+}
+
+.logo_styles {
     width: 25%;
+}
+
+.app_styles {
+    width: 365px;
+    height: 327px;
+    margin-left: 80px;
+}
+
+.favnav_styles {
+    padding: 60px;
+    background: #043873;
+}
+
+.humanimg_styles {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.card_styles {
+    width: 319px;
+    height: 290px;
+    margin: 50px 20px 20px 20px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.text_card {
+    font-family: "Montserrat", sans-serif;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: white;
+    line-height: 20px;
+}
+
+.quote_styles {
+    margin-left: 20px;
+}
+
+.footer_styles {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    margin-left: 20px;
+
+}
+
+.footer_styles1 {
+    font-family: "Roboto", sans-serif;
+    color: white;
+    margin-left: 20px;
+    margin-top: 15px;
+    font-size: 13px;
+
+}
+
+.card_styles1 {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 319px;
+    height: 290px;
+    margin: 50px 20px 20px 20px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 53px;
 }
