@@ -282,6 +282,7 @@ ul li {
     font-weight: 500;
     color: white;
     line-height: 20px;
+    margin-bottom: 31px;
 }
 
 .quote_styles {
@@ -312,4 +313,10 @@ ul li {
     border-radius: 10px;
     padding: 20px;
     margin-left: 53px;
+}
+
+.contact_styles {
+    text-align: center;
+    padding-top: 20px;
+    color: white;
 }
