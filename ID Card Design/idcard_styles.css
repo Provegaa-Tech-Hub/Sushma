@@ -1,0 +1,123 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 30px;
+    justify-self: start;
+    margin-left: 250px;
+}
+
+.card {
+    border: 1px solid black;
+    height: 500px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.company-logo-div {
+    position: absolute;
+    margin: 10px 0px 0px 135px;
+}
+
+.companylogo {
+    width: 150px;
+    height: 43px;
+}
+
+.top_design {
+    height: 220px;
+    background: linear-gradient(27deg, #166340 0%, white 40%, #064468 40%, #064468 61%, #009444 55%, #009444 100%);
+
+}
+
+/* .profile {
+
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    border: 4px solid white;
+} */
+.hexagon-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -150px;
+}
+
+.hexagon-img {
+    width: 130px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: block;
+}
+
+.name {
+    font-family: "Miranda Sans", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 0 5px;
+}
+
+.role {
+    font-family: "Miranda Sans", sans-serif;
+    background: #009444;
+    padding: 5px 12px;
+    font-size: 12px;
+    border-radius: 5px;
+    width: 85px;
+    margin-left: 93px;
+    color: white;
+}
+
+.details {
+    font-family: "Miranda Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 15px 20px;
+}
+
+.barcode {
+    width: 85px;
+    height: 40px;
+    margin: 10px 93px;
+    background: repeating-linear-gradient(90deg, black 0px, black 2px, white 2px, white 4px);
+}
+
+.bottom_design {
+    background: linear-gradient(217deg, #ffffff 55%, #064468 34%);
+    height: 75px;
+    width: 6%;
+    border-radius: 0 0 0 5px;
+    position: absolute;
+    margin-top: -11px;
+
+}
+
+.terms {
+    font-family: "Miranda Sans", sans-serif;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+
+.card2_topdesign {
+    height: 139px;
+    background: linear-gradient(18deg, white 0%, #ffffff 42%, #064468 42%, #064468 61%, #009444 53%, #009444 100%);
+}
+
+.content {
+    font-family: "Miranda Sans", sans-serif;
+    padding: 20px 25px 0px 25px;
+    line-height: 14px;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.content1 {
+    padding: 20px 25px 0px 25px;
+    line-height: 17px;
+    font-size: 14px;
+    display: flex;
+    justify-content: right;
+}
