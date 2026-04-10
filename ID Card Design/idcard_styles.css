@@ -12,6 +12,7 @@
     height: 500px;
     width: 300px;
     border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .company-logo-div {
@@ -103,7 +104,7 @@
 
 .card2_topdesign {
     height: 139px;
-    background: linear-gradient(18deg, white 0%, #ffffff 42%, #064468 42%, #064468 61%, #009444 53%, #009444 100%);
+    background: linear-gradient(18deg, #166340 0%, #ffffff 42%, #064468 42%, #064468 61%, #009444 53%, #009444 100%);
 }
 
 .content {
