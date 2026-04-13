@@ -1,0 +1,134 @@
+.container {
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 150px;
+}
+
+.navbar {
+    display: flex;
+    height: 40px;
+    border: 1px solid white;
+}
+
+.companylogo {
+    height: auto;
+    width: 148px;
+
+}
+
+.anchor_width {
+    padding: 20px;
+}
+
+.nav_styles {
+    margin-top: 10px;
+    margin-left: 89px;
+}
+
+.req_button {
+    height: 40px;
+    border-radius: 5px;
+    background: transparent;
+}
+
+.maincontent {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    width: 280px;
+}
+
+.maincontent1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    width: 377px;
+}
+
+.mike-styles {
+    height: 240px;
+    width: 300px;
+    margin-left: 62px;
+}
+
+.cosult_styles {
+    font-family: "Space Grotesk", sans-serif;
+    background: black;
+    color: white;
+    border-radius: 5px;
+    height: 40px;
+    width: 150px;
+    margin-top: 11px;
+}
+
+.logos_styles {
+    width: 70px;
+    padding: 27px;
+}
+
+.logos_styles1 {
+    width: 60px;
+    padding: 27px;
+}
+
+.service_styles {
+    font-family: "Space Grotesk", sans-serif;
+    background: #B9FF66;
+    width: 76px;
+    font-weight: 500;
+}
+
+.service_styles1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 12px;
+    width: 392px;
+    margin-left: 25px;
+}
+
+.grid {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.card {
+    padding: 30px;
+    min-height: 88px;
+    border-radius: 10px;
+    width: 216px;
+    justify-content: space-between;
+    border: 2px solid #000;
+}
+
+.icon_styles {
+    width: 100px;
+    height: 70px;
+}
+
+.card1_color {
+    background: #f3f3f3;
+}
+
+.card3_color {
+    background: #191A23;
+}
+
+.card2_color {
+    background: #B9FF66;
+}
+
+.freecard {
+    height: 157px;
+    width: 691px;
+    padding: 48px;
+    border-radius: 10px;
+    background: #f3f3f3;
+}
+.freeicon_styles{
+     height: 240px;
+    width: 300px;
+    margin-left: 50px;
+
+}
