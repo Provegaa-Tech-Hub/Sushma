@@ -1,0 +1,91 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 30px;
+    justify-self: start;
+    margin-left: 250px;
+}
+
+.frontcard {
+    height: 488px;
+    width: 300px;
+    border: 1px solid black;
+}
+.companylogotop{
+    position: absolute;
+    height: auto;
+    width: 140px;
+    margin: 40px -290px;
+}
+
+.profileimg {
+    position: absolute;
+    margin: 97px -215px;
+    width: 125px;
+}
+
+.name {
+    font-family: "Karla", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 0 5px;
+
+}
+
+
+.role {
+    font-family: "Karla", sans-serif;
+    background: #009444;
+    padding: 5px 12px;
+    font-size: 12px;
+    border-radius: 5px;
+    width: 85px;
+    margin-left: 93px;
+    color: white;
+}
+
+.details {
+    font-family: "Karla", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 15px 26px;
+}
+
+.backcard {
+    height: 488px;
+    width: 300px;
+    border: 1px solid black;
+
+}
+
+.companylogo {
+    height: auto;
+    width: 140px;
+    position: absolute;
+    margin: 40px -290px;
+}
+
+.terms {
+    font-family: "Karla", sans-serif;
+    font-weight: 700;
+    margin: -35px 63px;
+    position: absolute;
+}
+
+.content {
+    font-family: "Karla", sans-serif;
+    padding: 20px 25px 0px 25px;
+    line-height: 14px;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.content1 {
+    padding: 20px 25px 0px 25px;
+    line-height: 17px;
+    font-size: 14px;
+    display: flex;
+    justify-content: right;
+}
