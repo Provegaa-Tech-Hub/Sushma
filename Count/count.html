@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Count
+    </title>
+</head>
+
+<body>
+    <button onclick="increasecount()">
+        ClickMe
+    </button>
+    <span id="count">0</span>
+    <script>
+        let count=0; //initialize count
+        function increasecount(){
+            count++;
+            document.getElementById("count").innerText=count;
+        }
+    </script>
+    <input type="password" id="myPassword" placeholder="password">
+    <input type="checkbox" id="toggleshow">
+
+
+    <script>
+        const passwordFeild=document.getElementById("myPassword");
+        const toggleCheckbox=document.getElementById("toggleshow");
+
+
+        toggleCheckbox.addEventListener("change",function(){
+            if (passwordFeild.type==="password"){
+                passwordFeild.type="text";
+
+            }else{
+                passwordFeild.type="password";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
