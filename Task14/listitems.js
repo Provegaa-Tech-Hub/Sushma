@@ -1,21 +1,21 @@
-let input = document.getElementById("itemInput");
-let button = document.getElementById("addbtn");
-let list = document.getElementById("list");
+let input = document.getElementById("itemInput");// gets input box
+let button = document.getElementById("addbtn"); // add button
+let list = document.getElementById("list"); //ul will be added
 
 
-button.addEventListener("click", () => {
-    let value = input.value;
+button.addEventListener("click", () => { // listens to button click
+    let value = input.value; // gets typed text
 
 
-    if (value === "") {
-        alert("Enter something");
+    if (value === "") { // if input is empty
+        alert("Enter something"); //shows alert
     }
 
-    else {
-        let li = document.createElement("li");
-        li.innerText = value;
-        list.appendChild(li);
+    else {                 // runs if not empty
+        let li = document.createElement("li");   // creates new li elements
+        li.innerText = value;       // adds text given
+        list.appendChild(li);       //add <li> to <ul> and shows the out put
 
-        input.value = "";
+        input.value = "";           // clears inbox
     }
 });

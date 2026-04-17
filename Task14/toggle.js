@@ -1,9 +1,9 @@
-function toggleColor(){
-    if (document.body.style.backgroundColor ==="black"){
+function toggleColor(){    // function calll on clicking on button
+    if (document.body.style.backgroundColor ==="black"){ // checks background color of page
 
-        document.body.style.backgroundColor="white";
+        document.body.style.backgroundColor="white"; // if black it changes to white
         
-    }else{
-        document.body.style.backgroundColor="black";
+    }else{                               // condition is false
+        document.body.style.backgroundColor="black"; // sets background to black
     }
 }
