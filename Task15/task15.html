@@ -22,7 +22,7 @@
 
     <input type="text" id="primenumber" placeholder="Enter Number">
     <button onclick="findprime()">Show Prime</button>
-    <h3 id="primerusult"></h3>
+    <h3 id="primeresult"></h3>
 
     <h2>Prime Numbers</h2>
 
@@ -85,7 +85,7 @@
             } else {
                 output = n + " is not a prime number";
             }
-            document.getElementById("primerusult").innerText = output;
+            document.getElementById("primeresult").innerText = output;
         }
 
 
@@ -120,7 +120,6 @@
             for (let i = 1; i <= num; i++) {
                 sum += i;
             }
-
             document.getElementById("sumofnumberresult").innerText = "Sum:" + sum;
         }
 
@@ -139,7 +138,6 @@
                 }
                 result += '\n';
             }
-
             document.getElementById("triangleoutput").innerText = result;
         }
 
