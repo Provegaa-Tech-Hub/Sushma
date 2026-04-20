@@ -40,7 +40,11 @@
     <h2>Right Angle Triangle</h2>
     <input type="number" id="trianglenum" placeholder="Enter Number">
     <button onclick="trianglenumber()">Print</button>
-    <h3 id="triangleoutput"></h3>
+    <pre id="triangleoutput"></pre>
+
+    <h2>Role Based Access</h2>
+    <input type="text" id="access">
+    <button onclick="accessbtn()">Access</button>
 
     <script>
         function findlargest() {
@@ -52,14 +56,14 @@
 
             if (a >= b) {
                 largest = a;
-
-
-            } else {
+            }
+            else {
                 largest = b;
             }
-            if (largest >= c) {
 
-            } else {
+            if (largest >= c) {
+            }
+            else {
                 largest = c;
             }
             document.getElementById("result").innerText = "Largest number is :" + largest;
@@ -87,22 +91,55 @@
 
         function showprime() {
             let n = Number(document.getElementById("pnum").value);
+            let result = "Below are the prime number(s) between 1 and " + n + ":\n";
 
+            for (let i = 1; i <= n; i++) {
+                let isPrime = 0;
+
+                for (let j = 1; j <= i; j++) {
+                    if (i % j === 0) {
+                        isPrime = isPrime + 1;
+                    }
+                }
+
+                if (isPrime == 2) {
+                    result += i + "\n";
+                }
+            }
+
+            document.getElementById("showprimeresult").innerText = result;
         }
+
+
 
 
 
         function sumofnumbers() {
             let num = Number(document.getElementById("sumnum").value);
-            let sum = (num * (num + 1)) / 2;
+            let sum = 0;
+            for (let i = 1; i <= num; i++) {
+                sum += i;
+            }
+
             document.getElementById("sumofnumberresult").innerText = "Sum:" + sum;
         }
 
 
         function trianglenumber() {
             let n = Number(document.getElementById("trianglenum").value);
+
             let result = "";
-            
+
+            for (let i = 1; i <= n; i++) {
+                for (let j = 1; j <= n - i; j++) {
+                    result += ' ';
+                }
+                for (let k = 1; k <= i; k++) {
+                    result += '*';
+                }
+                result += '\n';
+            }
+
             document.getElementById("triangleoutput").innerText = result;
         }
 
