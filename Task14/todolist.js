@@ -17,7 +17,7 @@ function addTask(){
     };
 
     let del=document.createElement("button"); //creates del button
-    del.innerText="";
+    del.innerText="Delete"; //adds text to del button
 
     del.onclick=function(){
         li.remove();
