@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        LargestNumbers
+    </title>
+</head>
+
+<body>
+    <h2>
+        Finding Largest Number
+    </h2>
+    <input type="text" id="num1" placeholder="Enter Number One"><br><br>
+    <input type="text" id="num2" placeholder="Enter Number Two"><br><br>
+    <input type="text" id="num3" placeholder="Enter Number Three"><br><br>
+    <button onclick="findlargest()">Find Largest</button>
+    <h3 id="result"></h3>
+
+
+    <h2>Prime Numbers check</h2>
+
+    <input type="text" id="primenumber" placeholder="Enter Number">
+    <button onclick="findprime()">Show Prime</button>
+    <h3 id="primeresult"></h3>
+
+    <h2>Prime Numbers</h2>
+
+    <input type="number" id="pnum" placeholder="Enter Number">
+    <button onclick="showprime()">Show All Prime Numbers</button>
+    <h3 id="showprimeresult"></h3>
+
+
+    <h2>Sum of Number</h2>
+    <input type="number" id="sumnum" placeholder="Enter Number">
+    <button onclick="sumofnumbers()">Sum</button>
+    <h3 id="sumofnumberresult"></h3>
+
+
+    <h2>Right Angle Triangle</h2>
+    <input type="number" id="trianglenum" placeholder="Enter Number">
+    <button onclick="trianglenumber()">Print</button>
+    <!-- <pre> preserves spaces and line breaks -->
+    <pre id="triangleoutput"></pre> 
+
+
+    <h2>Role Based Access</h2>
+    <input type="text" id="access">
+    <button onclick="accessbtn()">Access</button>
+
+    <script>
+        function findlargest() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            let c = Number(document.getElementById("num3").value);
+
+            let largest;
+
+            if (a >= b) {
+                largest = a;
+            }
+            else {
+                largest = b;
+            }
+
+            if (largest >= c) {
+            }
+            else {
+                largest = c;
+            }
+            document.getElementById("result").innerText = "Largest number is :" + largest;
+        }
+
+
+        function findprime() {
+            let n = Number(document.getElementById("primenumber").value);
+            let x = 0;
+            let output = "";
+
+            for (i = 1; i <= n; i++) {
+                if (n % i == 0) {
+                    x = x + 1;
+                }
+            }
+            if (x == 2) {
+                output = n + " is a prime number";
+            } else {
+                output = n + " is not a prime number";
+            }
+            document.getElementById("primeresult").innerText = output;
+        }
+
+
+        function showprime() {
+            let n = Number(document.getElementById("pnum").value);
+            let result = "Below are the prime number(s) between 1 and " + n + ":\n";
+
+            for (let i = 1; i <= n; i++) {
+                let isPrime = 0;
+
+                for (let j = 1; j <= i; j++) {
+                    if (i % j === 0) {
+                        isPrime = isPrime + 1;
+                    }
+                }
+
+                if (isPrime == 2) {
+                    result += i + "\n";
+                }
+            }
+
+            document.getElementById("showprimeresult").innerText = result;
+        }
+
+
+
+
+
+        function sumofnumbers() {
+            let num = Number(document.getElementById("sumnum").value);
+            let sum = 0;
+            for (let i = 1; i <= num; i++) {
+                sum += i;
+            }
+            document.getElementById("sumofnumberresult").innerText = "Sum:" + sum;
+        }
+
+
+        function trianglenumber() {
+            let n = Number(document.getElementById("trianglenum").value);
+
+            let result = "";
+
+            for (let i = 1; i <= n; i++) {
+                for (let j = 1; j <= n - i; j++) {
+                    result += ' ';
+                }
+                for (let k = 1; k <= i; k++) {
+                    result += '*';
+                }
+                result += '\n';
+            }
+            document.getElementById("triangleoutput").innerText = result;
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
