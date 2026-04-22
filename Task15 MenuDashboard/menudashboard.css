@@ -330,7 +330,80 @@ body {
     margin-left: 20px;
 }
 
-.projectdashmian {
+.projectdashmain {
     width: 236px;
     height: 80px;
+    display: flex;
+    align-items: center;
+    margin: 24px;
+    position: relative;
+}
+
+.dash h3 {
+    width: 141px;
+    height: 21px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    margin: 0px;
+    color: #4B5563;
+
+
+}
+
+.dash p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 5px 0 0;
+    color: #9CA3AF;
+
+}
+
+
+.dash {
+    margin-left: 20px;
+}
+
+.dot-image {
+    position: absolute;
+    right: 0;
+    margin-bottom: 53px;
+}
+
+.circle-image {
+    position: absolute;
+    right: 0;
+    display: flex;
+    margin-top: 41px;
+
+}
+
+.statisticsmain {
+    width: 752px;
+    height: 388px;
+}
+
+.projectmain {
+    width: 234px;
+    height: 24px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.overviewmain {
+    width: 751px;
+    height: 353px;
+    padding: 35px;
+}
+
+.overviewsub {
+    width: 367px;
+    height: 256px;
+    display: flex;
+        margin-top: 22px;
+}
+.dots-style{
+    position: absolute;
+    right: 0;
 }
