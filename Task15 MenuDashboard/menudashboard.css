@@ -280,9 +280,10 @@ body {
 }
 
 .summermain {
-    width: 388px;
-    height: 61px;
-    padding: 20px 24px 20px 24px;
+    width: 321px;
+    height: 40px;
+    position: relative;
+    padding: 10px 24px 15px 24px;
 }
 
 .totalmain {
@@ -294,7 +295,7 @@ body {
     padding-bottom: 8px;
     padding-left: 16px;
     display: flex;
-    background: #FFBD00;
+    background: #e9cf88;
 }
 
 .summertext {
@@ -304,6 +305,12 @@ body {
     align-items: center;
     margin: 24px;
     position: relative;
+    border: 1px solid #E5E7DA;
+}
+.summersub{
+    font-size: 14px;
+    font-weight: 500;
+    color: #64748B;
 }
 
 .summer h3 {
@@ -380,16 +387,20 @@ body {
 }
 
 .statisticsmain {
-    width: 752px;
+    width: 718px;
     height: 388px;
+    position: relative;
+    padding: 30px 18px;
 }
 
-.projectmain {
+.statisticsub {
     width: 234px;
     height: 24px;
     font-weight: 500;
     font-size: 16px;
+    display: flex;
 }
+
 
 .overviewmain {
     width: 751px;
@@ -400,10 +411,126 @@ body {
 .overviewsub {
     width: 367px;
     height: 256px;
+    margin-top: 22px;
     display: flex;
-        margin-top: 22px;
+    flex-direction: column;
+    gap: 28px;
 }
-.dots-style{
+
+.dots-style {
     position: absolute;
     right: 0;
+}
+
+.teamsub {
+    width: 388px;
+    height: 352px;
+    padding: 24px;
+    gap: 10px;
+}
+
+.teamsub1 {
+    width: 316px;
+    height: 296px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.team h3 {
+    width: 132px;
+    height: 21px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0px;
+    color: #4B5563;
+}
+
+.team {
+    margin-left: 20px;
+}
+
+.team p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 5px 0 0;
+    color: #9CA3AF;
+}
+
+.timemain {
+    width: 341px;
+    height: 67px;
+    border-width: 1px;
+    padding: 20px;
+
+}
+
+.time-text {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.timesub {
+    width: 64px;
+    height: 21px;
+    border-width: 1px;
+    display: flex;
+    background-color: #94efb6;
+}
+
+.number-styles {
+    font-weight: 600;
+    font-size: 14px;
+    color: #1CB454;
+}
+
+.completeproject {
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 15px;
+    gap: 149px;
+    display: flex;
+}
+
+.dailytask {
+    width: 388px;
+    height: 51px;
+    gap: 10px;
+    padding-top: 12px;
+    padding-right: 24px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+}
+
+.landingmain {
+    width: 340px;
+    height: 95px;
+    padding: 8px;
+    border: 1px solid #E5E7EB;
+}
+
+.landing {
+    margin-left: 20px;
+}
+
+.landing h3 {
+    width: 251px;
+    height: 21px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    margin: 0px;
+    color: #4B5563;
+}
+
+.landing p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 5px 0 0;
+    color: #9CA3AF;
 }
