@@ -215,7 +215,6 @@ body {
     width: 1622px;
     height: 1135px;
     margin: 0 24px;
-    display: flex;
 }
 
 
@@ -244,4 +243,94 @@ body {
     font-size: 16px;
     line-height: 24px;
     margin: 24px;
+}
+
+.projectmain {
+    width: 339px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    margin: 24px;
+    position: relative;
+}
+
+.projecttext {
+    margin-left: 20px;
+}
+
+.projecttext h3 {
+    width: 110px;
+    height: 21px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0px;
+}
+
+.projecttext p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 5px 0 0;
+}
+
+.fill-image {
+    position: absolute;
+    right: 0;
+}
+
+.summermain {
+    width: 388px;
+    height: 61px;
+    padding: 20px 24px 20px 24px;
+}
+
+.totalmain {
+    width: 357px;
+    height: 38px;
+    gap: 10px;
+    padding-top: 8px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    display: flex;
+    background: #FFBD00;
+}
+
+.summertext {
+    width: 339px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    margin: 24px;
+    position: relative;
+}
+
+.summer h3 {
+    width: 132px;
+    height: 21px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0px;
+    color: #64748B;
+
+}
+
+.summer p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 5px 0 0;
+    color: #9CA3AF;
+
+}
+
+.summer {
+    margin-left: 20px;
+}
+
+.projectdashmian {
+    width: 236px;
+    height: 80px;
 }
