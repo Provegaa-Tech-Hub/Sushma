@@ -480,6 +480,7 @@ body {
     border-width: 1px;
     display: flex;
     background-color: #94efb6;
+    border-radius: 4px;
 }
 
 .number-styles {
