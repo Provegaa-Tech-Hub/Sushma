@@ -273,9 +273,9 @@
                                     <div class="statisticsub">
                                         Project Statistics
                                         <div class="fill-image">
-                                            <button style="background-color: #1E85FF;">All</button>
-                                            <button>6M</button>
-                                            <button>1Y</button>
+                                            <button class="allbutton">All</button>
+                                            <button class="button">6M</button>
+                                            <button class="button">1Y</button>
                                         </div>
                                     </div>
                                     <div>
@@ -289,16 +289,18 @@
                     <div style="width: 25%;">
                         <div style="width: 387px; height: 447px; background: #FFF; margin-bottom: 20px;">
                             <div class="summermain">
-                                <div class="summersub">
-                                    Project Summary
-                                </div>
-                                <div class="fill-image">
-                                    <img src="images/ri_more-fill.png">
+                                <div style="display: flex;">
+                                    <div class="summersub" style="margin: 20px;">
+                                        Project Summary
+                                    </div>
+                                    <div class="fill-image" style="margin: 20px;">
+                                        <img src="images/ri_more-fill.png">
+                                    </div>
                                 </div>
                             </div>
                             <div class="totalmain">
                                 <div>
-                                    <img src="images/mingcute_folder-star-line.png">
+                                    <img src="images/mingcute_folder-star-line.png" style="margin: 10px 0;">
                                 </div>
                                 <div style="color: #E2A907;align-content: center;">
                                     38 Total Admin & Client Projects
@@ -310,7 +312,8 @@
                                     <h3>Project Discssion</h3>
                                     <p>6 Person</p>
                                 </div>
-                                <div class="fill-image"><img src="images/mingcute_information-line.png"></div>
+                                <div class="fill-image" style="right: 10px;"><img
+                                        src="images/mingcute_information-line.png"></div>
                             </div>
                             <div class="summertext">
                                 <div><img src="images/compass.png"></div>
@@ -318,7 +321,8 @@
                                     <h3>In Progress</h3>
                                     <p>16 Projects</p>
                                 </div>
-                                <div class="fill-image"><img src="images/mingcute_information-line.png"></div>
+                                <div class="fill-image" style="right: 10px;"><img
+                                        src="images/mingcute_information-line.png"></div>
                             </div>
                             <div class="summertext">
                                 <div><img src="images/check.png"></div>
@@ -326,7 +330,8 @@
                                     <h3>Completed Projects</h3>
                                     <p>24</p>
                                 </div>
-                                <div class="fill-image"><img src="images/mingcute_information-line.png"></div>
+                                <div class="fill-image" style="right: 10px;"><img
+                                        src="images/mingcute_information-line.png"></div>
                             </div>
                             <div class="summertext">
                                 <div><img src="images/send.png"></div>
@@ -334,7 +339,8 @@
                                     <h3>Delivery Projects</h3>
                                     <p>20</p>
                                 </div>
-                                <div class="fill-image"><img src="images/mingcute_information-line.png"></div>
+                                <div class="fill-image" style="right: 10px;"><img
+                                        src="images/mingcute_information-line.png"></div>
                             </div>
                         </div>
                         <div style="width: 387px; height: 115px; background: #FFF; margin-bottom: 20px;">
@@ -464,9 +470,14 @@
                             <div
                                 style="width: 387px; height: 403px; background: #FFF; margin-bottom: 20px; margin-left: 20px;">
                                 <div class="dailytask">
-                                    <div style=" display: flex; gap: 137px;">
-                                        Daily Task
-                                        <div style=" border: 1px solid #E5E7EB;">Today
+                                    <div
+                                        style="display: flex; margin: 20px 24px; align-items: center; position: relative;">
+                                        <div>
+                                            Daily Task
+                                        </div>
+                                        <div
+                                            style=" border: 1px solid #E5E7EB; position: absolute; right: 0;padding: 5px; display: flex; align-items: center;">
+                                            <div>Today</div>
                                             <img src="images/down arrow.png">
                                         </div>
                                     </div>
@@ -476,7 +487,7 @@
                                             <p>Create a new landing page (Saas Product)</p>
                                             <div style="display: flex;">
                                                 <img src="images/mingcute_group-line.png" style="width: 20px;
-                                                         height: 20px;">
+                                                         height: 20px; margin: 5px 10px 0 0;">
                                                 <p>5 People</p>
                                             </div>
                                         </div>
@@ -487,7 +498,7 @@
                                             <p>Create a new Admin dashboard</p>
                                             <div style="display: flex;">
                                                 <img src="images/mingcute_group-line.png" style="width: 20px;
-                                                         height: 20px;">
+                                                         height: 20px; margin: 5px 10px 0 0;">
                                                 <p>2 People</p>
                                             </div>
                                         </div>
@@ -498,7 +509,7 @@
                                             <p>Create a new Power Project (Sktech design)</p>
                                             <div style="display: flex;">
                                                 <img src="images/mingcute_group-line.png" style="width: 20px;
-                                                         height: 20px;">
+                                                         height: 20px; margin: 5px 10px 0 0;">
                                                 <p>2 People</p>
                                             </div>
                                         </div>
@@ -512,37 +523,55 @@
                         <div
                             style="width: 387px; height: 403px; background: #FFF; margin-bottom: 20px; margin-left: 5px;">
                             <div class="teamsub">
-                                <div style=" display: flex; gap: 137px;">
-                                    Team Members
-                                    <div style=" border: 1px solid #E5E7EB;">Active
+                                <div
+                                    style="display: flex; margin-bottom: 20px; align-items: center; position: relative;">
+                                    <div>
+                                        Team Members
+                                    </div>
+                                    <div
+                                        style=" border: 1px solid #E5E7EB; position: absolute; right: 0;padding: 5px; display: flex; align-items: center;">
+                                        <div>Active</div>
                                         <img src="images/down arrow.png">
                                     </div>
                                 </div>
                                 <div class="teamsub1">
                                     <div class="team">
-                                        <h3>Risa Pearson</h3>
-                                        <p>UI/UX Designer • 2.5 Year Experience</p>
+                                        <div><img src="images/Group1.png"></div>
+                                        <div style="margin-left: 10px;">
+                                            <h3>Risa Pearson</h3>
+                                            <p>UI/UX Designer • 2.5 Year Experience</p>
+                                        </div>
                                     </div>
                                     <div class="team">
-                                        <h3>Risa Pearson</h3>
-                                        <p>UI/UX Designer • 2.5 Year Experience</p>
+                                        <div><img src="images/Group1.png"></div>
+                                        <div style="margin-left: 10px;">
+                                            <h3>Margaret D. Evans</h3>
+                                            <p>PHP Developer • 2 Year Experience</p>
+                                        </div>
                                     </div>
                                     <div class="team">
-                                        <h3>Risa Pearson</h3>
-                                        <p>UI/UX Designer • 2.5 Year Experience</p>
+                                        <div><img src="images/Group1.png"></div>
+                                        <div style="margin-left: 10px;">
+                                            <h3>Bryan J. Luellen</h3>
+                                            <p>Front end Developer• 1 Year Experience</p>
+                                        </div>
+                                    </div>
+                                    <div class="team">
+                                        <div><img src="images/Group1.png"></div>
+                                        <div style="margin-left: 10px;">
+                                            <h3>Kathryn S. Collier</h3>
+                                            <p>UI/UX Designer • 3 Year Experience</p>
+                                        </div>
+                                    </div>
+                                    <div class="team">
+                                        <div><img src="images/Group1.png"></div>
+                                        <div style="margin-left: 10px;">
+                                            <h3>Timothy Kauper</h3>
+                                            <p>Backend Developer • 2 Year Experience</p>
+                                        </div>
                                     </div>
 
-                                    <div class="team">
-                                        <h3>Risa Pearson</h3>
-                                        <p>UI/UX Designer • 2.5 Year Experience</p>
-                                    </div>
-
-                                    <div class="team">
-                                        <h3>Risa Pearson</h3>
-                                        <p>UI/UX Designer • 2.5 Year Experience</p>
-                                    </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>

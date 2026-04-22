@@ -217,14 +217,12 @@ body {
     margin: 0 24px;
 }
 
-
-
-
 .footer {
     width: 1670px;
     height: 64px;
     box-shadow: 0px 1px 3px 0px #0000001A;
     background: #FFF;
+    margin-top: 43px;
 
 }
 
@@ -280,10 +278,9 @@ body {
 }
 
 .summermain {
-    width: 321px;
-    height: 40px;
+    width: 388px;
+    height: 60px;
     position: relative;
-    padding: 10px 24px 15px 24px;
 }
 
 .totalmain {
@@ -300,14 +297,16 @@ body {
 
 .summertext {
     width: 339px;
-    height: 48px;
+    height: 66px;
     display: flex;
     align-items: center;
-    margin: 24px;
+    padding: 0px 12px;
     position: relative;
     border: 1px solid #E5E7DA;
+    margin: 10px;
 }
-.summersub{
+
+.summersub {
     font-size: 14px;
     font-weight: 500;
     color: #64748B;
@@ -423,14 +422,13 @@ body {
 }
 
 .teamsub {
-    width: 388px;
     height: 352px;
     padding: 24px;
     gap: 10px;
 }
 
 .teamsub1 {
-    width: 316px;
+    width: 350px;
     height: 296px;
     display: flex;
     flex-direction: column;
@@ -448,7 +446,9 @@ body {
 }
 
 .team {
-    margin-left: 20px;
+    width: 330px;
+    height: 50px;
+    display: flex;
 }
 
 .team p {
@@ -499,22 +499,20 @@ body {
 .dailytask {
     width: 388px;
     height: 51px;
-    gap: 10px;
-    padding-top: 12px;
-    padding-right: 24px;
-    padding-bottom: 12px;
-    padding-left: 24px;
 }
 
 .landingmain {
-    width: 340px;
-    height: 95px;
-    padding: 8px;
+    width: 329px;
+    height: 85px;
+    margin-top: 10px;
     border: 1px solid #E5E7EB;
+    padding: 8px;
+    margin-left: 17px;
 }
 
 .landing {
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-top: 5px;
 }
 
 .landing h3 {
@@ -532,5 +530,17 @@ body {
     font-size: 14px;
     line-height: 21px;
     margin: 5px 0 0;
+    color: #9CA3AF;
+}
+.allbutton{
+    background-color: #8ebbf3; 
+    color: #1E85FF;                                  
+    border: none; 
+    border-radius: 4px;
+}
+.button{
+    border-radius: 4px;
+    border: none;
+    background-color: #dbe6fa;
     color: #9CA3AF;
 }
