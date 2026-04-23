@@ -81,13 +81,13 @@ let count = 0;                //starts from 0
 let intervel;                 //store timer
 
 function start() {  //start button clicked
-    if(!intervel){      //is timer already running no timer running
-          intervel = setInterval(() => {      //starts repeating loop
-        count++;                               //increases value by 1
-        document.getElementById("timer").innerText = count;
-    }, 1000); //runs every 1000ms=1s
+    if (!intervel) {      //is timer already running no timer running
+        intervel = setInterval(() => {      //starts repeating loop
+            count++;                               //increases value by 1
+            document.getElementById("timer").innerText = count;
+        }, 1000); //runs every 1000ms=1s
 
-    } 
+    }
 }
 
 function stop() {
@@ -103,4 +103,19 @@ function showdate() {                     //function name
     let year = now.getFullYear();               //gets full year
     let result = day + "/" + month + "/" + year;//combines values into string
     document.getElementById("result").innerText = result;//dispaly the date
+}
+
+
+function orderIdCheck() {
+    let id = document.getElementById("orderId").value;
+    let pattern = /^ORD-\d{4}-\d{5}$/;
+    if (!pattern.test(id)) {
+        document.getElementById("result").innerText = "Invalid Order ID";
+        return;
+    }
+
+    let parts = id.split("-");
+
+    let output = "Prefix:" + parts[0] + "\n" + "Year:" + parts[1] + "\n" + "Number:" + parts[2];
+    document.getElementById("parseresult").innerText = output;
 }
