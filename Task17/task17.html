@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        JavaScript Concepts
+    </title>
+</head>
+
+<body>
+    <h2>
+        OTP Timer
+    </h2>
+    <p id="timer">click send to start</p>
+    <button id="timerbutton">Resend OTP</button>
+    <style>
+        button:disabled {
+            background: gray;
+            cursor: not-allowed;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 250px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        .valid {
+            color: green;
+            font-size: 14px;
+        }
+    </style>
+    <h2>Form Vlidation</h2>
+    <input type="text" id="email" placeholder="Enter Email">
+    <p id="emailerror" class="error"></p>
+
+    <input type="text" id="phone" placeholder="Enter Phonenumber">
+    <p id="phoneerror" class="error"></p>
+
+    <input type="password" id="password" placeholder="Enetr Password">
+    <p id="passworderror" class="error"></p>
+
+
+
+
+
+
+
+    <script src="task17.js"></script>
+</body>
+
+</html>

@@ -587,33 +587,52 @@ body {
     align-items: center;
     position: relative;
 }
-.dailymain{
+
+.dailymain {
     width: 387px;
-     height: 403px;
-      background: #FFF;
-       margin-bottom: 20px; 
-       margin-left: 20px;
+    height: 403px;
+    background: #FFF;
+    margin-bottom: 20px;
+    margin-left: 20px;
 }
-.flexmain{
+
+.flexmain {
     display: flex;
 }
-.overviewhead{
-    width: 794px; 
+
+.overviewhead {
+    width: 794px;
     height: 403px;
-     background: #FFF;
-      margin-bottom: 20px;
-}
-.projecthead{
-    width: 387px; 
-    height: 96px; 
     background: #FFF;
-     margin-bottom: 20px; 
-     margin-left: 20px; 
+    margin-bottom: 20px;
 }
-.projectreviewhead{
+
+.projecthead {
     width: 387px;
-     height: 96px;
-      background: #FFF;
-       margin-bottom: 20px; 
-       margin-left: 20px;
+    height: 96px;
+    background: #FFF;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.projectreviewhead {
+    width: 387px;
+    height: 96px;
+    background: #FFF;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.projectmainhead {
+    width: 387px;
+    height: 96px;
+    background: #FFF;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.projecthero{
+    width: 387px;
+     height: 96px; 
+     background: #FFF; 
+     margin-bottom: 20px;
 }
