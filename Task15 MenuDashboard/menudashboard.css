@@ -533,15 +533,87 @@ body {
     margin: 5px 0 0;
     color: #9CA3AF;
 }
-.allbutton{
-    background-color: #8ebbf3; 
-    color: #1E85FF;                                  
-    border: none; 
+
+.allbutton {
+    background-color: #8ebbf3;
+    color: #1E85FF;
+    border: none;
     border-radius: 4px;
 }
-.button{
+
+.button {
     border-radius: 4px;
     border: none;
     background-color: #dbe6fa;
     color: #9CA3AF;
+}
+
+.teammembers {
+    border: 1px solid #E5E7EB;
+    position: absolute;
+    right: 0;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.teammembersmain {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    position: relative;
+}
+
+.teammembershead {
+    width: 387px;
+    height: 403px;
+    background: #FFF;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+.dailytaskmain {
+    border: 1px solid #E5E7EB;
+    position: absolute;
+    right: 0;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.dailytaskhead {
+    display: flex;
+    margin: 20px 24px;
+    align-items: center;
+    position: relative;
+}
+.dailymain{
+    width: 387px;
+     height: 403px;
+      background: #FFF;
+       margin-bottom: 20px; 
+       margin-left: 20px;
+}
+.flexmain{
+    display: flex;
+}
+.overviewhead{
+    width: 794px; 
+    height: 403px;
+     background: #FFF;
+      margin-bottom: 20px;
+}
+.projecthead{
+    width: 387px; 
+    height: 96px; 
+    background: #FFF;
+     margin-bottom: 20px; 
+     margin-left: 20px; 
+}
+.projectreviewhead{
+    width: 387px;
+     height: 96px;
+      background: #FFF;
+       margin-bottom: 20px; 
+       margin-left: 20px;
 }
