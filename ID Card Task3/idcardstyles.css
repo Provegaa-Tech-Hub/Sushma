@@ -46,6 +46,16 @@
     color: white;
 }
 
+
+.watermark-img {
+    position: absolute;
+    height: auto;
+    width: 380px;
+    margin: 23px -229px;
+    transform: rotate(315deg) translate(-62%, 80%);
+    opacity: 0.2;
+}
+
 .details {
     font-family: "Karla", sans-serif;
     font-size: 14px;
