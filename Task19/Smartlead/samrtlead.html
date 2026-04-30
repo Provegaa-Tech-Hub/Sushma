@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Smart Lead Management
+    </title>
+</head>
+<style>
+    .error {
+        color: red;
+        font-size: 14px;
+    }
+
+    .valid {
+        color: green;
+        font-size: 14px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: center;
+    }
+
+    .status-new {
+        color: green;
+    }
+
+    .status-contacted {
+        color: orange;
+    }
+
+    .status-closed {
+        color: red;
+    }
+
+    .action-btn {
+        cursor: pointer;
+        padding: 5px 8px;
+        margin: 2px;
+    }
+</style>
+
+<body>
+    <div>
+        <div>
+            <input type="text" id="name" placeholder="Enter Name">
+            <input type="text" id="email" placeholder="Enter Email">
+            <p id="emailerror" class="error"></p>
+            <input type="number" id="phone" placeholder="Enter Phonenumber">
+            <p id="phoneerror" class="error"></p>
+            <button onclick="addButton()">Add Lead</button>
+        </div>
+        <div>
+            <input type="text" id="search" placeholder="Search..." onkeyup="addLeads()">
+            <select id="filter" onchange="addLeads()">
+                <option value="all">All</option>
+                <option value="New">New</option>
+                <option value="Contacted">Contacted</option>
+                <option value="Closed">Closed</option>
+            </select>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Sno</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="leadTable"></tbody>
+        </table>
+    </div>
+    <script src="smartlead.js"></script>
+</body>
+
+</html>

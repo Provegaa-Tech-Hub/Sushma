@@ -51,8 +51,8 @@
     position: absolute;
     height: auto;
     width: 380px;
-    margin: 23px -229px;
-    transform: rotate(315deg) translate(-62%, 80%);
+    margin: 23px -334px;
+    /* transform: rotate(315deg) translate(-62%, 80%); */
     opacity: 0.2;
 }
 
