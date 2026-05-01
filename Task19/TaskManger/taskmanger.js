@@ -1,51 +1,69 @@
-function addTask() {
-    let input = document.getElementById("taskInput");
-    let taskText = input.value.trim();
+let tasks = [];
+    let filter = "all";
 
-    if (taskText === "") {
-        alert("Enter a task");
-        return;
+    function addTask() {
+        let input = document.getElementById("taskInput");
+        let text = input.value;
+
+        if (text === "") {
+            alert("Enter a task");
+            return;
+        }
+
+        tasks.push({ name: text, completed: false });
+        input.value = "";
+        displayTasks();
     }
 
-    let li = document.createElement("li");
+    function displayTasks() {
+        let list = document.getElementById("taskList");
+        list.innerHTML = "";
 
-    let span = document.createElement("span");
-    span.innerText = taskText;
+        //  FOR LOOP USED HERE
+        for (let i = 0; i < tasks.length; i++) {
 
-    // Mark complete
-    span.onclick = function () {
-        span.classList.toggle("completed");
-    };
+            let task = tasks[i];
 
-    // Delete button
-    let delBtn = document.createElement("button");
-    delBtn.innerText = "Delete";
-    delBtn.onclick = function () {
-        li.remove();
-    };
+            // filter logic
+            if (filter === "completed" && task.completed === false) {
+                continue;
+            }
 
-    li.appendChild(span);
-    li.appendChild(delBtn);
+            if (filter === "pending" && task.completed === true) {
+                continue;
+            }
 
-    document.getElementById("taskList").appendChild(li);  //Adds <li> into <ul>
+            let li = document.createElement("li");
 
-    input.value = ""; // clear input
-}
+            let span = document.createElement("span");
+            span.innerText = task.name;
 
-function filterTasks(type) {
-    let tasks = document.querySelectorAll("#taskList li");
+            if (task.completed) {
+                span.classList.add("completed");
+            }
 
-    tasks.forEach(function (task) {
-        let text = task.querySelector("span");
+            // mark complete
+            span.onclick = function () {
+                tasks[i].completed = !tasks[i].completed;
+                displayTasks();
+            };
 
-        if (type === "all") {
-            task.style.display = "flex";
-        } 
-        else if (type === "completed") {
-            task.style.display = text.classList.contains("completed") ? "flex" : "none";
-        } 
-        else if (type === "pending") {
-            task.style.display = !text.classList.contains("completed") ? "flex" : "none";
+            // delete button
+            let delBtn = document.createElement("button");
+            delBtn.innerText = "Delete";
+
+            delBtn.onclick = function () {
+                tasks.splice(i, 1);
+                displayTasks();
+            };
+
+            li.appendChild(span);
+            li.appendChild(delBtn);
+            list.appendChild(li);
         }
-    });
-}
+    }
+
+    function filterTasks(type) {
+        filter = type;
+        displayTasks();
+    }
