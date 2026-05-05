@@ -99,10 +99,22 @@
     border: 2px solid white;
 }
 
-.donors span {
-    margin-left: 10px;
-    font-size: 14px;
+.number{
+    width: clamp(40px, 2.63vw, 50px);
+    aspect-ratio: 1 / 1;
+    margin-left: calc(0% - clamp(12px, 0.79vw, 15px));
+    border: 2px solid white;
+    border-radius: 999px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(11px, 0.74vw, 14px);
+    font-weight: 800;
+    color: #EB5310;
 }
+
+
 
 /* RIGHT SIDE */
 .hero-right {
@@ -916,6 +928,8 @@
 }
 
 
+
+
 body {
     background: #FFE9C8;
 }
@@ -928,6 +942,8 @@ body {
 
 .events h2 {
     margin-bottom: 20px;
+        font-size: 33px;
+    font-weight: 700;
 }
 
 /* SCROLL AREA */
@@ -1023,4 +1039,20 @@ body {
 
 .card-lifestyle.active button {
     background: #ff5a1f;
+}
+
+.donateus{
+    color: #ff3d00;
+    font-weight: 500;
+}
+
+.donoteus-img{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    left: auto;
+    border-radius: 999px 0 0 999px;
+    background: url(images/donate-form-bg.jpg) no-repeat center center / cover;
+    width: clamp(0px, 46.56vw, 886px);
 }
