@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Smart Lead Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        input {
+            padding: 8px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        li {
+            list-style: none;
+            margin: 10px;
+            padding: 10px;
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Lead Management System</h2>
+
+    <input type="text" id="name" placeholder="Enter Name">
+    <input type="text" id="email" placeholder="Enter Email">
+    <button onclick="addLead()">Add Lead</button>
+
+    <br><br>
+
+    <button onclick="filterLeads('all')">All</button>
+    <button onclick="filterLeads('new')">New</button>
+    <button onclick="filterLeads('contacted')">Contacted</button>
+
+    <ul id="leadList"></ul>
+
+    <script>
+        // Load leads when page opens
+        window.onload = function () {
+            displayLeads();
+        };
+
+        function addLead() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+
+            let lead = {
+                name: name,
+                email: email,
+                status: "new"
+            };
+
+            saveLead(lead);
+            displayLeads();
+
+            // clear input
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+        }
+
+        // Save Lead
+        function saveLead(newLead) {
+            let leads = JSON.parse(localStorage.getItem("leads")) || [];
+            leads.push(newLead);
+            localStorage.setItem("leads", JSON.stringify(leads));
+        }
+
+        // Display Leads using FOR LOOP
+        function displayLeads(filter = "all") {
+            let leads = JSON.parse(localStorage.getItem("leads")) || [];
+            let list = document.getElementById("leadList");
+
+            list.innerHTML = "";
+
+            for (let i = 0; i < leads.length; i++) {
+
+                if (filter === "all" || leads[i].status === filter) {
+
+                    let li = document.createElement("li");
+
+                    li.innerHTML = `
+                ${leads[i].name} - ${leads[i].email} - ${leads[i].status}
+                <button onclick="markContacted(${i})">Contacted</button>
+                <button onclick="deleteLead(${i})">Delete</button>
+            `;
+
+                    list.appendChild(li);
+                }
+            }
+        }
+
+        // Delete Lead
+        function deleteLead(index) {
+            let leads = JSON.parse(localStorage.getItem("leads")) || [];
+
+            leads.splice(index, 1);
+
+            localStorage.setItem("leads", JSON.stringify(leads));
+
+            displayLeads();
+        }
+
+        // Update Status
+        function markContacted(index) {
+            let leads = JSON.parse(localStorage.getItem("leads")) || [];
+
+            leads[index].status = "contacted";
+
+            localStorage.setItem("leads", JSON.stringify(leads));
+
+            displayLeads();
+        }
+
+        // Filter Leads
+        function filterLeads(type) {
+            displayLeads(type);
+        }
+    </script>
+
+</body>
+
+</html>

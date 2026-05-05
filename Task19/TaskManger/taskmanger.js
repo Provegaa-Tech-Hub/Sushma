@@ -11,7 +11,7 @@ let tasks = [];
         }
 
         tasks.push({ name: text, completed: false });
-        input.value = "";
+        input.value = "";                                          //clear inbox
         displayTasks();
     }
 
@@ -59,7 +59,7 @@ let tasks = [];
 
             li.appendChild(span);
             li.appendChild(delBtn);
-            list.appendChild(li);
+            list.appendChild(li);          //add task to screen
         }
     }
 
