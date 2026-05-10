@@ -2,29 +2,30 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Charitics Clone</title>
     <link rel="stylesheet" href="chariticsstyles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-    <link href="https://charitics.temptics.com/assets/icon/flaticon_charitics.css" rel="stylesheet">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 
 </head>
 </head>
 
 <body>
 
+
     <!-- NAVBAR -->
-    <header class="navbar">
+    <header class="navbar" id="navbar">
         <div class="logo"><img src="images/logo-white.svg"></div>
 
-        <nav>
+        <nav style="margin-left: 142px;">
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Pages</a>
@@ -33,46 +34,54 @@
             <a href="#">Blog</a>
             <a href="#">Contact</a>
         </nav>
-
+        <img src="images/search.png" class="search-styles">
         <button class="join-btn"> Join With us</button>
     </header>
 
     <!-- HERO SECTION -->
     <section class="hero">
+        <div class="backimg-style">
+            <div class="hero-inner-div">
+                <div class="hero-left">
+                    <p class="tagline">❤️ Change The World Together</p>
 
-        <div class="hero-left">
-            <p class="tagline">❤️ Change The World Together</p>
+                    <h1>
+                        For The People & <br>
+                        Cause You Care About
+                    </h1>
 
-            <h1>
-                For The People & <br>
-                Cause You Care About
-            </h1>
+                    <p class="description">
+                        It is a long established fact that a reader will be distracted lorem the readable content of a
+                        page when looking at layout the point lorem established fact that It is a long established
+                    </p>
 
-            <p class="description">
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-            </p>
+                    <div class="hero-actions">
+                        <button class="donate-btn">
+                            <div class="arrowcircle-styles">
+                                <img src="images/fast-forward-double-right-arrows-symbol.png" class="arrow-styles">
+                            </div>
+                            <div class="hero-text">Make Donation</div>
+                        </button>
 
-            <div class="hero-actions">
-                <button class="donate-btn">➤ Make Donation</button>
-
-                <div class="donors">
-                    <img src="images/user-1.png">
-                    <img src="images/user-2.png">
-                    <img src="images/user-3.png">
-                    <span class="number">2M </span>
+                        <div class="donors">
+                            <img src="images/user-1.png">
+                            <img src="images/user-2.png">
+                            <img src="images/user-3.png">
+                            <span class="number">2M </span>
+                            <div class="donors-text">
+                                Active donors
+                            </div>
+                        </div>
+                    </div>
                     <div>
-                        Active donors
+                        <img src="images/vector-img.png" class="vectorimg">
                     </div>
                 </div>
-            </div>
-            <div>
-                <img src="images/vector-img.png">
-            </div>
-        </div>
 
-        <div class="hero-right">
-            <img src="images/banner-img.png" alt="Hero Image">
+                <div class="hero-right">
+                    <img src="images/banner-img.png" alt="Hero Image">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -90,60 +99,79 @@
         <!-- RIGHT CONTENT -->
         <div class="about-right">
 
-            <p class="tag">❤️ About US</p>
+            <p class="abouttag">❤️ About US</p>
 
             <h1>Helping Each Other can Make World Better</h1>
 
-            <p class="desc">
-                Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit.
-                Nonprofits around the world apply and join us to access more funding.
-            </p>
-
-            <div class="team">
-                <span>✔ Start Helping Team</span>
-                <div>
-                    There are many variations of solve
-                </div>
-
-                <div class="avatars">
-                    <img src="images/about-block-img.jpg">
-                </div>
+            <div class="aboutdesc">
+                Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit The aspernaturaut odit aut fugit, sed
+                quia consequuntur. Nonprofits around the world apply and join us to access more funding.
             </div>
 
-            <div class="buttons">
-                <button class="explore">➤ Explore More</button>
+            <div class="team">
+                <div style="display: flex;">
+                    <div style="display: flex;">
+                        <div class="love-bg-img">
+                            <img src="images/in-love.png" class="love-img">
 
-                <div class="call">
-                    📞 <div>
-                        <p>Call Any Time</p>
-                        <strong>+61 2345 678 990</strong>
+                        </div>
+                        <div class="start-text">Start Helping Team</div>
+                    </div>
+
+
+
+                    <div class="avatars">
+                        <img src="images/about-block-img.jpg">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="images/check-circle.png" style="width: 10px;">
+                        There are many variations of solve
                     </div>
                 </div>
             </div>
 
+            <div class="buttons">
+                <button class="donate-btn">
+                    <div class="arrowcircle-styles">
+                        <img src="images/fast-forward-double-right-arrows-symbol.png" class="arrow-styles">
+                    </div>
+                    <div class="hero-text">Explore More</div>
+                </button>
+
+                <div class="telephone-styles">
+                    <div>
+                        <img src="images/telephone-call.png" class="telephone-img">
+
+                    </div>
+                </div>
+                <div>
+                    <div class="call-time">Call Any Time</div>
+                    <div class="number-style">+61 2345 678 990</div>
+                </div>
+            </div>
         </div>
     </div>
 
 
 
     <div class="events">
-
         <div class="donateus">
             Help & Donate us
         </div>
         <h2>Inspiring and Helping for Better Lifestyle</h2>
-        <div>
-            <div class="donors">
-                <img src="images/user-1.png">
-                <img src="images/user-2.png">
-                <img src="images/user-3.png">
-                <span class="number">2M </span>
-                <div>Active donors</div>
-            </div>
+
+        <div class="donors">
+            <img src="images/user-1.png">
+            <img src="images/user-2.png">
+            <img src="images/user-3.png">
+            <span class="number">2M </span>
+            <div>Active donors</div>
         </div>
 
-        <div class="donoteus-img">
 
+        <div class="donoteus-img">
         </div>
 
 
@@ -255,39 +283,76 @@
         <div class="display-styles">
 
             <div class="stat-box">
-                <h2>260+</h2>
-                <p>Total Happy Children</p>
+                <div class="overlay"></div>
+                <div style="position: absolute;">
+                    <img src="images/stat-bg.png" class="overlay-bg-img">
+                </div>
+
+                <div class="flactionimg-styles">
+                    <img src="images/costumer.png" style="width: 32%;">
+                    <h2>260+</h2>
+                    <p>Total Happy Children</p>
+                </div>
             </div>
 
             <div class="stat-box">
-                <h2>110+</h2>
-                <p>Total Our Volunteer</p>
+
+
+                <div class="overlay">Hover Me</div>
+                <div style="position: absolute;">
+                    <img src="images/stat-bg.png" class="overlay-bg-img">
+                </div>
+
+                <div class="flactionimg-styles">
+                    <img src="images/team.png" style="width: 32%;">
+                    <h2>110+</h2>
+                    <p>Total Our Volunteer</p>
+                </div>
             </div>
 
             <div class="stat-box">
-                <h2>190+</h2>
-                <p>Our Products & Gifts</p>
+                <div class="overlay">Hover Me</div>
+                <div>
+                    <img src="images/stat-bg.png" class="overlay-bg-img">
+                </div>
+                <div class="flactionimg-styles">
+                    <img src="images/unboxing.png" style="width: 32%;">
+                    <h2>190+</h2>
+                    <p>Our Products & Gifts</p>
+                </div>
             </div>
-
             <div class="stat-box">
-                <h2>560+</h2>
-                <p>Worldwide Donor</p>
+                <div class="overlay">Hover Me</div>
+                <div>
+                    <img src="images/stat-bg.png" class="overlay-bg-img">
+                </div>
+                <div class="flactionimg-styles">
+                    <img src="images/relationship.png" style="width:41%">
+                    <h2>560+</h2>
+                    <p>Worldwide Donor</p>
+                </div>
+
             </div>
         </div>
 
 
-        <div>
-            <div>
-                ❤️ Upcoming Events
-            </div>
-            <div>
-                Charitics Information Of Event Schedule
-            </div>
-            <div class="buttons">
-                <button class="explore"><img src="images/double-arrow.png"> Explore More</button>
+        <div class="cls-events">
+            <div class="cls-events-main">
+                <div class="upcoming-container">
+                    <div>
+                        <div>
+                            ❤️ Upcoming Events
+                        </div>
+                        <div>
+                            Charitics Information Of Event Schedule
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="explore"><img src="images/double-arrow.png"> Explore More</button>
+                    </div>
+                </div>
             </div>
         </div>
-
 
         <div class="card-section">
             <div class="dv-card ">
@@ -447,539 +512,707 @@
 
 
 
+
+
+
+    <div class="upcoming-container">
+        <div style="margin-left: 35px;">
+            <div class="upcoming-text">
+                ❤️ Our Team
+            </div>
+            <div class="skilled-text ">
+                Skilled Legal Professionals Dedicated to You
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="explore"><img src="images/double-arrow.png"> Join With us</button>
+        </div>
+    </div>
+
+
+
+
     <div>
         <div>
-            Our Team
+            <div class="card-main ">
 
-        </div>
-        <div>
-            Skilled Legal Professionals Dedicated to You
-        </div>
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="images/member-1.jpg" alt="">
+                    <div class="overlay">
+                        <div class="social">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-linkedin-in"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>John Doe</h3>
+                        <p>Attorney</p>
+                    </div>
+                </div>
 
+                <!-- Card 2 (Hover style) -->
+                <div class="card ">
+                    <img src="images/member-2.jpg" alt="">
 
-    </div>
-    <div class="buttons">
+                    <div class="overlay">
+                        <div class="social">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-linkedin-in"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
 
-        <button class="event"><i class="flaticon-fast-forward-double-right-arrows-symbol"></i> Join With Us</button>
-    </div>
+                    <div class="card-content ">
+                        <h3>John Doe</h3>
+                        <p>Attorney</p>
+                    </div>
+                </div>
 
+                <!-- Card 3 -->
+                <div class="card">
+                    <img src="images/member-3.jpg" alt="">
+                    <div class="overlay">
+                        <div class="social">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-linkedin-in"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>John Doe</h3>
+                        <p>Attorney</p>
+                    </div>
+                </div>
 
-
-
-
-
-
-
-    <div class="card-main ">
-
-        <!-- Card 1 -->
-        <div class="card">
-            <img src="images/member-1.jpg" alt="">
-            <div class="overlay">
-                <div class="social">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-linkedin-in"></i>
-                    <i class="fab fa-instagram"></i>
+                <!-- Card 4 -->
+                <div class="card">
+                    <img src="images/member-4.jpg" alt="">
+                    <div class="overlay">
+                        <div class="social">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-linkedin-in"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>John Doe</h3>
+                        <p>Attorney</p>
+                    </div>
                 </div>
             </div>
-            <div class="card-content">
-                <h3>John Doe</h3>
-                <p>Attorney</p>
-            </div>
-        </div>
 
-        <!-- Card 2 (Hover style) -->
-        <div class="card ">
-            <img src="images/member-2.jpg" alt="">
 
-            <div class="overlay">
-                <div class="social">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-linkedin-in"></i>
-                    <i class="fab fa-instagram"></i>
+
+
+            <section class="testimonial-section">
+                <div class="testimonal-main">
+                    <div class="testimonal-styles">
+                       ❤️ Testimonials
+                    </div>
+                    <div class="talking-about">
+                        What They Are Talking About Charitics
+                    </div>
+
                 </div>
-            </div>
 
-            <div class="card-content ">
-                <h3>John Doe</h3>
-                <p>Attorney</p>
-            </div>
-        </div>
+                <div class="container">
 
-        <!-- Card 3 -->
-        <div class="card">
-            <img src="images/member-3.jpg" alt="">
-            <div class="overlay">
-                <div class="social">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-linkedin-in"></i>
-                    <i class="fab fa-instagram"></i>
-                </div>
-            </div>
-            <div class="card-content">
-                <h3>John Doe</h3>
-                <p>Attorney</p>
-            </div>
-        </div>
+                    <!-- CAROUSEL -->
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel"
+                        data-bs-interval="2000">
 
-        <!-- Card 4 -->
-        <div class="card">
-            <img src="images/member-4.jpg" alt="">
-            <div class="overlay">
-                <div class="social">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-linkedin-in"></i>
-                    <i class="fab fa-instagram"></i>
-                </div>
-            </div>
-            <div class="card-content">
-                <h3>John Doe</h3>
-                <p>Attorney</p>
-            </div>
-        </div>
+                        <div class="carousel-inner">
 
-    </div>
+                            <!-- SLIDE 1 -->
+                            <div class="carousel-item active">
 
+                                <div class="row g-4">
 
+                                    <!-- CARD 1 -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="testimonial-card">
 
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="card" style="width: 18rem;">
-                    <img src="images/star-fill.svg" class="card-img-top" alt="...">
-                    <img src="images/star-fill.svg" class="card-img-top" alt="...">
-                    <img src="images/star-fill.svg" class="card-img-top" alt="...">
-                    <img src="images/star-fill.svg" class="card-img-top" alt="...">
-                    <img src="images/star.svg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text"> Praesent ut lacus a velit tincidunt aliquam a eget urna.Sed ullamcoper
-                            tristique nisl at
-                            pharetra tupis
-                            accumsan et etiam eu sollicititudin eros. In imperdiet accumsan</p>
-                        <div style="display: flex; margin-top: 50px;">
-                            <div>
-                                <img src="images/member-2.jpg" class="humanimg_styles">
-                            </div>
-                            <div>
-                                <div class="footer_styles">
-                                    Esther Howard
+                                            <div class="stars">
+                                                ★★★★☆
+                                            </div>
+
+                                            <p class="testimonial-text">
+                                                 Praesent ut lacus a velit tincidunt aliquam a eget urna.Sed ullamcoper
+                                                tristique nisl at
+                                                pharetra tupis
+                                                accumsan et etiam eu sollicititudin eros. In imperdiet accumsan
+                                            </p>
+
+                                            <div class="profile">
+
+                                                <div class="profile-left">
+                                                    <img src="images/member-1.jpg">
+
+                                                    <div>
+                                                        <h5>Esther Howard</h5>
+                                                        <p>Web Designer</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="quote">
+                                                    <i class="fa-solid fa-quote-right"></i>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- CARD 2 -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="testimonial-card">
+
+                                            <div class="stars">
+                                                ★★★★☆
+                                            </div>
+
+                                            <p class="testimonial-text">
+                                                 Praesent ut lacus a velit tincidunt aliquam a eget urna.Sed ullamcoper
+                                                tristique nisl at
+                                                pharetra tupis
+                                                accumsan et etiam eu sollicititudin eros. In imperdiet accumsan
+                                            </p>
+
+                                            <div class="profile">
+
+                                                <div class="profile-left">
+                                                    <img src="images/member-2.jpg">
+
+                                                    <div>
+                                                        <h5>Esther Howard</h5>
+                                                        <p>Web Designer</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="quote">
+                                                    <i class="fa-solid fa-quote-right"></i>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- CARD 3 -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="testimonial-card">
+
+                                            <div class="stars">
+                                                ★★★★☆
+                                            </div>
+
+                                            <p class="testimonial-text">
+                                                 Praesent ut lacus a velit tincidunt aliquam a eget urna.Sed ullamcoper
+                                                tristique nisl at
+                                                pharetra tupis
+                                                accumsan et etiam eu sollicititudin eros. In imperdiet accumsan
+                                            </p>
+
+                                            <div class="profile">
+
+                                                <div class="profile-left">
+                                                    <img src="images/member-3.jpg">
+
+                                                    <div>
+                                                        <h5>Esther Howard</h5>
+                                                        <p>UI Designer</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="quote">
+                                                    <i class="fa-solid fa-quote-right"></i>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- CARD 4 -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="testimonial-card">
+
+                                            <div class="stars">
+                                                ★★★★☆
+                                            </div>
+
+                                            <p class="testimonial-text">
+                                                Praesent ut lacus a velit tincidunt aliquam a eget urna.Sed ullamcoper
+                                                tristique nisl at
+                                                pharetra tupis
+                                                accumsan et etiam eu sollicititudin eros. In imperdiet accumsan
+                                            </p>
+
+                                            <div class="profile">
+
+                                                <div class="profile-left">
+                                                    <img src="images/member-4.jpg">
+
+                                                    <div>
+                                                        <h5>Esther Howard</h5>
+                                                        <p>Web Designer</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="quote">
+                                                    <i class="fa-solid fa-quote-right"></i>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
                                 </div>
-                                <div class="footer_styles1">
-                                    Web Designer
+
+                            </div>
+
+                            <!-- SLIDE 2 -->
+                            <div class="carousel-item">
+
+                                <div class="row g-4">
+
+                                    <!-- CARD 5 -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="testimonial-card">
+                                            <div class="stars">★★★★☆</div>
+
+                                            <p class="testimonial-text">
+                                                 Praesent ut lacus a velit tincidunt aliquam a eget urna.Sed ullamcoper
+                                                tristique nisl at
+                                                pharetra tupis
+                                                accumsan et etiam eu sollicititudin eros. In imperdiet accumsan
+                                            </p>
+
+                                            <div class="profile">
+
+                                                <div class="profile-left">
+                                                    <img src="images/member-2.jpg">
+
+                                                    <div>
+                                                        <h5>Esther Howard</h5>
+                                                        <p>Web Designer</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="quote">
+                                                    <i class="fa-solid fa-quote-right"></i>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- CARD 6 -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="testimonial-card">
+                                            <div class="stars">★★★★☆</div>
+
+                                            <p class="testimonial-text">
+                                                Praesent ut lacus a velit tincidunt aliquam a eget urna.Sed ullamcoper
+                                                tristique nisl at
+                                                pharetra tupis
+                                                accumsan et etiam eu sollicititudin eros. In imperdiet accumsan
+                                            </p>
+
+                                            <div class="profile">
+
+                                                <div class="profile-left">
+                                                    <img src="images/member-1.jpg">
+
+                                                    <div>
+                                                        <h5>Esther Howard</h5>
+                                                        <p>Web Designer</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="quote">
+                                                    <i class="fa-solid fa-quote-right"></i>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- CARD 7 -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="testimonial-card">
+                                            <div class="stars">★★★★☆</div>
+
+                                            <p class="testimonial-text">
+                                                 Praesent ut lacus a velit tincidunt aliquam a eget urna.Sed ullamcoper
+                                                tristique nisl at
+                                                pharetra tupis
+                                                accumsan et etiam eu sollicititudin eros. In imperdiet accumsan
+                                            </p>
+
+                                            <div class="profile">
+
+                                                <div class="profile-left">
+                                                    <img src="images/member-3.jpg">
+
+                                                    <div>
+                                                        <h5>Esther Howard</h5>
+                                                        <p>Web Designer</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="quote">
+                                                    <i class="fa-solid fa-quote-right"></i>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- CARD 8 -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="testimonial-card">
+                                            <div class="stars">★★★★☆</div>
+
+                                            <p class="testimonial-text">
+                                                 Praesent ut lacus a velit tincidunt aliquam a eget urna.Sed ullamcoper
+                                                tristique nisl at
+                                                pharetra tupis
+                                                accumsan et etiam eu sollicititudin eros. In imperdiet accumsan
+                                            </p>
+
+                                            <div class="profile">
+
+                                                <div class="profile-left">
+                                                    <img src="images/member-4.jpg">
+
+                                                    <div>
+                                                        <h5>Esther Howard</h5>
+                                                        <p>Web Designer</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="quote">
+                                                    <i class="fa-solid fa-quote-right"></i>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- DOTS -->
+                        <div class="carousel-indicators position-static mt-4">
+
+                            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0"
+                                class="active">
+                            </button>
+
+                            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1">
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+           
+
+
+
+            <div class="blog-section">
+
+                <!-- Left Content -->
+                <div class="left">
+                    <div class="blog-styles">Latest Blog</div>
+                    <div class="new-styles">Read Our Latest News</div>
+                    <div class="company-styles">We help companies develop powerful corporate social responsibility,
+                        grantmaking,
+                        and employee engagement strategies.</div>
+
+                    <div class="arrows">
+                        <button><i class="fas fa-arrow-left"></i></button>
+                        <button><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Slider -->
+                <div class="slider">
+                    <div class="slide-track">
+
+                        <!-- Card -->
+                        <div class="card">
+                            <img src="images/blog-1.jpg">
+                            <span class="date">15 Dec</span>
+                            <div style="display: flex;">
+                                <div class="margin-styles1">
+                                    <img src="images/person.png" style=" height: auto;width: 10px;">By Admin
+                                </div>
+                                <div class="margin-styles2">
+                                    <img src="images/tag.png" style="height: auto; width: 15px;">Donation
                                 </div>
                             </div>
-                            <img src="images/quote.svg">
+                            <hr>
+                            <h4>The sun and the sand makes beaches beautiful</h4>
+                            <hr>
+                            <a href="#">Read More →</a>
                         </div>
+
+                        <div class="card">
+                            <img src="images/blog-2.jpg">
+                            <span class="date">15 Dec</span>
+                            <div style="display: flex;">
+                                <div class="margin-styles1">
+                                    <img src="images/person.png" style=" height: auto;width: 10px;">By Admin
+                                </div>
+                                <div class="margin-styles2">
+                                    <img src="images/tag.png" style="height: auto; width: 15px;">Donation
+                                </div>
+                            </div>
+                            <hr>
+                            <h4>The sun and the sand makes beaches beautiful</h4>
+                            <hr>
+                            <a href="#">Read More →</a>
+                        </div>
+
+                        <div class="card">
+                            <img src="images/blog-1.jpg">
+                            <span class="date">15 Dec</span>
+                            <div style="display: flex;">
+                                <div class="margin-styles1">
+                                    <img src="images/person.png" style=" height: auto;width: 10px;">By Admin
+                                </div>
+                                <div class="margin-styles2">
+                                    <img src="images/tag.png" style="height: auto; width: 15px;">Donation
+                                </div>
+
+                            </div>
+                            <hr>
+                            <h4>The sun and the sand makes beaches beautiful</h4>
+                            <hr>
+                            <a href="#">Read More →</a>
+                        </div>
+
+                        <!-- Duplicate for smooth loop -->
+                        <div class="card">
+                            <img src="images/blog-3.jpg">
+                            <span class="date">15 Dec</span>
+                            <div style="display: flex;">
+                                <div class="margin-styles1">
+                                    <img src="images/person.png" style=" height: auto;width: 10px;">By Admin
+                                </div>
+                                <div class="margin-styles2">
+                                    <img src="images/tag.png" style="height: auto; width: 15px;">Donation
+                                </div>
+                            </div>
+                            <hr>
+                            <h4>The sun and the sand makes beaches beautiful</h4>
+                            <hr>
+                            <a href="#">Read More →</a>
+                        </div>
+
                     </div>
                 </div>
 
             </div>
-            <div class="carousel-item">
-                <div class="card_styles">
+
+
+
+
+
+
+
+            <div class="gallery">
+                <div class="circle"><img src="images/gallery-item-1.png"></div>
+
+                <div class="circle">
+                    <div class="circle-text gallery-1">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <img src="images/gallery-item-5.png">
+                </div>
+
+                <div class="circle"><img src="images/gallery-item-2.png"></div>
+                <div class="circle"><img src="images/gallery-item-3.png"></div>
+                <div class="circle"><img src="images/gallery-item-4.png"></div>
+            </div>
+
+
+            <!-- ===== Contact Bar ===== -->
+            <div class="contact-bar">
+
+                <div class="item">
+                    <i class="fas fa-map-marker-alt"></i>
                     <div>
-                        <img src="images/4star.png" class="star_styles">
-                    </div>
-                    <div class="text_card">
-                        Praesent ut lacus a velit tincidunt aliquam a eget urna.Sed ullamcoper tristique nisl at
-                        pharetra tupis
-                        accumsan et etiam eu sollicititudin eros. In imperdiet accumsan
-                    </div>
-
-                    <div style="display: flex; margin-top: 50px;">
-                        <div>
-                            <img src="images/member-2.jpg" class="humanimg_styles">
-                        </div>
-                        <div>
-                            <div class="footer_styles">
-                                Esther Howard
-                            </div>
-                            <div class="footer_styles1">
-                                Web Designer
-                            </div>
-                        </div>
+                        <h4>Address</h4>
+                        <p>4648 Rocky Road Philadelphia PA, 1920</p>
                     </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card_styles">
+
+                <div class="item">
+                    <i class="fas fa-envelope"></i>
                     <div>
-                        <img src="images/4star.png" class="star_styles">
-                    </div>
-                    <div class="text_card">
-                        Praesent ut lacus a velit tincidunt aliquam a eget urna.Sed ullamcoper tristique nisl at
-                        pharetra tupis
-                        accumsan et etiam eu sollicititudin eros. In imperdiet accumsan
-                    </div>
-
-                    <div style="display: flex; margin-top: 50px;">
-                        <div>
-                            <img src="images/member-3.jpg" class="humanimg_styles">
-                        </div>
-                        <div>
-                            <div class="footer_styles">
-                                Esther Howard
-                            </div>
-                            <div class="footer_styles1">
-                                Web Designer
-                            </div>
-                        </div>
+                        <h4>Send Email</h4>
+                        <p>info@example.com</p>
                     </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card_styles">
+
+                <div class="item">
+                    <i class="fas fa-phone"></i>
                     <div>
-                        <img src="images/4star.png" class="star_styles">
+                        <h4>Call Emergency</h4>
+                        <p>+88 0123 654 99</p>
                     </div>
-                    <div class="text_card">
-                        Praesent ut lacus a velit tincidunt aliquam a eget urna.Sed ullamcoper tristique nisl at
-                        pharetra tupis
-                        accumsan et etiam eu sollicititudin eros. In imperdiet accumsan
-                    </div>
+                </div>
 
-                    <div style="display: flex; margin-top: 50px;">
-                        <div>
-                            <img src="images/member-3.jpg" class="humanimg_styles">
-                        </div>
-                        <div>
-                            <div class="footer_styles">
-                                Esther Howard
+            </div>
+
+            <div class="footer-hero">
+                <div class="footer-container">
+                    <div class="footer-middle">
+                        <div class="margin-main">
+                            <img src="images/logo-white.svg" alt="" class="logo-styles">
+                            <div class="margin-styles">
+                                Phasellus ultricies aliquam volutpat ullamcorper laoreet neque, a lacinia curabitur
+                                lacinia
+                                mollis
                             </div>
-                            <div class="footer_styles1">
-                                Web Designer
+                            <div class="social-icons">
+                                <div class="social-icon-styles">
+                                    <i class="fab fa-facebook-f"></i>
+                                </div>
+                                <div class="social-icon-styles">
+                                    <i class="fab fa-twitter"></i>
+                                </div>
+                                <div class="social-icon-styles">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+                                <div class="social-icon-styles">
+                                    <i class="fab fa-youtube"></i>
+                                </div>
+
                             </div>
+
+                        </div>
+                        <div class="links-main">
+                            <div class="links-text"> Quick Links</div>
+                            <div class="links-styles">
+                                <div class="margin-styles3"> <img src="images/double-arrow.png" class="arrow-styles1">
+                                    About Us</div>
+                                <div class="margin-styles3"> <img src="images/double-arrow.png"
+                                        class="arrow-styles2">Our Services</div>
+                                <div class="margin-styles3"><img src="images/double-arrow.png" class="arrow-styles2">Our
+                                    Blogs</div>
+                                <div class="margin-styles3"><img src="images/double-arrow.png"
+                                        class="arrow-styles2">FAQ’S</div>
+                                <div class="margin-styles3"><img src="images/double-arrow.png"
+                                        class="arrow-styles2">Contact Us</div>
+                            </div>
+                        </div>
+                        <div class="post-hero">
+                            <div class="post-main">
+                                Recent Posts
+                            </div>
+
+                            <div class="blog-main">
+                                <div>
+                                    <img src="images/blog-2.jpg" alt="" class="blog-img">
+                                </div>
+                                <div class="footer-date">
+                                    <i class="fa-solid fa-calendar-days" style="color: white;"></i>
+                                    May 12, 2025
+                                    <div class="footer-text">There are many vario ns of passages of</div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="blog-main">
+                                <div>
+                                    <img src="images/blog-1.jpg" alt="" class="blog-img">
+                                </div>
+                                <div class="footer-date">
+                                    <i class="fa-solid fa-calendar-days" style="color: white;"></i>
+                                    May 12, 2025
+                                    <div class="footer-text">There are many vario ns of passages of</div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-hero">
+                            <div class="contact-main">
+                                Contact Us
+                            </div>
+                            <div class="contact-text">
+                                <div class="mail-info"><i class="fa-solid fa-envelope"> </i>info@example.com</div>
+                            </div>
+                            <div class="phone-info">
+                                <i class="fa-solid fa-phone-volume"></i> 123-456-7890
+                            </div>
+                            <form class="mail-main">
+                                <div class="mail-styles">
+                                    <input type="text" id="email" placeholder="Your Email Address" class="mail-input">
+                                    <button type="submit" class="button-btn">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+
+                                </div>
+                                <div class="agreement">
+                                    <label for="" class="checkbox-text">
+                                        <input type="checkbox" name="agreement" id="">
+                                        <div>
+                                            
+                                            <div class="checkbox-text">
+                                                I agree with the
+                                                <a href="#" style="color: white;"> Privacy Policy</a>
+                                            </div>
+
+                                        </div>
+                                    </label>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card_styles">
-                    <div>
-                        <img src="images/4star.png" class="star_styles">
+                <div class="footer-end">
+                    <div class="reserved">
+                        © 2026 Charitics. All rights reserved
                     </div>
-                    <div class="text_card">
-                        Praesent ut lacus a velit tincidunt aliquam a eget urna.Sed ullamcoper tristique nisl at
-                        pharetra tupis
-                        accumsan et etiam eu sollicititudin eros. In imperdiet accumsan
-                    </div>
-
-                    <div style="display: flex; margin-top: 50px;">
+                    <div class="terms-conditions">
                         <div>
-                            <img src="images/member-3.jpg" class="humanimg_styles">
+                            Terms & Conditions
                         </div>
                         <div>
-                            <div class="footer_styles">
-                                Esther Howard
-                            </div>
-                            <div class="footer_styles1">
-                                Web Designer
-                            </div>
+                            Privacy Policy
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
-
-
-
-
-
-
-
-
-    <!-- <div style="display: flex;">
-        <div class="card_styles1">
-            <div>
-                <img src="images/4star.png" class="star_styles">
-            </div>
-            <div class="text_card" style="color: black;">
-                Praesent ut lacus a velit tincidunt aliquam a eget urna.Sed ullamcoper tristique nisl at pharetra tupis
-                accumsan et etiam eu sollicititudin eros. In imperdiet accumsan
-            </div>
-
-            <div style="display: flex; margin-top: 50px;">
-                <div>
-                    <img src="images/member-1.jpg" class="humanimg_styles">
-                </div>
-                <div>
-                    <div class="footer_styles">
-                        Esther Howard
-                    </div>
-                    <div class="footer_styles1">
-                        Web Designer
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card_styles">
-            <div>
-                <img src="images/4star.png" class="star_styles">
-            </div>
-            <div class="text_card">
-                Praesent ut lacus a velit tincidunt aliquam a eget urna.Sed ullamcoper tristique nisl at pharetra tupis
-                accumsan et etiam eu sollicititudin eros. In imperdiet accumsan
-            </div>
-
-            <div style="display: flex; margin-top: 50px;">
-                <div>
-                    <img src="images/member-2.jpg" class="humanimg_styles">
-                </div>
-                <div>
-                    <div class="footer_styles">
-                        Esther Howard
-                    </div>
-                    <div class="footer_styles1">
-                        Web Designer
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card_styles">
-            <div>
-                <img src="images/4star.png" class="star_styles">
-            </div>
-            <div class="text_card">
-                Praesent ut lacus a velit tincidunt aliquam a eget urna.Sed ullamcoper tristique nisl at pharetra tupis
-                accumsan et etiam eu sollicititudin eros. In imperdiet accumsan
-            </div>
-
-            <div style="display: flex; margin-top: 50px;">
-                <div>
-                    <img src="images/member-3.jpg" class="humanimg_styles">
-                </div>
-                <div>
-                    <div class="footer_styles">
-                        Esther Howard
-                    </div>
-                    <div class="footer_styles1">
-                        Web Designer
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-
-
-    <div class="blog-section">
-
-        <!-- Left Content -->
-        <div class="left">
-            <div class="blog-styles">Latest Blog</div>
-            <div class="new-styles">Read Our Latest News</div>
-            <div class="company-styles">We help companies develop powerful corporate social responsibility, grantmaking,
-                and employee engagement strategies.</div>
-
-            <div class="arrows">
-                <button><i class="fas fa-arrow-left"></i></button>
-                <button><i class="fas fa-arrow-right"></i></button>
-            </div>
-        </div>
-
-        <!-- Slider -->
-        <div class="slider">
-            <div class="slide-track">
-
-                <!-- Card -->
-                <div class="card">
-                    <img src="images/blog-1.jpg">
-                    <span class="date">15 Dec</span>
-                    <div style="display: flex;">
-                        <div class="margin-styles1">
-                            <img src="images/person.png" style=" height: auto;width: 10px;">By Admin
-                        </div>
-                        <div class="margin-styles2">
-                            <img src="images/tag.png" style="height: auto; width: 15px;">Donation
-                        </div>
-                    </div>
-                    <hr>
-                    <h4>The sun and the sand makes beaches beautiful</h4>
-                    <hr>
-                    <a href="#">Read More →</a>
-                </div>
-
-                <div class="card">
-                    <img src="images/blog-2.jpg">
-                    <span class="date">15 Dec</span>
-                    <div style="display: flex;">
-                        <div class="margin-styles1">
-                            <img src="images/person.png" style=" height: auto;width: 10px;">By Admin
-                        </div>
-                        <div class="margin-styles2">
-                            <img src="images/tag.png" style="height: auto; width: 15px;">Donation
-                        </div>
-                    </div>
-                    <hr>
-                    <h4>The sun and the sand makes beaches beautiful</h4>
-                    <hr>
-                    <a href="#">Read More →</a>
-                </div>
-
-                <div class="card">
-                    <img src="images/blog-1.jpg">
-                    <span class="date">15 Dec</span>
-                    <div style="display: flex;">
-                        <div class="margin-styles1">
-                            <img src="images/person.png" style=" height: auto;width: 10px;">By Admin
-                        </div>
-                        <div class="margin-styles2">
-                            <img src="images/tag.png" style="height: auto; width: 15px;">Donation
-                        </div>
-
-                    </div>
-                    <hr>
-                    <h4>The sun and the sand makes beaches beautiful</h4>
-                    <hr>
-                    <a href="#">Read More →</a>
-                </div>
-
-                <!-- Duplicate for smooth loop -->
-                <div class="card">
-                    <img src="images/blog-3.jpg">
-                    <span class="date">15 Dec</span>
-                    <div style="display: flex;">
-                        <div class="margin-styles1">
-                            <img src="images/person.png" style=" height: auto;width: 10px;">By Admin
-                        </div>
-                        <div class="margin-styles2">
-                            <img src="images/tag.png" style="height: auto; width: 15px;">Donation
-                        </div>
-                    </div>
-                    <hr>
-                    <h4>The sun and the sand makes beaches beautiful</h4>
-                    <hr>
-                    <a href="#">Read More →</a>
                 </div>
 
             </div>
         </div>
 
-    </div>
-
-
-
-
-
-
-
-    <div class="gallery">
-        <div class="circle"><img src="images/gallery-item-1.png"></div>
-
-        <div class="circle active">
-            <div class="overlay gallery-1">
-                <i class="fab fa-instagram"></i>
-            </div>
-            <img src="images/gallery-item-5.png">
-        </div>
-
-        <div class="circle"><img src="images/gallery-item-2.png"></div>
-        <div class="circle"><img src="images/gallery-item-3.png"></div>
-        <div class="circle"><img src="images/gallery-item-4.png"></div>
-    </div>
-
-
-    <!-- ===== Contact Bar ===== -->
-    <div class="contact-bar">
-
-        <div class="item">
-            <i class="fas fa-map-marker-alt"></i>
-            <div>
-                <h4>Address</h4>
-                <p>4648 Rocky Road Philadelphia PA, 1920</p>
-            </div>
-        </div>
-
-        <div class="item">
-            <i class="fas fa-envelope"></i>
-            <div>
-                <h4>Send Email</h4>
-                <p>info@example.com</p>
-            </div>
-        </div>
-
-        <div class="item">
-            <i class="fas fa-phone"></i>
-            <div>
-                <h4>Call Emergency</h4>
-                <p>+88 0123 654 99</p>
-            </div>
-        </div>
-
-    </div>
-
-
-
-    <div class="footer-container">
-        <div>
-            <img src="images/logo-white.svg" alt="" class="logo-styles">
-            <div class="margin-styles">
-                Phasellus ultricies aliquam volutpat ullamcorper laoreet neque, a lacinia curabitur lacinia mollis
-            </div>
-
-
-
-        </div>
-        <div>
-            <div> Quick Links</div>
-            <div>
-                About Us
-                Our Services
-                Our Blogs
-                FAQ’S
-                Contact Us
-            </div>
-        </div>
-        <div>
-            <div class="logo-styles">
-                Recent Posts
-            </div>
-            <div style="display: flex;">
-                <img src="images/blog-2.jpg" alt="" class="blog-img">
-
-                <div>
-                    May 12, 2025 <br>
-                    There are many vario ns of passages of
-                </div>
-
-
-            </div>
-            <div style="display: flex;">
-                <img src="images/blog-1.jpg" alt="" class="blog-img">
-
-                May 12, 2025<br>
-                There are many vario ns of passages of
-            </div>
-        </div>
-        <div>
-            <div>
-                Contact Us
-                info@example.com
-                123-456-7890
-                <input type="text" id="email" placeholder="Your Email Address">
-                I agree with the Privacy Policy
-            </div>
-        </div>
-    </div>
-    <div class="footer-end">
-        <div style="  margin-left: 50px;">
-            © 2026 Charitics. All rights reserved
-        </div>
-        <div style="margin-left: 620px;">
-            <div>
-                Terms & Conditions
-                Privacy Policy
-            </div>
-        </div>
-
-
-    </div>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="charistics.js"></script>
 </body>
 
 </html>
