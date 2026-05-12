@@ -1,0 +1,21 @@
+{
+  "name": "sushma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Provegaa-Tech-Hub/Sushma.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Provegaa-Tech-Hub/Sushma/issues"
+  },
+  "homepage": "https://github.com/Provegaa-Tech-Hub/Sushma#readme"
+}
