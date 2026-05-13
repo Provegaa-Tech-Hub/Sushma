@@ -1,3 +1,6 @@
+
+function Testimonial(){
+    return(
 <section className="testimonial-section">
 
     <div className="testimonal-main">
@@ -313,3 +316,8 @@
     </div>
 
 </section>
+    )
+}
+
+export default Testimonial
+

@@ -1,4 +1,7 @@
-   <div class="contact-bar">
+  
+  function Contact(){
+    return(
+<div class="contact-bar">
 
             <div class="item">
                 <i class="fas fa-map-marker-alt"></i>
@@ -26,4 +29,11 @@
 
         </div>
 
+    )
+  }
+
+  export default Contact
+  
+  
+  
        

@@ -1,3 +1,6 @@
+
+function Events(){
+    return(
 <div className="events">
 
     <div className="donateus">
@@ -190,3 +193,8 @@
     </div>
 
 </div>
+    )
+}
+
+export default Events
+

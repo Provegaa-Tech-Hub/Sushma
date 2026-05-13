@@ -1,3 +1,6 @@
+
+function Blog(){
+    return(
 <div className="blog-section">
 
     {/* Left Content */}
@@ -263,3 +266,7 @@
     </div>
 
 </div>
+    )
+}
+export default Blog
+

@@ -1,3 +1,6 @@
+
+function Body(){
+    return(
 <div>
     <div className="upcoming-container">
 
@@ -162,3 +165,6 @@
 
     </div>
 </div>
+    )
+}
+export default Body

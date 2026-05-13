@@ -1,4 +1,5 @@
 import Counter from "./Counter";
+import './App.css';
 import StudentForm from "./StudentForm";
 
 function App() {

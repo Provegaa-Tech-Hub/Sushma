@@ -1,3 +1,6 @@
+
+function Volunteer(){
+    return(
 <section className="volunteer">
 
     <div className="left-img">
@@ -62,3 +65,7 @@
     </div>
 
 </section>
+    )
+}
+
+export default Volunteer

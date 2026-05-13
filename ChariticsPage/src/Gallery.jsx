@@ -1,3 +1,6 @@
+
+function Gallery(){
+    return(
 <div className="gallery">
 
     <div className="circle">
@@ -76,3 +79,8 @@
     </div>
 
 </div>
+    )
+}
+export default Gallery
+
+

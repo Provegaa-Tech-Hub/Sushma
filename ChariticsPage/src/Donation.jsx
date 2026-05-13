@@ -1,3 +1,6 @@
+
+function Donation(){
+    return(
 <div className="donation">
 
     <div className="donation-box">
@@ -69,3 +72,8 @@
     </div>
 
 </div>
+    )
+}
+
+export default Donation
+

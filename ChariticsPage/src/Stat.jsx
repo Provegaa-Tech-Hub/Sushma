@@ -1,3 +1,5 @@
+function Stat(){
+    return(
 <div className="stats">
 
     <div className="display-styles">
@@ -392,3 +394,7 @@
     </div>
 
 </div>
+    )
+}
+export default Stat
+

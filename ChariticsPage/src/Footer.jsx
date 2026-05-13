@@ -1,3 +1,6 @@
+
+function Footer(){
+    return(
 <div className="footer-hero">
 
     <div className="footer-container">
@@ -290,3 +293,8 @@
     </div>
 
 </div>
+    )
+}
+
+export default Footer
+
