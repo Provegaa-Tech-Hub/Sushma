@@ -49,9 +49,9 @@
 
 .watermark-img {
     position: absolute;
-    height: auto;
-    width: 380px;
-    margin: 23px -334px;
+    height: 551px;
+    width: 354px;
+    margin: -29px -320px;
     /* transform: rotate(315deg) translate(-62%, 80%); */
     opacity: 0.2;
 }
