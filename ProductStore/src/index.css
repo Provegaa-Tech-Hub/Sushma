@@ -26,3 +26,27 @@
     font-weight:bold;
     color:green;
 }
+.timer-container{
+    text-align:center;
+    margin-top:100px;
+}
+
+h1{
+    font-size:40px;
+}
+
+h2{
+    font-size:35px;
+    margin:20px 0;
+}
+
+button{
+    padding:10px 20px;
+    margin:10px;
+    border:none;
+    background:black;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    border-radius:5px;
+}

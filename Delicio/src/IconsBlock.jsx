@@ -22,38 +22,77 @@ function IconBlocks() {
                     </p>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
-                <img src="./Images/product1.jpg" class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+
+            <div className="card-main">
+                <div className="card card-styles" >
+                    <img
+                        src="./Images/product1.jpg"className="card-img-top" alt="product" />
+                    <div className="card-body">
+                        <a href="#" className="card-text" >
+                           <span>Delicious Chocolate</span> 
+                        </a>
+                        <p>
+                            $ 23.00
+                        </p>
+
+                        
+                    </div>
+                </div>
+                <div className="card card-styles">
+                    <img
+                        src="./Images/product2.jpg"
+                        className="card-img-top"
+                        alt="product"
+                    />
+
+                    <div className="card-body">
+
+                        <a href="#" className="card-text">
+                           Mix of Chocolates
+                        </a>
+
+                        <p >
+                          $ 32.00
+                        </p>
+                    </div>
+                </div>
+                <div className="card card-styles" >
+                    <img
+                        src="./Images/product3.jpg"
+                        className="card-img-top"
+                        alt="product"
+                    />
+
+                    <div className="card-body">
+
+                        <a href="#" className="card-text">
+                           Choco Nuts
+                        </a>
+
+                        <p>
+                            $ 20.00
+                        </p>
+                    </div>
+                </div>
+                <div className="card card-styles" >
+                    <img
+                        src="./Images/product4.jpg"
+                        className="card-img-top"
+                        alt="product"
+                    />
+
+                    <div className="card-body">
+                        <a href="#"className="card-text">
+                           Soft Cake.
+                        </a>
+
+                        <p >
+                          $ 15.00
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
-                <img src="./Images/product2.jpg" class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="./Images/product3.jpg" class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="./Images/product4.jpg" class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
+
 
         </div>
     )
