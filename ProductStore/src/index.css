@@ -1,0 +1,28 @@
+.product-card{
+    transition:0.3s;
+    border:none;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+}
+
+.product-image{
+    height:250px;
+    object-fit:contain;
+    padding:20px;
+}
+
+.card-title{
+    font-size:16px;
+    height:60px;
+    overflow:hidden;
+}
+
+.price{
+    font-size:20px;
+    font-weight:bold;
+    color:green;
+}

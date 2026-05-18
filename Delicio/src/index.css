@@ -1,0 +1,156 @@
+:root{
+    --bs-body-font-family: initial;
+}
+
+.topbar {
+  background: #7f574c;
+  width: 100%;
+  padding: 10px;
+}
+
+.container {
+  width: 1170px;
+  display: flex;
+}
+
+.welcome-styles {
+  width: 330%;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #ebebeb;
+  float: left;
+  padding: 0;
+  margin: 0;
+  line-height: 20px;
+}
+
+.account {
+  width: 50%;
+}
+
+.language a {
+  padding: 6px 10px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #ebebeb;
+  text-decoration: none;
+}
+
+.language a:hover {
+  background: rgb(0, 0, 0, 0.2);
+  color: white;
+  border-radius: 4px;
+}
+
+.container-box {
+  background: #fff;
+  width: 100%;
+  margin: 35px;
+}
+
+.container-head {
+  width: 50%;
+}
+
+.home-styles {
+  width: 50%;
+}
+
+.nav-hover a {
+  padding: 6px 10px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: black;
+  text-decoration: none;
+}
+
+.nav-hover a:hover {
+  color: #fff !important;
+  background: #6d534c !important;
+  border-radius: 4px;
+}
+
+.home {
+  color: #fff !important;
+  background: #6d534c !important;
+  border-radius: 4px;
+}
+
+.slider-main {
+  float: left;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.slide-caption {
+  width: 100%;
+  top: 30%;
+  position: absolute;
+  z-index: 100;
+
+}
+
+.slide-caption h2 {
+  margin-top: 0;
+  font-family: Lobster;
+  font-weight: 400;
+  color: #ebebeb;
+  text-align: center;
+  font-size: 30px;
+}
+
+.slide-caption a {
+  font-size: 10px;
+  line-height: 86px;
+  color: #fff;
+  background: #be8c60;
+  font-family: Open sans;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.slide-caption a:hover {
+  color: #725337;
+  background: #f6ede5;
+}
+
+.block-container {
+  width: 1170px;
+}
+
+.icon-blocks {
+  background: #fff;
+  float: left;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin: 30px 0;
+}
+
+.icon-blocks i {
+  font-size: 30px;
+  color: #5a423b;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.icon-styles {
+  padding: 30px;
+  width: 380px;
+  float: left;
+}
+
+.icon-styles p {
+  color: #382925;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+}
