@@ -172,10 +172,12 @@ body {
   border: none;
   height: 363px;
   text-align: center;
+  transition: 0.3s ease;
 }
 
-.card :hover{
-  box-shadow: 3px -9px 84px 13px rgba(0, 0, 0, 0.31);
+.card:hover{
+  box-shadow: 3px -9px 84px 13px rgba(0, 0, 0, 0.2);
+   transform: translateY(-5px);
 }
 
 .card-text {
@@ -184,6 +186,8 @@ body {
   font-weight: bold;
   font-size: 15px;
   text-transform: uppercase;
+  transition: 0.3s ease;
+
 }
 
 .card-body p{
@@ -191,6 +195,26 @@ body {
   font-size: 21px;
   font-weight: bold;
 }
-.card-text :hover{
+.card-text:hover{
   color: #89573b !important;
+}
+
+
+.choco-conatiner{
+  width: 1170px;
+}
+
+
+.client-slider {
+     padding: 37px 52px;
+}
+
+.brand-img {
+  width: 218px;
+  transition: 0.3s ease;
+}
+
+.fa-regular{
+  font-size: 24px;
+    color: white;
 }
