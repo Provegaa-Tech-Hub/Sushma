@@ -1,44 +1,30 @@
+import { Link } from "react-router-dom"
+
+
 function Header() {
     return (
-        <header
-            className="navbar"
-            id="navbar"
-        >
+        <header className="navbar" id="navbar" >
 
             <div className="logo">
-
-                <img
-                    src="/images/logo-white.svg"
-                    alt="logo"
-                />
+                <img src="/images/logo-white.svg" alt="logo" />
 
             </div>
 
             <nav style={{ marginLeft: "142px" }}>
 
-                <a href="#">Home</a>
-
-                <a href="#">About</a>
-
-                <a href="#">Pages</a>
-
-                <a href="#">Donation</a>
-
-                <a href="#">Event</a>
-
-                <a href="#">Blog</a>
-
-                <a href="#">Contact</a>
-
+                <Link to="/">Home</Link>
+                <Link to="/about">About</Link>
+                <Link to="/about">Pages</Link>
+                <Link to="/donation">Donation</Link>
+                <Link to="/event">Event</Link>
+                <Link to="/blog">Blog</Link>
+                <Link to="/contact">Contact</Link>
             </nav>
 
-            <img
-                src="/images/search.png"
-                className="search-styles"
-                alt="search"
-            />
+            <img  src="/images/search.png" className="search-styles" alt="search" />
 
             <button className="join-btn">
+                <i class="fa-solid fa-angles-right"></i>
                 Join With us
             </button>
 

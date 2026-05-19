@@ -1,34 +1,23 @@
 import './App.css';
 import Head from "./Head";
-import Hero from "./Hero";
-import Navbar from "./Navbar";
-import Events from './Events';
-import Donation from './Donation';
-import Stat from './Stat';
-import Volunteer from './Volunteer';
-import Body from './Body';
-import Testimonial from './Testimonial';
-import Blog from './Blog';
-import Gallery from './Gallery';
-import Contact from './Contact';
-import Footer from './Footer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/HomePage';
+import About from './pages/AboutPage';
+import ContactUs from './pages/ContactUs';
 
 function App() {
   return (
     <div>
-      <Head />
-      <Hero />
-      <Navbar />
-      <Events />
-      <Donation />
-      <Stat />
-      <Volunteer/>
-      <Body/>
-      <Testimonial/>
-      <Blog/>
-      <Gallery/>
-      <Contact/>
-      <Footer/>
+      <BrowserRouter>
+        <Head />
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path="about" element={<About/>}/>
+          <Route path='contact' element={<ContactUs/>}/>
+        </Routes>
+      </BrowserRouter>
+
+    
     </div>
   );
 }

@@ -209,6 +209,16 @@ function IconBlocks() {
                 </div>
             </div>
 
+            <div className="price">
+                <div className="choco-conatiner">
+                    <h1>
+                        win our special prize on our facebook page
+                    </h1>
+
+                </div>
+
+            </div>
+
         </div>
     )
 }

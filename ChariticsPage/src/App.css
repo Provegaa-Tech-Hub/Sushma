@@ -1684,3 +1684,44 @@
     align-items: center;
     text-align: center;
 }
+
+.about-bg-img {
+    background: url(/images/breadcrumb-bg.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 128px 121px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.about-container h1 {
+    font-size: 53px;
+    font-weight: 400;
+    color: white;
+    line-height: 1.3;
+    margin-bottom: 6px;
+    font-family: sans-serif;
+
+}
+
+.contact-box {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+}
+
+.col {
+    flex: 0 0 auto;
+    width: 406px;
+}
+
+.contact-info {
+    background-color: #F4F4F4;
+    border-radius: 20px;
+    padding: 110px 23px;
+}
