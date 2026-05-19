@@ -1723,5 +1723,30 @@
 .contact-info {
     background-color: #F4F4F4;
     border-radius: 20px;
-    padding: 110px 23px;
+    padding: 26px 23px;
+    height: 206px;
+}
+
+.icon-call {
+    background: #ff5722;
+    color: white;
+    padding: 9px;
+    border-radius: 50%;
+    font-size: 18px;
+    height: 40px;
+    width: 40px;
+}
+.title{
+    display: block;
+    font-size: 15px;
+    color: #434343;
+    margin-bottom: 4px;
+    margin-top: 66px;
+}
+.phone{
+    font-size: 18px;
+    font-weight: 700;
+}
+.phone:hover{
+    color: #f44336;
 }
