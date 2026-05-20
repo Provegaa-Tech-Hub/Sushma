@@ -1,11 +1,15 @@
+import Navbar from "../Navbar";
+
 function About() {
   return (
-  
-     <section className="about-bg-img">
+  <section>
+     <div className="about-bg-img">
         <div className="about-container">
             <h1>About Us</h1>
         </div>
-    </section>
+    </div>
+    <Navbar/>
+  </section>
     
    
   );

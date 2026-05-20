@@ -1685,6 +1685,7 @@
     text-align: center;
 }
 
+
 .about-bg-img {
     background: url(/images/breadcrumb-bg.jpg) no-repeat center center;
     background-size: cover;
@@ -1692,6 +1693,15 @@
     text-align: center;
     position: relative;
     z-index: 1;
+}
+
+.about-bg-img::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(30, 37, 47, 0.9);
+    z-index: -1;
+    pointer-events: none;
 }
 
 .about-container h1 {
