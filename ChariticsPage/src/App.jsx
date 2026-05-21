@@ -4,10 +4,13 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/HomePage';
 import About from './pages/AboutPage';
 import ContactUs from './pages/ContactUs';
+import Charitics from './charitics';
 
 function App() {
   return (
     <div>
+
+      
       <BrowserRouter>
         <Head />
         <Routes>
@@ -16,6 +19,7 @@ function App() {
           <Route path='contact' element={<ContactUs/>}/>
         </Routes>
       </BrowserRouter>
+      <Charitics/>
 
     
     </div>
