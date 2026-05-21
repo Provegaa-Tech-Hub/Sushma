@@ -66,7 +66,7 @@ function Navbar(){
 
             <div>
 
-                <div>
+                <div className="clr-blck">
 
                     <img
                         src="/images/check-circle.png"

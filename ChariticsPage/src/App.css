@@ -253,6 +253,7 @@
     font-size: 31px;
     margin-bottom: 20px;
     font-weight: 700;
+    color: black;
 }
 
 .aboutdesc {
@@ -281,6 +282,11 @@
     font-weight: 700;
     margin-left: 10px;
     margin-top: 12px;
+    color: black;
+}
+
+.clr-blck{
+    color: black;
 }
 
 .donors-text {
@@ -1759,4 +1765,29 @@
 }
 .phone:hover{
     color: #f44336;
+}
+
+
+.light-mode {
+  background: white;
+  color: black;
+  min-height: 100vh;
+  transition: 0.4s;
+  padding: 40px;
+}
+
+.dark-mode {
+  background: #121212;
+  color: white;
+  min-height: 100vh;
+  transition: 0.4s;
+  padding: 40px;
+}
+
+.toggle-btn {
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
