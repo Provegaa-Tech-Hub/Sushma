@@ -1,0 +1,45 @@
+
+
+.feature-container {
+  display: flex;
+  gap: 20px;
+  
+}
+
+.geex-content__feature__card {
+  width: 145px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.geex-content__feature__card__subtitle {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: -26px;
+}
+
+.geex-content__feature__card__title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.geex-content__feature__card__badge {
+  color: #0f9d58;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.geex-content__feature__card__img img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-top: 24px;
+}

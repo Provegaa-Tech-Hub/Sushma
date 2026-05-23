@@ -175,9 +175,8 @@ body {
   transition: 0.3s ease;
 }
 
-.card:hover {
-  box-shadow: 3px -9px 84px 13px rgba(0, 0, 0, 0.2);
-  transform: translateY(-5px);
+.card-styles:hover {
+  box-shadow: 3px -9px 6px 5px rgba(0, 0, 0, 0.31);
 }
 
 .card-text {
@@ -364,4 +363,7 @@ ul li {
 }
 ul{
       padding-left: 0;
+}
+i:hover{
+  transform: rotate(10deg);
 }
