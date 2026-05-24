@@ -21,7 +21,7 @@ export const featureData = [
         subtitle: "New Users",
         title: "4,750",
         badge: " +2.5%",
-        image: "/images/feature-3.svg",
+        image: "/images/feature-1.svg",
     },
 ];
 

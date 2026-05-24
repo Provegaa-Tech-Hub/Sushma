@@ -1,10 +1,17 @@
 import React from "react";
-import FeatureCard ,{featureData} from "./FeaturedCard";
-import './App.css'; 
+import FeatureCard from "./FeaturedCard";
+import Header from "./Header";
+import DashboardCards from "./BodyBox";
+import './App.css';
 function App() {
   return (
-   <FeatureCard/>
+    <div>
+      <Header/>
+     <FeatureCard/>
+     <DashboardCards/>
+    </div>
+
   );
 }
 
-export default App;
+export default App
