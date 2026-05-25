@@ -254,11 +254,13 @@ h4.geex-content__feature__card__title {
   gap: 25px;
   color: #555;
   cursor: pointer;
-  transition: 0.3s ease;
+
 }
 
 .menu-item:hover {
   background: rgb(171 84 219 / 15%);
+  padding: 10px;
+  border-radius: 10px;
   color: #AB54DB;
 }
 
@@ -466,7 +468,8 @@ p.geex-content__widget__single__subtitle {
 }
 
 .archive-btn,
-.accept-btn {
+.accept-btn,
+.publish-btn {
   border: none;
   background: transparent;
   cursor: pointer;
@@ -480,4 +483,111 @@ p.geex-content__widget__single__subtitle {
 
 .accept-btn {
   color: #00b894;
+}
+
+.activity-card {
+
+  position: absolute;
+  margin-top: 446px;
+  margin-left: 648px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h3 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.card-header button {
+  border: none;
+  background: none;
+  color: #a855f7;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.visitor-info {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.visitor-info h1 {
+  font-size: 60px;
+  color: #00a88f;
+  margin: 0;
+}
+
+.visitor-info span {
+  font-size: 24px;
+}
+
+.activity-card h2 {
+  color: #464255;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 0;
+  line-height: 30px;
+}
+
+.activity-subtitle {
+  color: #A3A3A3;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 35px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 20px;
+  width: 2px;
+  height: calc(100% + 20px);
+  background: #ddd;
+}
+
+.timeline-item:last-child::before {
+  display: none;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 4px;
+  top: 5px;
+  width: 11px;
+  height: 11px;
+  border: 3px solid #AB54DB;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.timeline-content h4 {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #464255;
+}
+
+.timeline-content p {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  margin-bottom: 0;
+  color: #A3A3A3;
 }
