@@ -1,49 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 
-const activityData = [
-  {
-    id: 1,
-    date: "January 2nd, 04:35 AM",
-    description:
-      "Illum omnis quo illum nisi. Nesciunt est accusamus. Blanditiis nisi quae eum nisi similique.",
-  },
-  {
-    id: 2,
-    date: "January 4th, 06:19 AM",
-    description:
-      "Corrupti unde qui molestiae labore ad adipisci veniam perspiciatis quasi.",
-  },
-  {
-    id: 3,
-    date: "January 5th, 12:34 AM",
-    description:
-      "Maiores doloribus qui. Repellat accusamus minima ipsa ipsam aut debitis.",
-  },
-];
+const Sidebar = () => {
+  const [openMenu, setOpenMenu] = useState(null);
 
-const DashBoard = () => {
+  const handleMenuClick = (id) => {
+    setOpenMenu(openMenu === id ? null : id);
+  };
+
   return (
-    <div className="activity-card">
-      <h2 className="activity-title">
-        Latest Activity
-      </h2>
+    <div className="sidebar">
+      <div className="menu-list">
+        {menuItems.map((item) => (
+          <div key={item.id}>
+            <div
+              className="menu-item"
+              onClick={() => handleMenuClick(item.id)}
+            >
+              <div className="menu-icon">
+                {item.icon}
+              </div>
 
-      <p className="activity-subtitle">
-        Sit et tempora dicta omnis ab quia quo quo.
-      </p>
+              <span>{item.title}</span>
+            </div>
 
-      {activityData.map((item) => (
-        <div className="timeline-item" key={item.id}>
-          <div className="timeline-dot"></div>
-
-          <div className="timeline-content">
-            <h4>{item.date}</h4>
-            <p>{item.description}</p>
+            {/* Submenu */}
+            {openMenu === item.id && item.submenu && (
+              <div className="submenu">
+                {item.submenu.map((subItem, index) => (
+                  <div
+                    className="submenu-item"
+                    key={index}
+                  >
+                    {subItem}
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
 
-export default DashBoard;
+export default Sidebar;

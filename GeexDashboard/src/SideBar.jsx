@@ -1,7 +1,6 @@
-// Sidebar.jsx
 
-import React from "react";
-import { House, LayoutGrid, AppWindow, Layers3, FileText,} from "lucide-react";
+import React,{useState} from "react";
+import { House, LayoutGrid, AppWindow, Layers3, FileText, } from "lucide-react";
 
 
 // Store all sidebar data
@@ -10,6 +9,12 @@ const menuItems = [
     id: 1,
     title: "Demo",
     icon: <House size={28} />,
+    submenu:[
+      "Server Management",
+      "Banking",
+      "Crypto",
+      "Invoicing"
+    ],
   },
   {
     id: 2,
@@ -32,21 +37,29 @@ const menuItems = [
     icon: <FileText size={28} />,
   },
 ];
+const handleDemoClick = () => {
+  alert("Demo clicked!");
+};
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
 
-        <div className="logo-icon">
-          <img src="./images/logo-dark.svg"/>
-        </div>
+      <div className="logo-icon">
+        <img src="./images/logo-dark.svg" />
+      </div>
 
       {/* Menu Items */}
       <div className="menu-list">
 
         {menuItems.map((item) => (
 
-          <div className="menu-item" key={item.id}>
+          <div className="menu-item" key={item.id}
+            onClick={() => {
+              if (item.title === "Demo") {
+                handleDemoClick();
+              }
+            }}>
 
             <div className="menu-icon">
               {item.icon}
