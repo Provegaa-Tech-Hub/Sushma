@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paradesi Solutions™</title>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
     <style>
         /* --- 1. CORE VARIABLES (DARK THEME) --- */
         :root {
             /* Palette: Dark Navy/Slate & Muted Gold */
-            --bg-main: #0f172a;      /* Deepest Navy (Background) */
-            --bg-card: #1e293b;      /* Lighter Slate (Cards/Sections) */
-            --bg-header: rgba(15, 23, 42, 0.95); /* Semi-transparent dark header */
-            
-            --accent: #d4af37;       /* Metallic Gold */
+            --bg-main: #0f172a;
+            /* Deepest Navy (Background) */
+            --bg-card: #1e293b;
+            /* Lighter Slate (Cards/Sections) */
+            --bg-header: rgba(15, 23, 42, 0.95);
+            /* Semi-transparent dark header */
+
+            --accent: #d4af37;
+            /* Metallic Gold */
             --accent-hover: #f1c40f;
-            
-            --text-heading: #f8fafc; /* Almost White */
-            --text-body: #94a3b8;    /* Muted Silver/Grey */
-            
+
+            --text-heading: #f8fafc;
+            /* Almost White */
+            --text-body: #94a3b8;
+            /* Muted Silver/Grey */
+
             --font-heading: 'Playfair Display', serif;
             --font-body: 'Manrope', sans-serif;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: var(--font-body);
             color: var(--text-body);
@@ -35,11 +48,21 @@
             scroll-behavior: smooth;
         }
 
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; }
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
 
         /* --- 2. TYPOGRAPHY --- */
-        h1, h2, h3, h4 {
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: var(--font-heading);
             color: var(--text-heading);
             font-weight: 700;
@@ -51,7 +74,8 @@
             margin-bottom: 1rem;
             position: relative;
             padding-bottom: 20px;
-            display: inline-block; /* Changed to inline-block for star positioning */
+            display: inline-block;
+            /* Changed to inline-block for star positioning */
             width: 100%;
         }
 
@@ -60,7 +84,7 @@
             display: block;
             width: 60px;
             height: 3px;
-            background: var(--accent);
+            background: #006881;
             margin: 15px auto 0;
         }
 
@@ -75,7 +99,7 @@
 
         /* --- 3. NAVIGATION (Dark Mode) --- */
         header {
-            background: var(--bg-header);
+            background: #FDFFFF;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
             position: fixed;
@@ -96,36 +120,55 @@
             letter-spacing: -0.5px;
             text-transform: uppercase;
         }
-        
-        .logo span { color: var(--accent); }
 
-        nav ul { display: flex; gap: 25px; align-items: center; }
-        nav a { 
-            font-size: 0.85rem; 
-            font-weight: 600; 
-            text-transform: uppercase; 
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav a {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
             letter-spacing: 0.5px;
-            color: var(--text-heading); /* White text */
+            color: #006881;
+            /* White text */
             padding-bottom: 5px;
             border-bottom: 2px solid transparent;
             opacity: 0.8;
         }
-        nav a:hover { color: var(--accent); opacity: 1; border-bottom: 2px solid var(--accent); }
+
+        nav a:hover {
+            color: #99C83E;
+            opacity: 1;
+            border-bottom: 2px solid #99C83E;
+        }
 
         .btn-header {
             padding: 10px 20px;
             background: transparent;
-            color: var(--accent) !important;
-            border: 1px solid var(--accent);
+            color: #006881 !important;
+            border: 1px solid #99C83E;
             border-radius: 2px;
             opacity: 1;
         }
+
         .btn-header:hover {
-            background: var(--accent);
-            color: var(--bg-main) !important;
+            background: #99C83E;
+            color: #006881 !important;
         }
 
-        .menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; color: var(--text-heading); }
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-heading);
+        }
 
         /* --- 4. HERO SECTION --- */
         .hero {
@@ -143,15 +186,30 @@
             margin-top: 60px;
         }
 
-        .hero-content { max-width: 800px; animation: fadeIn 1.5s ease; }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; line-height: 1.1; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
-        .hero p { font-size: 1.2rem; margin-bottom: 30px; font-weight: 300; color: #cbd5e1; }
+        .hero-content {
+            max-width: 800px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+            color: #cbd5e1;
+        }
 
         .btn-hero {
             display: inline-block;
             padding: 15px 40px;
-            background: var(--accent);
-            color: var(--bg-main);
+            background: #99C83E;
+            color: #006881;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -159,11 +217,19 @@
             cursor: pointer;
             transition: 0.3s;
         }
-        .btn-hero:hover { background: #fff; color: var(--bg-main); box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); }
+
+        .btn-hero:hover {
+            background: #fff;
+            color: #006881;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
 
         /* --- 5. ABOUT US --- */
-        .section-pad { padding: 80px 10%; position: relative; }
-        
+        .section-pad {
+            padding: 80px 10%;
+            position: relative;
+        }
+
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -173,19 +239,29 @@
 
         .about-image img {
             width: 100%;
-            border: 1px solid rgba(255,255,255,0.1);
-            box-shadow: 20px 20px 0px rgba(30, 41, 59, 0.5); /* Subtle shadow */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 20px 20px 0px rgba(30, 41, 59, 0.5);
+            /* Subtle shadow */
         }
-        
-        .about-text p { margin-bottom: 20px; }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
 
         /* --- 6. WE HIRE (Dark Cards + STARS ANIMATION) --- */
-        .we-hire { background-color: #0b1120; position: relative; overflow: hidden; }
-        
+        .we-hire {
+            background-color: #0b1120;
+            position: relative;
+            overflow: hidden;
+        }
+
         /* STAR ANIMATION CSS */
         .star-container {
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             pointer-events: none;
         }
 
@@ -201,14 +277,49 @@
         }
 
         /* Specific positions for stars near the title */
-        .star-1 { top: 60px; left: 35%; animation-delay: 0s; width: 15px; height: 15px; }
-        .star-2 { top: 50px; right: 35%; animation-delay: 0.5s; width: 25px; height: 25px; }
-        .star-3 { top: 90px; left: 40%; animation-delay: 1s; width: 10px; height: 10px; }
-        .star-4 { top: 85px; right: 38%; animation-delay: 1.5s; width: 12px; height: 12px; }
+        .star-1 {
+            top: 60px;
+            left: 35%;
+            animation-delay: 0s;
+            width: 15px;
+            height: 15px;
+        }
+
+        .star-2 {
+            top: 50px;
+            right: 35%;
+            animation-delay: 0.5s;
+            width: 25px;
+            height: 25px;
+        }
+
+        .star-3 {
+            top: 90px;
+            left: 40%;
+            animation-delay: 1s;
+            width: 10px;
+            height: 10px;
+        }
+
+        .star-4 {
+            top: 85px;
+            right: 38%;
+            animation-delay: 1.5s;
+            width: 12px;
+            height: 12px;
+        }
 
         @keyframes glow-twinkle {
-            0% { transform: scale(0.8); opacity: 0.3; }
-            100% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 20px var(--accent); }
+            0% {
+                transform: scale(0.8);
+                opacity: 0.3;
+            }
+
+            100% {
+                transform: scale(1.2);
+                opacity: 1;
+                box-shadow: 0 0 20px var(--accent);
+            }
         }
 
         /* --- PROCESS CARDS --- */
@@ -225,23 +336,33 @@
             background: var(--bg-card);
             padding: 30px;
             border-left: 4px solid var(--accent);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
         }
-        .process-card:hover { transform: translateY(-5px); }
-        
-        /* UPDATED: NUMBERS IN WHITE */
-        .process-num { 
-            font-size: 3.5rem; 
-            color: #ffffff;  /* PURE WHITE as requested */
-            font-weight: 900; 
-            line-height: 1; 
-            margin-bottom: 10px; 
-            font-family: var(--font-heading); 
-            opacity: 1; /* Fully visible */
-            text-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+        .process-card:hover {
+            transform: translateY(-5px);
         }
-        .process-card h4 { font-size: 1.2rem; margin-bottom: 10px; color: var(--accent); }
+
+        /* UPDATED: NUMBERS IN WHITE */
+        .process-num {
+            font-size: 3.5rem;
+            color: #ffffff;
+            /* PURE WHITE as requested */
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 10px;
+            font-family: var(--font-heading);
+            opacity: 1;
+            /* Fully visible */
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .process-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
 
         /* --- 7. SERVICES --- */
         .services-grid {
@@ -253,31 +374,100 @@
         .service-card {
             background: var(--bg-card);
             padding: 40px;
-            border: 1px solid rgba(255,255,255,0.05);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             transition: 0.3s;
         }
 
         .service-card:hover {
             border-color: var(--accent);
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            background: #253249; /* Slightly lighter on hover */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            background: #253249;
+            /* Slightly lighter on hover */
         }
 
-        .icon-box { font-size: 2rem; color: var(--accent); margin-bottom: 20px; }
-        .service-card h3 { margin-bottom: 15px; font-size: 1.5rem; }
-        .service-card ul { padding-left: 20px; list-style: square; color: var(--text-body); margin-top: 15px; }
+        .abroad-btn {
+            width: 50%;
+            background: #99C83E;
+            color: #006881;
+            padding: 15px 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            margin: 15px 0;
+        }
+
+        .abroad-btn:hover {
+            color: #006881;
+            background: white;
+        }
+
+
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Popup Box */
+        .popup-content {
+            background: white;
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .popup-content h2 {
+            color: #006881;
+        }
+
+        .close-btn {
+            margin-top: 15px;
+            padding: 8px 15px;
+            background: #99C83E;
+            color: #006881;
+            border: none;
+            cursor: pointer;
+        }
+
+        .icon-box {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .service-card ul {
+            padding-left: 20px;
+            list-style: square;
+            color: var(--text-body);
+            margin-top: 15px;
+        }
 
         /* --- 8. OUR CLIENTS --- */
-        .clients { 
+        .clients {
             background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-attachment: fixed;
-            text-align: center; 
-            border-top: 1px solid rgba(255,255,255,0.05);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
+
         .client-grid {
             display: flex;
             flex-wrap: wrap;
@@ -285,28 +475,38 @@
             gap: 40px;
             margin-top: 40px;
         }
-        
+
         .client-logo-placeholder {
-            border: 1px solid rgba(255,255,255,0.1);
-            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.02);
             padding: 20px 40px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
             font-size: 1.2rem;
-            color: rgba(255,255,255,0.5);
+            color: rgba(255, 255, 255, 0.5);
             transition: 0.3s;
         }
+
         .client-logo-placeholder:hover {
             border-color: var(--accent);
             color: var(--accent);
         }
 
         /* --- 9. CAREERS --- */
-        .careers { background-color: var(--bg-main); text-align: center; }
-        
-        .hiring-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
-        
+        .careers {
+            background-color: var(--bg-main);
+            text-align: center;
+        }
+
+        .hiring-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
         .btn-outline-dark {
             padding: 15px 30px;
             border: 1px solid var(--text-body);
@@ -314,65 +514,169 @@
             text-transform: uppercase;
             font-weight: 600;
             transition: 0.3s;
+            cursor: pointer;
         }
-        .btn-outline-dark:hover { border-color: var(--accent); color: var(--accent); }
+
+        .btn-outline-dark:hover {
+            border-color: #99C83E;
+            color: #99C83E;
+        }
+
+        .resume-btn {
+            margin-top: 40px;
+        }
+
+        .resume-btn a {
+            background: #4fc37b;
+            color: white;
+            border: none;
+            padding: 20px 80px;
+            border-radius: 40px;
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .job-buttons {
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding: 0 20px;
+        }
+
+        .job-buttons button {
+            background: #99C83E;
+            color: #006881;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .resume-btn {
+            margin-top: 40px;
+        }
+
+        .resume-btn button {
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            background: #99C83E;
+            color: #006881;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+         .resume-btn button:hover {
+            background: #fff;
+            color: #006881;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
 
         /* --- 10. FOOTER / LETS TALK --- */
         footer {
-            background: #020617; /* Almost black */
+            background: #020617;
+            /* Almost black */
             color: #64748b;
             padding: 80px 5% 20px;
             font-size: 0.9rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 40px;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             padding-bottom: 40px;
             margin-bottom: 20px;
         }
-        
-        .footer-col h4 { color: var(--text-heading); margin-bottom: 20px; font-family: var(--font-heading); }
-        .footer-col p { margin-bottom: 10px; }
-        .footer-col a { color: #64748b; transition: 0.3s; }
-        .footer-col a:hover { color: var(--accent); padding-left: 5px; }
+
+        .footer-col h4 {
+            color: var(--text-heading);
+            margin-bottom: 20px;
+            font-family: var(--font-heading);
+        }
+
+        .footer-col p {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #64748b;
+            transition: 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
 
         /* --- RESPONSIVE --- */
         @media (max-width: 900px) {
-            .menu-toggle { display: block; }
+            .menu-toggle {
+                display: block;
+            }
+
             nav {
                 position: absolute;
                 top: 70px;
                 left: 0;
                 width: 100%;
                 background: var(--bg-card);
-                border-top: 1px solid rgba(255,255,255,0.1);
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
                 display: none;
                 flex-direction: column;
                 padding: 20px;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
             }
-            nav.active { display: flex; }
-            nav ul { flex-direction: column; width: 100%; text-align: center; }
-            .hero h1 { font-size: 2.5rem; }
-            .about-grid { grid-template-columns: 1fr; }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
             /* Hide decorative stars on mobile to save space */
-            .star { display: none; }
+            .star {
+                display: none;
+            }
         }
-        
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
+
 <body>
 
     <header>
-        <div class="logo"><a href="index.html" class="navbar-brand"><img src="Latest-Logo-TM.png" width="60%"></a></div>
+        <div class="logo"><a href="index.html" class="navbar-brand"><img src="Latest-Logo-TM.png" width="80%"></a></div>
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <nav id="navbar">
             <ul>
@@ -390,32 +694,48 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Defining the Future of <br><em>Workforce & Management </em></h1>
-            <p>Paradesi Solutions Private Limited delivers precision-engineered IT solutions and strategic human capital for the digital age.</p>
-            <p>We help organizations build strong teams, streamline HR operations, and manage payroll with confidence. As a trusted HR Consultancy & Payroll Management partner, we deliver practical, compliant, and people‑centric solutions tailored to your business needs.</p>
-            <a href="#contact" class="btn-hero">Rech Us</a>
+            <p>Paradesi Solutions Private Limited delivers precision-engineered IT solutions and strategic human capital
+                for the digital age.</p>
+            <p>We help organizations build strong teams, streamline HR operations, and manage payroll with confidence.
+                As a trusted HR Consultancy & Payroll Management partner, we deliver practical, compliant, and
+                people‑centric solutions tailored to your business needs.</p>
+            <a href="#contact" class="btn-hero">Reach Us</a>
         </div>
     </section>
 
     <section id="about" class="section-pad">
         <div class="section-title">About Us</div>
         <div class="section-subtitle">More than just a vendor. We are your strategic partner.
-            <p>People..... Process..... Performance.....</p></div>
-        </p>Paradesi Solutions is a professional HR services firm dedicated to supporting businesses across industries with end‑to‑end human resource and payroll solutions. Our goal is simple: take the complexity out of HR so you can focus on growing your business.</p>
+            <p>People..... Process..... Performance.....</p>
+        </div>
+        </p>Paradesi Solutions is a professional HR services firm dedicated to supporting businesses across industries
+        with end‑to‑end human resource and payroll solutions. Our goal is simple: take the complexity out of HR so you
+        can focus on growing your business.</p>
 
-         <p>With deep domain expertise, up‑to‑date statutory knowledge, and a client‑first approach, we act as an extension of your internal HR team—reliable, responsive, and results‑driven.</p>
-        
+        <p>With deep domain expertise, up‑to‑date statutory knowledge, and a client‑first approach, we act as an
+            extension of your internal HR team—reliable, responsive, and results‑driven.</p>
+
         <div class="about-grid">
             <div class="about-image">
                 <img src="About Us 1.jpg" style="filter: brightness(0.8) contrast(1.1);" alt="Meeting">
             </div>
             <div class="about-text">
                 <h3>Our Mission & Vision</h3>
-                <p><strong>Paradesi Solutions Private Limited</strong> to empower organizations by delivering reliable, compliant, and people-focused HR consultancy and payroll management solutions that simplify operations, strengthen workforce performance, and enable sustainable business growth. We are committed to providing practical HR strategies, accurate payroll processing, and dependable compliance support—so our clients can focus on building successful teams and achieving their business goals..</p>
-                <p>To be a trusted and preferred HR Consultancy and Payroll Management partner, recognized for integrity, expertise, and excellence in service delivery.
+                <p><strong>Paradesi Solutions Private Limited</strong> to empower organizations by delivering reliable,
+                    compliant, and people-focused HR consultancy and payroll management solutions that simplify
+                    operations, strengthen workforce performance, and enable sustainable business growth. We are
+                    committed to providing practical HR strategies, accurate payroll processing, and dependable
+                    compliance support—so our clients can focus on building successful teams and achieving their
+                    business goals..</p>
+                <p>To be a trusted and preferred HR Consultancy and Payroll Management partner, recognized for
+                    integrity, expertise, and excellence in service delivery.
 
-We envision a future where businesses of all sizes operate with confidence in their HR processes, supported by transparent systems, strong compliance practices, and employee-centric solutions.</p>
-                <p style="color: var(--accent); font-weight: 600; border-left: 3px solid var(--accent); padding-left: 15px;">
-                    "To mutually build a globally respected Human Capital Solutions & Payroll Management Company that adds tangible value to client organizations."
+                    We envision a future where businesses of all sizes operate with confidence in their HR processes,
+                    supported by transparent systems, strong compliance practices, and employee-centric solutions.</p>
+                <p
+                    style="color: var(--accent); font-weight: 600; border-left: 3px solid var(--accent); padding-left: 15px;">
+                    "To mutually build a globally respected Human Capital Solutions & Payroll Management Company that
+                    adds tangible value to client organizations."
                 </p>
             </div>
         </div>
@@ -430,30 +750,34 @@ We envision a future where businesses of all sizes operate with confidence in th
         </div>
 
         <div class="section-title">We Hire For You</div>
-        <div class="section-subtitle">Our rigorous screening procedure ensures quality output within specific time frames.</div>
-        
+        <div class="section-subtitle">Our rigorous screening procedure ensures quality output within specific time
+            frames.</div>
+
         <div class="process-grid">
             <div class="process-card">
                 <div class="process-num">01</div>
                 <h4>Requirement Analysis</h4>
-                <p>We deeply understand your corporate culture, management style, and technical needs before starting.</p>
+                <p>We deeply understand your corporate culture, management style, and technical needs before starting.
+                </p>
             </div>
             <div class="process-card">
                 <div class="process-num">02</div>
                 <h4>Sourcing & Screening</h4>
-                <p>Using our vast database and headhunting techniques to find the perfect fit, not just the first available.</p>
+                <p>Using our vast database and headhunting techniques to find the perfect fit, not just the first
+                    available.</p>
             </div>
             <div class="process-card">
                 <div class="process-num">03</div>
                 <h4>Onboarding Support</h4>
-                <p>We assist in the final selection and onboarding process to ensure a smooth transition for the candidate.</p>
+                <p>We assist in the final selection and onboarding process to ensure a smooth transition for the
+                    candidate.</p>
             </div>
         </div>
         <br>
         <div class="Hire">
-        <div class="about-image">
-            <img src="how-we-work.png" style="filter: brightness(0.8) contrast(1.1);" alt="Meeting">
-        </div>
+            <div class="about-image">
+                <img src="how-we-work.png" style="filter: brightness(0.8) contrast(1.1);" alt="Meeting">
+            </div>
         </div>
         </br>
     </section>
@@ -476,22 +800,48 @@ We envision a future where businesses of all sizes operate with confidence in th
             <div class="service-card">
                 <div class="icon-box">✦</div>
                 <h3>Campus Drives</h3>
-                <p>It is conducted in a common place or within educational institutes to provide jobs to students pursuing or in the stage of completing the Programme/ Studies.</p>
+                <p>It is conducted in a common place or within educational institutes to provide jobs to students
+                    pursuing or in the stage of completing the Programme/ Studies.</p>
             </div>
             <div class="service-card">
                 <div class="icon-box">✦</div>
                 <h3>Academic Projects</h3>
-                <p>We supports the students in their Mini & Major Projects in all Domains & Technologies for Graduates & Post Graduates of all the streams.</p>
+                <p>We supports the students in their Mini & Major Projects in all Domains & Technologies for Graduates &
+                    Post Graduates of all the streams.</p>
             </div>
-             <div class="service-card">
+            <div class="service-card">
                 <div class="icon-box">★</div>
                 <h3>Internship</h3>
-                <p>It's more than just work; it's a learning-focused professional training period that provides industry exposure and networking, often leading to job offers. </p>
+                <p>It's more than just work; it's a learning-focused professional training period that provides industry
+                    exposure and networking, often leading to job offers. </p>
             </div>
             <div class="service-card">
                 <div class="icon-box">✦</div>
                 <h3>Outsourcing Projects</h3>
-                <p>Outsourcing is a practice in which an individual or company performs tasks, provides services for other companies/Clients -- functions that could have been or are usually done in-house. Outsourcing is typically used by companies to save costs.</p>
+                <p>Outsourcing is a practice in which an individual or company performs tasks, provides services for
+                    other companies/Clients -- functions that could have been or are usually done in-house. Outsourcing
+                    is typically used by companies to save costs.</p>
+            </div>
+        </div>
+        <div class="row">
+            <button class="abroad-btn open-btn" style="width: 49%;" onclick="openPopup()">
+                Abroard Educattion Support
+            </button>
+            <button class="abroad-btn open-btn" onclick="openPopup()">
+                Abroard Job Support
+            </button>
+
+            <div class="popup" id="popup">
+
+                <div class="popup-content">
+                    <h2>Thank you for your support</h2>
+                    <p>Please share your details.</p>
+
+                    <button class="close-btn" onclick="closePopup()">
+                        Close
+                    </button>
+                </div>
+
             </div>
         </div>
     </section>
@@ -499,25 +849,38 @@ We envision a future where businesses of all sizes operate with confidence in th
     <section id="clients" class="section-pad clients">
         <div class="section-title">Our Clients</div>
         <div class="section-subtitle">Trusted by leading businesses across the globe.</div>
-        
+
         <div class="client-grid">
-        <div class="about-image">
-            <img src="clients.png" style="filter: brightness(0.8) contrast(1.1);" alt="Meeting">
-        </div>
+            <div class="about-image">
+                <img src="clients.png" style="filter: brightness(0.8) contrast(1.1);" alt="Meeting">
+            </div>
     </section>
 
     <section id="careers" class="section-pad careers">
         <div class="section-title">Careers</div>
         <div class="section-subtitle">Looking for your next challenge? Upload your resume today.</div>
-        
+
         <p style="max-width: 700px; margin: 0 auto; color: var(--text-body); opacity: 0.8;">
-            We recruit across various verticals for all corporations. Whether you are a fresher or experienced, we have a place for you.
+            We recruit across various verticals for all corporations. Whether you are a fresher or experienced, we have
+            a place for you.
         </p>
 
-        <div class="hiring-buttons">
-            <a href="#" class="btn-outline-dark">Current Openings</a>
-            <a href="#" class="btn-hero" onclick="alert('Upload Resume Portal - Coming Soon')">Upload Resume</a>
+        <div>
+            <button class="btn-outline-dark" onclick="toggleButtons()">Current Openings</button>
+            <!-- IT & Non IT Buttons -->
+            <div class="job-buttons" id="jobBox">
+
+                <button>IT Jobs</button>
+
+                <button>Non IT Jobs</button>
+
+            </div>
+            <div class="resume-btn">
+                <button href="#" onclick="alert('Upload Resume Portal - Coming Soon')">Upload
+                    Resume</button>
+            </div>
         </div>
+
     </section>
 
     <footer id="contact">
@@ -526,10 +889,11 @@ We envision a future where businesses of all sizes operate with confidence in th
                 <div class="logo" style="margin-bottom: 20px;"><span>Paradesi Solutions</span></div>
                 <p>Excellence in every line of code, and every candidate placed.</p>
             </div>
-            
+
             <div class="footer-col">
                 <h4>Headquarters</h4>
-                <p>Kukatpally, Hyderabad</p> <p>Telangana, India.</p>
+                <p>Kukatpally, Hyderabad</p>
+                <p>Telangana, India.</p>
             </div>
 
             <div class="footer-col">
@@ -538,7 +902,7 @@ We envision a future where businesses of all sizes operate with confidence in th
                 <p><strong>Email:</strong> info@paradesisolutions.com</p>
                 <p><strong>Jobs:</strong> careers@paradesisolutions.com</p>
             </div>
-            
+
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <p><a href="#about">About Us</a></p>
@@ -546,9 +910,10 @@ We envision a future where businesses of all sizes operate with confidence in th
                 <p><a href="#careers">Careers</a></p>
             </div>
         </div>
-        
+
         <div class="copyright">
-            Design & Copyright © 2017-2026 @ <strong>P</strong>aradesi <strong>S</strong>olutions <strong>P</strong>rivate <strong>L</strong>imited, <strong>Hyd</strong>erabad.</p>
+            Design & Copyright © 2017-2026 @ <strong>P</strong>aradesi <strong>S</strong>olutions
+            <strong>P</strong>rivate <strong>L</strong>imited, <strong>Hyd</strong>erabad.</p>
             All Rights Reserved.
         </div>
     </footer>
@@ -567,6 +932,28 @@ We envision a future where businesses of all sizes operate with confidence in th
                 nav.classList.remove("active");
             })
         })
+
+        function openPopup() {
+            document.getElementById("popup").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+        function toggleButtons() {
+
+            let box = document.getElementById("jobBox");
+
+            if (box.style.display === "flex") {
+                box.style.display = "none";
+            }
+            else {
+                box.style.display = "flex";
+            }
+
+        }
     </script>
 </body>
+
 </html>
