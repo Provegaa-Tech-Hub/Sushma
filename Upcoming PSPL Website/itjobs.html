@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IT Jobs</title>
+
+    <style>
+        :root {
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Manrope', sans-serif;
+            --text-heading: #f8fafc;
+        }
+
+        body {
+            background: #f2f2f2;
+            font-family: 'Manrope', sans-serif;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-heading);
+            color: var(--text-heading);
+            font-weight: 700;
+        }
+
+        header {
+            background: #FDFFFF;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: #99C83E;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav a {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #006881;
+            /* White text */
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+            opacity: 0.8;
+        }
+
+        nav a:hover {
+            color: #99C83E;
+            opacity: 1;
+            border-bottom: 2px solid #99C83E;
+        }
+
+        .btn-header {
+            padding: 10px 20px;
+            background: transparent;
+            color: #006881 !important;
+            border: 1px solid #99C83E;
+            border-radius: 2px;
+            opacity: 1;
+        }
+
+        .btn-header:hover {
+            background: #99C83E;
+            color: #006881 !important;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-heading);
+        }
+
+        /* Job Cards */
+
+        .job-card {
+            background: #e9e9e9;
+            padding: 40px 20px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Popup Background */
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 100px;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 100px);
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: flex-start;
+            overflow-y: auto;
+            padding: 20px 0;
+            z-index: 999;
+        }
+
+        /* Popup Box */
+
+        .popup-content {
+            background: #f3f3f3;
+            width: 80%;
+            padding: 30px;
+            max-height: 90vh;
+            overflow-y: auto;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .popup-content h2 {
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .popup-content p,
+        .popup-content li {
+            font-size: 20px;
+            line-height: 35px;
+        }
+
+        /* Close Button */
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #4fc37b;
+        }
+
+        /* Apply Button */
+
+        .apply-btn {
+            width: 100%;
+            background: #4fc37b;
+            color: #006881;
+            border: none;
+            padding: 20px;
+            border-radius: 40px;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+
+        .apply-btn:hover {
+            background: white;
+            color: #006881;
+        }
+
+
+        /* --- 10. FOOTER / LETS TALK --- */
+        footer {
+            background: #020617;
+            /* Almost black */
+            color: #64748b;
+            padding: 80px 5% 20px;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 40px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-heading);
+            margin-bottom: 20px;
+            font-family: var(--font-heading);
+        }
+
+        .footer-col p {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #64748b;
+            transition: 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .container {
+            margin-top: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="index.html" class="navbar-brand"><img src="Latest-Logo-TM.png" width="80%"></a></div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#hire">We Hire</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#clients">Our Clients</a></li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#contact" class="btn-header">Let's Talk</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Job Cards -->
+    <div class="container">
+
+
+        <div class="job-card" onclick="openPopup()">
+
+            <div>Freshers, Hyderabad/ Bangalore/ Chennai</div>
+
+            <div>Late Date : ASAP</div>
+
+        </div>
+
+
+        <div class="job-card" onclick="openPopup()">
+
+            <div>Dotnet Developer, Hyderabad</div>
+
+            <div>Late Date : ASAP</div>
+
+        </div>
+
+
+        <div class="job-card" onclick="openPopup()">
+
+            <div>Testing Lead Role on C2H, Bangalore</div>
+
+            <div>Late Date : ASAP</div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- Popup -->
+
+    <div class="popup" id="popup">
+
+        <div class="popup-content">
+
+            <span class="close-btn" onclick="closePopup()">
+                &times;
+            </span>
+
+            <h2>No. of Positions: 25</h2>
+
+            <h2>Type: Full Time</h2>
+
+            <p><b>Qualification Requirements:</b></p>
+
+            <ul>
+                <li>
+                    MSC/B.E/B.Tech/Degree with CSE/IT/ECE from
+                    2021 to 2024 Passouts Candidates with good
+                    academic records.
+                </li>
+            </ul>
+
+            <p><b>Roles & Description:</b></p>
+
+            <ul>
+                <li>
+                    Require Trained Candidates in any Technology.
+                </li>
+            </ul>
+
+            <p><b>Responsibilities:</b></p>
+
+            <ul>
+                <li>As per the Company Norms.</li>
+            </ul>
+
+            <p>
+                <b>Joining:</b> Immediate
+            </p>
+
+            <p>
+                <b>Interview Date, Time & Place:</b>
+                Candidate will get the Mail/SMS
+            </p>
+
+            <button class="apply-btn">
+                Apply Now
+            </button>
+
+        </div>
+
+    </div>
+
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 20px;"><span>Paradesi Solutions</span></div>
+                <p>Excellence in every line of code, and every candidate placed.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Headquarters</h4>
+                <p>Kukatpally, Hyderabad</p>
+                <p>Telangana, India.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><strong>Phone:</strong> +91 9505583679</p>
+                <p><strong>Email:</strong> info@paradesisolutions.com</p>
+                <p><strong>Jobs:</strong> careers@paradesisolutions.com</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <p><a href="#about">About Us</a></p>
+                <p><a href="#services">Services</a></p>
+                <p><a href="#careers">Careers</a></p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            Design & Copyright © 2017-2026 @ <strong>P</strong>aradesi <strong>S</strong>olutions
+            <strong>P</strong>rivate <strong>L</strong>imited, <strong>Hyd</strong>erabad.</p>
+            All Rights Reserved.
+        </div>
+    </footer>
+
+
+    <script>
+
+        function openPopup() {
+
+            document.getElementById("popup").style.display = "flex";
+
+        }
+
+        function closePopup() {
+
+            document.getElementById("popup").style.display = "none";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

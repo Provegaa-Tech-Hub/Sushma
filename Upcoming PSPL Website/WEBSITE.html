@@ -20,7 +20,7 @@
             --bg-header: rgba(15, 23, 42, 0.95);
             /* Semi-transparent dark header */
 
-            --accent: #d4af37;
+            --accent: #99C83E;
             /* Metallic Gold */
             --accent-hover: #f1c40f;
 
@@ -379,7 +379,7 @@
         }
 
         .service-card:hover {
-            border-color: var(--accent);
+            border-color: #99C83E;
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             background: #253249;
@@ -447,6 +447,7 @@
         }
 
         .service-card h3 {
+            color: #006881;
             margin-bottom: 15px;
             font-size: 1.5rem;
         }
@@ -571,7 +572,7 @@
             transition: 0.3s;
         }
 
-         .resume-btn button:hover {
+        .resume-btn button:hover {
             background: #fff;
             color: #006881;
             box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
@@ -866,13 +867,16 @@
         </p>
 
         <div>
-            <button class="btn-outline-dark" onclick="toggleButtons()">Current Openings</button>
+            <button class="btn-outline-dark" onclick="toggleButtons()" style="margin-top: 10px;">Current Openings</button>
             <!-- IT & Non IT Buttons -->
             <div class="job-buttons" id="jobBox">
+                <a href="itjobs.html" target="_blank">
+                    <button>IT Jobs</button>
+                </a>
+                <a href="nonitjobs.html" target="_blank">
+                    <button>Non IT Jobs</button>
+                </a>
 
-                <button>IT Jobs</button>
-
-                <button>Non IT Jobs</button>
 
             </div>
             <div class="resume-btn">
