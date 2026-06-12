@@ -122,7 +122,7 @@
         }
 
         .logo span {
-            color: var(--accent);
+            color: #006881;
         }
 
         nav ul {
@@ -208,13 +208,14 @@
         .btn-hero {
             display: inline-block;
             padding: 15px 40px;
-            background: #99C83E;
+            background: #4fc37b;
             color: #006881;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
             border: none;
             cursor: pointer;
+            border-radius: 40px;
             transition: 0.3s;
         }
 
@@ -335,7 +336,7 @@
         .process-card {
             background: var(--bg-card);
             padding: 30px;
-            border-left: 4px solid var(--accent);
+            border-left: 4px solid #006881;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
         }
@@ -379,7 +380,7 @@
         }
 
         .service-card:hover {
-            border-color: #99C83E;
+            border-color: #006881;
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             background: #253249;
@@ -387,8 +388,11 @@
         }
 
         .abroad-btn {
-            width: 50%;
-            background: #99C83E;
+            width: 324px;
+            margin-top: 15px;
+            margin-left: 125px;
+            border-radius: 40px;
+            background: #18bd5b;
             color: #006881;
             padding: 15px 40px;
             text-transform: uppercase;
@@ -396,7 +400,6 @@
             border: none;
             cursor: pointer;
             font-weight: 700;
-            margin: 15px 0;
         }
 
         .abroad-btn:hover {
@@ -434,7 +437,7 @@
         .close-btn {
             margin-top: 15px;
             padding: 8px 15px;
-            background: #99C83E;
+            background: #18bd5b;
             color: #006881;
             border: none;
             cursor: pointer;
@@ -447,7 +450,6 @@
         }
 
         .service-card h3 {
-            color: #006881;
             margin-bottom: 15px;
             font-size: 1.5rem;
         }
@@ -509,6 +511,7 @@
         }
 
         .btn-outline-dark {
+            border-radius: 40px;
             padding: 15px 30px;
             border: 1px solid var(--text-body);
             color: var(--text-body);
@@ -540,15 +543,17 @@
 
         .job-buttons {
             display: none;
-            justify-content: space-between;
+            gap: 250px;
+            margin-left: 230px;
             align-items: center;
             margin-top: 40px;
             padding: 0 20px;
         }
 
         .job-buttons button {
-            background: #99C83E;
+            background: #4fc37b;
             color: #006881;
+            border-radius: 40px;
             border: none;
             padding: 15px 30px;
             font-size: 18px;
@@ -564,7 +569,8 @@
             border: none;
             padding: 15px 30px;
             cursor: pointer;
-            background: #99C83E;
+            border-radius: 40px;
+            background: #4fc37b;
             color: #006881;
             font-weight: 700;
             text-transform: uppercase;
@@ -825,8 +831,8 @@
             </div>
         </div>
         <div class="row">
-            <button class="abroad-btn open-btn" style="width: 49%;" onclick="openPopup()">
-                Abroard Educattion Support
+            <button class="abroad-btn open-btn" onclick="openPopup()">
+                Abroard Education Support
             </button>
             <button class="abroad-btn open-btn" onclick="openPopup()">
                 Abroard Job Support
