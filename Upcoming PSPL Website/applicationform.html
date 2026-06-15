@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Job Portal Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            margin: 0;
+        }
+
+        /* Header */
+
+        .header {
+            background: #006881;
+            color: white;
+
+            padding: 20px;
+
+            font-size: 28px;
+            font-weight: bold;
+
+            text-align: center;
+        }
+
+        /* Form Box */
+
+        .form-container {
+            width: 90%;
+            max-width: 700px;
+            border-top: 4px solid #18bd5b;
+            background: white;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Labels */
+
+        label {
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Important star */
+
+        .required {
+            color: red;
+        }
+
+        /* Inputs */
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 18px;
+            box-sizing: border-box;
+        }
+
+        /* Submit Button */
+
+        .submit-btn {
+            width: 100%;
+            background: #4fc37b;
+            color: white;
+            border: none;
+            padding: 18px;
+            border-radius: 40px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <div class="header">
+        Job Portal Form
+    </div>
+
+
+    <!-- Form -->
+
+    <div class="form-container">
+
+        <form>
+
+            <label>
+                Full Name
+                <span class="required">*</span>
+            </label>
+
+            <input type="text" required>
+
+
+            <label>
+                Mobile Number
+                <span class="required">*</span>
+            </label>
+
+            <input type="tel" required>
+
+            <label>
+                Email Address
+                <span class="required">*</span>
+            </label>
+            <input type="email" required>
+
+
+            <label>
+                Birth Date
+                <span class="required">*</span>
+            </label>
+
+            <input type="text" required>
+
+
+            <label>
+                Pan/Aadhar Card Number
+                <span class="required">*</span>
+            </label>
+
+            <input type="number" required>
+
+
+
+
+            <label>
+                Looking for job as
+                <span class="required">*</span>
+            </label>
+
+            <select required>
+
+
+                <option value="" disabled selected>
+                    Select Please
+                </option>
+
+                <option>Fresher </option>
+
+                <option>Experienced</option>
+
+                <option>Contract</option>
+
+                <option>FreeLancing</option>
+
+            </select>
+
+            <label>
+                Skills Set / Job Title
+                <span class="required">*</span>
+            </label>
+
+            <textarea rows="1" placeholder="Eg: PHP, HTML, React, Java..." required>
+</textarea>
+
+
+            <label>
+                Current Organization
+            </label>
+
+            <input type="text">
+
+
+            <label>
+                Current Annual Salary
+                <span class="required">*</span>
+            </label>
+
+            <input type="text">
+
+
+            <label>
+                Expected Annual Salary
+                <span class="required">*</span>
+            </label>
+
+            <input type="text">
+
+
+            <label>
+                Notice Period
+            </label>
+
+            <select required>
+
+
+                <option value="" disabled selected>
+                    Select Please
+                </option>
+
+                <option>Immediate </option>
+
+                <option>15 days</option>
+
+                <option>1 month</option>
+
+                <option>> 3 month</option>
+
+            </select>
+
+
+
+            <label>
+                Present Location
+                <span class="required">*</span>
+            </label>
+
+            <input type="text" required>
+
+
+            <label>
+                Willing To Relocate
+            </label>
+
+            <select>
+
+                <option>Yes</option>
+
+                <option>No</option>
+
+            </select>
+
+
+            <label>
+                Upload Resume
+                <span class="required">*</span>
+            </label>
+
+            <input type="file" required>
+
+
+            <button class="submit-btn">
+                Submit Application
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
