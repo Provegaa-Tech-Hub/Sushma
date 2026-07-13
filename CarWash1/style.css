@@ -1,0 +1,32 @@
+:root{
+  --accent:#1e90ff;
+  --card-bg:#fff;
+  --muted:#666;
+  --bg:#f5f7fb;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#222}
+header{background:#fff;padding:10px 18px;border-bottom:1px solid #e6e9ef;display:flex;align-items:center}
+header h1{margin:0;font-size:20px}
+nav{display:flex;align-items:center;width:100%}
+nav button{margin:0 6px;padding:8px 10px;border:0;background:transparent;cursor:pointer;border-radius:6px}
+nav button:hover{background:#f0f6ff}
+nav .spacer{flex:1}
+#userDisplay{margin-right:10px;color:var(--muted)}
+#main{padding:18px;max-width:1100px;margin:18px auto}
+.card{background:var(--card-bg);padding:14px;border-radius:10px;box-shadow:0 1px 3px rgba(27,40,60,0.06);margin-bottom:12px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.row{display:flex;gap:8px;align-items:center}
+input,textarea,select{width:100%;padding:8px;border:1px solid #e2e6ef;border-radius:6px;margin:6px 0}
+textarea{min-height:80px;resize:vertical}
+h2{margin-top:0}
+ul{padding-left:18px;margin:6px 0}
+#carList .carItem, #historyList .bookingItem, #reviewsList .reviewItem{padding:8px;border-bottom:1px dashed #eee}
+.small{font-size:13px;color:var(--muted)}
+footer{padding:12px;text-align:center;color:var(--muted)}
+button[type="submit"],button#registerSubmit{background:var(--accent);color:#fff;border:0;padding:8px 12px;border-radius:6px;cursor:pointer}
+button[disabled]{opacity:.6;cursor:not-allowed}
+@media (max-width:900px){
+  .grid-3{grid-template-columns:1fr}
+  nav{flex-wrap:wrap}
+}

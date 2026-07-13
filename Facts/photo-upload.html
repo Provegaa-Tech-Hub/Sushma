@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Passport Photo Upload</title>
+
+<link rel="stylesheet" href="css/photo-upload.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="upload-box">
+
+<h1>
+<i class="fa-solid fa-id-card"></i>
+Passport Photo Upload
+</h1>
+
+<p class="subtitle">
+
+Upload a recent passport-size photograph
+
+(PNG, JPG, JPEG | Max 2 MB)
+
+</p>
+
+<form id="photoForm">
+
+<div class="upload-area">
+
+<img
+id="previewImage"
+src="https://via.placeholder.com/180x220?text=Preview"
+alt="Preview">
+
+<input
+type="file"
+id="photo"
+accept=".png,.jpg,.jpeg">
+
+<label
+for="photo"
+class="upload-btn">
+
+Upload Photo
+
+</label>
+
+</div>
+
+<div class="file-info">
+
+Supported Formats:
+<strong>PNG, JPG, JPEG</strong>
+
+</div>
+
+<div class="buttons">
+
+<button
+type="button"
+id="saveBtn">
+
+Save
+
+</button>
+
+<button
+type="submit">
+
+Next
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+<script src="js/photo-upload.js"></script>
+
+</body>
+
+</html>

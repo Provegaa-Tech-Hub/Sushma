@@ -1,0 +1,444 @@
+/* ===================================
+   CAREER PATH - FRESHER MOCK TEST
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    color:#333;
+}
+
+/* =====================
+   Container
+===================== */
+
+.container{
+    width:95%;
+    max-width:1400px;
+    margin:30px auto;
+}
+
+/* =====================
+   Header
+===================== */
+
+.header{
+    background:#2563eb;
+    color:#fff;
+    padding:25px;
+    border-radius:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+
+.header h1{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.header p{
+    opacity:.9;
+}
+
+.timer-box{
+    background:#fff;
+    color:#2563eb;
+    padding:15px 25px;
+    border-radius:10px;
+    text-align:center;
+    min-width:170px;
+}
+
+.timer-box span{
+    display:block;
+    margin-bottom:10px;
+    font-size:14px;
+}
+
+.timer-box h2{
+    font-size:34px;
+}
+
+/* =====================
+   Candidate Card
+===================== */
+
+.candidate-card{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-bottom:25px;
+}
+
+.candidate-item{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.candidate-item label{
+    display:block;
+    color:#777;
+    font-size:14px;
+    margin-bottom:8px;
+}
+
+.candidate-item span{
+    font-size:20px;
+    font-weight:600;
+    color:#2563eb;
+}
+
+/* =====================
+   Statistics
+===================== */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-bottom:25px;
+}
+
+.stat-card{
+    background:#fff;
+    border-radius:10px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.stat-card h3{
+    font-size:32px;
+    color:#2563eb;
+    margin-bottom:8px;
+}
+
+.stat-card p{
+    color:#666;
+}
+
+/* =====================
+   Progress
+===================== */
+
+.progress-section{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:25px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.progress-top{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:12px;
+    font-weight:600;
+}
+
+.progress-bar{
+    height:12px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+#progressFill{
+    width:2%;
+    height:100%;
+    background:#2563eb;
+    transition:.4s;
+}
+
+/* =====================
+   Question Card
+===================== */
+
+.question-card{
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    margin-bottom:25px;
+}
+
+.question-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+#questionCategory{
+    background:#2563eb;
+    color:#fff;
+    padding:8px 18px;
+    border-radius:25px;
+    font-size:14px;
+}
+
+#questionText{
+    margin-bottom:25px;
+    line-height:1.7;
+}
+
+/* =====================
+   Options
+===================== */
+
+.option{
+    display:flex;
+    align-items:center;
+    background:#f8f9fc;
+    border:2px solid transparent;
+    padding:16px;
+    margin-bottom:15px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.option:hover{
+    border-color:#2563eb;
+    background:#eef5ff;
+}
+
+.option input{
+    margin-right:15px;
+    transform:scale(1.2);
+}
+
+/* =====================
+   Navigation
+===================== */
+
+.navigation{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:30px;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.navigation button{
+    flex:1;
+    min-width:180px;
+}
+
+/* =====================
+   Buttons
+===================== */
+
+button{
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    padding:14px 24px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+#reviewBtn{
+    background:#f59e0b;
+}
+
+#reviewBtn:hover{
+    background:#d97706;
+}
+
+.submit-btn{
+    background:#16a34a;
+}
+
+.submit-btn:hover{
+    background:#15803d;
+}
+
+.save-btn{
+    background:#7c3aed;
+}
+
+.save-btn:hover{
+    background:#6d28d9;
+}
+
+/* =====================
+   Question Palette
+===================== */
+
+.palette{
+    background:#fff;
+    border-radius:10px;
+    padding:25px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    margin-bottom:30px;
+}
+
+.palette h2{
+    margin-bottom:20px;
+}
+
+#questionPalette{
+    display:grid;
+    grid-template-columns:repeat(10,1fr);
+    gap:12px;
+}
+
+.palette-btn{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:#e5e7eb;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.palette-btn:hover{
+    transform:scale(1.08);
+}
+
+.palette-btn.current{
+    background:#2563eb;
+    color:#fff;
+}
+
+.palette-btn.answered{
+    background:#16a34a;
+    color:#fff;
+}
+
+.palette-btn.review{
+    background:#f59e0b;
+    color:#fff;
+}
+
+/* =====================
+   Footer Buttons
+===================== */
+
+.footer-buttons{
+    display:flex;
+    justify-content:flex-end;
+    gap:20px;
+    margin-bottom:40px;
+}
+
+/* =====================
+   Responsive
+===================== */
+
+@media(max-width:1200px){
+
+.candidate-card,
+.stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+#questionPalette{
+
+grid-template-columns:repeat(8,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.header{
+
+flex-direction:column;
+text-align:center;
+gap:20px;
+
+}
+
+.candidate-card,
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+.navigation{
+
+flex-direction:column;
+
+}
+
+.footer-buttons{
+
+flex-direction:column;
+
+}
+
+.footer-buttons button{
+
+width:100%;
+
+}
+
+#questionPalette{
+
+grid-template-columns:repeat(5,1fr);
+
+}
+
+.question-header{
+
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.container{
+
+width:98%;
+
+}
+
+#questionPalette{
+
+grid-template-columns:repeat(4,1fr);
+
+}
+
+.palette-btn{
+
+width:40px;
+height:40px;
+
+}
+
+.timer-box{
+
+width:100%;
+
+}
+
+}

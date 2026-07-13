@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Experience Details</title>
+
+<link rel="stylesheet" href="css/experience.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="experience-box">
+
+<h1>
+<i class="fa-solid fa-briefcase"></i>
+Experience Details
+</h1>
+
+<div class="radio-group">
+
+<label>
+<input type="radio" name="type" value="fresher" checked>
+Fresher
+</label>
+
+<label>
+<input type="radio" name="type" value="experienced">
+Experienced
+</label>
+
+</div>
+
+<form id="experienceForm">
+
+<!-- Fresher -->
+
+<div id="fresherSection">
+
+<div class="input-group">
+
+<label>Internship</label>
+
+<input
+type="text"
+id="internship"
+placeholder="Internship Company">
+
+</div>
+
+<div class="input-group">
+
+<label>Projects</label>
+
+<textarea
+id="projects"
+rows="5"
+placeholder="Project Details"></textarea>
+
+</div>
+
+</div>
+
+<!-- Experienced -->
+
+<div id="experiencedSection">
+
+<div class="row">
+
+<div class="input-group">
+
+<label>Company Name</label>
+
+<input type="text" id="company">
+
+</div>
+
+<div class="input-group">
+
+<label>Designation</label>
+
+<input type="text" id="designation">
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-group">
+
+<label>Total Experience</label>
+
+<input
+type="text"
+id="experience"
+placeholder="2 Years">
+
+</div>
+
+<div class="input-group">
+
+<label>Current Salary</label>
+
+<input
+type="number"
+id="currentSalary">
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-group">
+
+<label>Expected Salary</label>
+
+<input
+type="number"
+id="expectedSalary">
+
+</div>
+
+<div class="input-group">
+
+<label>Notice Period</label>
+
+<select id="notice">
+
+<option>Immediate</option>
+
+<option>15 Days</option>
+
+<option>30 Days</option>
+
+<option>60 Days</option>
+
+<option>90 Days</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="input-group">
+
+<label>Skills</label>
+
+<textarea
+id="skills"
+rows="5"
+placeholder="Manual Testing, Selenium, SQL..."></textarea>
+
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button
+type="button"
+id="saveBtn">
+
+Save
+
+</button>
+
+<button
+type="submit">
+
+Next
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+<script src="js/experience.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Path Builder - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Career Path Builder</h1>
+            <p class="tagline">Build Your Future Career</p>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            
+            <div class="social-login">
+                <p>Or login with:</p>
+                <div class="social-buttons">
+                    <button class="social-btn linkedin" onclick="loginWithLinkedIn()">
+                        <span>LinkedIn</span>
+                    </button>
+                    <button class="social-btn facebook" onclick="loginWithFacebook()">
+                        <span>Facebook</span>
+                    </button>
+                    <button class="social-btn twitter" onclick="loginWithTwitter()">
+                        <span>Twitter</span>
+                    </button>
+                    <button class="social-btn instagram" onclick="loginWithInstagram()">
+                        <span>Instagram</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="signup-link">
+                <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

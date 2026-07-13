@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Career Path | My Profile</title>
+
+    <link rel="stylesheet"
+          href="css/profile.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ===========================
+         Profile Header
+    ============================ -->
+
+    <div class="profile-header">
+
+        <img id="profilePhoto"
+             src="images/profile.png"
+             alt="Profile">
+
+        <div class="profile-info">
+
+            <h1 id="userName">Manga</h1>
+
+            <p id="userRole">
+                Software Tester
+            </p>
+
+            <button id="editProfileBtn">
+
+                <i class="fa-solid fa-user-pen"></i>
+
+                Edit Profile
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ===========================
+         Personal Details
+    ============================ -->
+
+    <div class="card">
+
+        <h2>
+
+            <i class="fa-solid fa-address-card"></i>
+
+            Personal Information
+
+        </h2>
+
+        <div class="grid">
+
+            <div>
+
+                <label>Full Name</label>
+
+                <p id="fullName">-</p>
+
+            </div>
+
+            <div>
+
+                <label>Email</label>
+
+                <p id="email">-</p>
+
+            </div>
+
+            <div>
+
+                <label>Phone</label>
+
+                <p id="phone">-</p>
+
+            </div>
+
+            <div>
+
+                <label>Current City</label>
+
+                <p id="city">-</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ===========================
+         Education
+    ============================ -->
+
+    <div class="card">
+
+        <h2>
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            Education
+
+        </h2>
+
+        <div class="grid">
+
+            <div>
+
+                <label>Qualification</label>
+
+                <p id="qualification">-</p>
+
+            </div>
+
+            <div>
+
+                <label>Degree</label>
+
+                <p id="degree">-</p>
+
+            </div>
+
+            <div>
+
+                <label>Branch</label>
+
+                <p id="branch">-</p>
+
+            </div>
+
+            <div>
+
+                <label>Passing Year</label>
+
+                <p id="passingYear">-</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ===========================
+         Experience
+    ============================ -->
+
+    <div class="card">
+
+        <h2>
+
+            <i class="fa-solid fa-briefcase"></i>
+
+            Experience
+
+        </h2>
+
+        <div class="grid">
+
+            <div>
+
+                <label>Status</label>
+
+                <p id="experience">Fresher</p>
+
+            </div>
+
+            <div>
+
+                <label>Skills</label>
+
+                <p id="skills">-</p>
+
+            </div>
+
+            <div>
+
+                <label>Expected Salary</label>
+
+                <p id="salary">-</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ===========================
+         Resume
+    ============================ -->
+
+    <div class="card">
+
+        <h2>
+
+            <i class="fa-solid fa-file"></i>
+
+            Resume
+
+        </h2>
+
+        <p id="resumeName">
+
+            Resume.pdf
+
+        </p>
+
+        <button id="downloadResume">
+
+            <i class="fa-solid fa-download"></i>
+
+            Download Resume
+
+        </button>
+
+    </div>
+
+    <!-- ===========================
+         Mock Test
+    ============================ -->
+
+    <div class="card">
+
+        <h2>
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            Mock Test Score
+
+        </h2>
+
+        <div class="score-grid">
+
+            <div>
+
+                <h3 id="score">
+
+                    80%
+
+                </h3>
+
+                <p>Score</p>
+
+            </div>
+
+            <div>
+
+                <h3 id="grade">
+
+                    A
+
+                </h3>
+
+                <p>Grade</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ===========================
+         Applied Jobs
+    ============================ -->
+
+    <div class="card">
+
+        <h2>
+
+            <i class="fa-solid fa-briefcase"></i>
+
+            Applied Jobs
+
+        </h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Company</th>
+
+                    <th>Job</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="appliedJobs">
+
+                <tr>
+
+                    <td>Amazon</td>
+
+                    <td>QA Engineer</td>
+
+                    <td class="status applied">
+
+                        Applied
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!-- ===========================
+         Saved Jobs
+    ============================ -->
+
+    <div class="card">
+
+        <h2>
+
+            <i class="fa-solid fa-bookmark"></i>
+
+            Saved Jobs
+
+        </h2>
+
+        <ul id="savedJobs">
+
+            <li>Software Tester</li>
+
+            <li>QA Engineer</li>
+
+            <li>Business Analyst</li>
+
+        </ul>
+
+    </div>
+
+    <!-- ===========================
+         Certificates
+    ============================ -->
+
+    <div class="card">
+
+        <h2>
+
+            <i class="fa-solid fa-certificate"></i>
+
+            Certificates
+
+        </h2>
+
+        <p>
+
+            Fresher Mock Test Certificate
+
+        </p>
+
+        <button id="viewCertificate">
+
+            <i class="fa-solid fa-eye"></i>
+
+            View Certificate
+
+        </button>
+
+    </div>
+
+    <!-- ===========================
+         Footer Buttons
+    ============================ -->
+
+    <div class="buttons">
+
+        <button id="editBtn">
+
+            <i class="fa-solid fa-user-pen"></i>
+
+            Edit Profile
+
+        </button>
+
+        <button id="logoutBtn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="js/profile.js"></script>
+
+</body>
+
+</html>

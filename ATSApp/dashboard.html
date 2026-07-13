@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Career Path Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>CPB</h2>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="profile.html">My Profile</a></li>
+                    <li><a href="jobs.html">Search Jobs</a></li>
+                    <li><a href="mock-exam.html">Mock Exams</a></li>
+                    <li><a href="apply.html">Applications</a></li>
+                    <li><a href="scorecard.html">Score Card</a></li>
+                    <li><a href="index.html" onclick="logout()">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="user-info">
+                    <span id="userName">Welcome, User</span>
+                    <img src="https://via.placeholder.com/40" alt="Profile" class="profile-pic">
+                </div>
+            </header>
+            
+            <section class="content">
+                <h1>Dashboard</h1>
+                
+                <div class="dashboard-grid">
+                    <!-- Profile Completion -->
+                    <div class="dashboard-card">
+                        <h3>Profile Completion</h3>
+                        <div class="progress-bar">
+                            <div class="progress" id="profileProgress" style="width: 45%"></div>
+                        </div>
+                        <p>45% Complete</p>
+                        <a href="profile.html" class="btn btn-small">Complete Profile</a>
+                    </div>
+                    
+                    <!-- Jobs Available -->
+                    <div class="dashboard-card">
+                        <h3>Jobs Available</h3>
+                        <p class="big-number">1,245</p>
+                        <a href="jobs.html" class="btn btn-small">Browse Jobs</a>
+                    </div>
+                    
+                    <!-- Mock Exams -->
+                    <div class="dashboard-card">
+                        <h3>Mock Exams</h3>
+                        <p class="big-number">12</p>
+                        <a href="mock-exam.html" class="btn btn-small">Take Exam</a>
+                    </div>
+                    
+                    <!-- Applications -->
+                    <div class="dashboard-card">
+                        <h3>Applications</h3>
+                        <p class="big-number">3</p>
+                        <a href="apply.html" class="btn btn-small">View All</a>
+                    </div>
+                </div>
+                
+                <!-- Recent Activity -->
+                <div class="section-box">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <span class="activity-icon">📝</span>
+                            <div class="activity-details">
+                                <p>Completed Mock Exam - Java Basics</p>
+                                <small>2 hours ago</small>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-icon">🔗</span>
+                            <div class="activity-details">
+                                <p>Applied to Senior Developer role</p>
+                                <small>1 day ago</small>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-icon">⭐</span>
+                            <div class="activity-details">
+                                <p>Profile Updated</p>
+                                <small>3 days ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

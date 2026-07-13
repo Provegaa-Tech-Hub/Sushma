@@ -24,7 +24,7 @@
             /* Metallic Gold */
             --accent-hover: #f1c40f;
 
-            --text-heading: #f8fafc;
+            --text-heading: #006881;
             /* Almost White */
             --text-body: #94a3b8;
             /* Muted Silver/Grey */
@@ -61,17 +61,21 @@
         /* --- 2. TYPOGRAPHY --- */
         h1,
         h2,
-        h3,
         h4 {
             font-family: var(--font-heading);
             color: var(--text-heading);
             font-weight: 700;
         }
 
+        h3 {
+            font-family: var(--font-heading);
+            color: white;
+            text-align: right;
+        }
+
         .section-title {
             font-size: 2.5rem;
             text-align: center;
-            margin-bottom: 1rem;
             position: relative;
             padding-bottom: 20px;
             display: inline-block;
@@ -85,15 +89,15 @@
             width: 60px;
             height: 3px;
             background: #006881;
-            margin: 15px auto 0;
+            margin: 0 auto 0;
         }
 
         .section-subtitle {
             text-align: center;
-            font-size: 1.1rem;
+            font-size: 22px;
             color: var(--text-body);
             max-width: 600px;
-            margin: 0 auto 50px auto;
+            margin: 0 auto 20px auto;
             opacity: 0.8;
         }
 
@@ -106,7 +110,7 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            padding: 15px 5%;
+            padding: 5px 20px 0px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -200,7 +204,7 @@
 
         .hero p {
             font-size: 1.2rem;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
             font-weight: 300;
             color: #cbd5e1;
         }
@@ -216,20 +220,37 @@
             border: none;
             cursor: pointer;
             border-radius: 40px;
-            transition: 0.3s;
+            transition: transform 0.3s;
+            transform-style: preserve-3d;
+            transform-origin: 50% 0;
+        }
+
+        .btn-hero::before {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 69%;
+            height: 54%;
+            background: #006881;
+            border-radius: 100px;
+            color: #ffffff;
+            padding: 13px 25px;
+            content: attr(data-hover);
+            transform: rotateX(-90deg);
+            transform-origin: 50% 0;
         }
 
         .btn-hero:hover {
-            background: #fff;
-            color: #006881;
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+            transform: rotateX(90deg) translateY(-22px);
+
         }
 
         /* --- 5. ABOUT US --- */
         .section-pad {
-            padding: 80px 10%;
+            padding: 15px 10%;
             position: relative;
         }
+
 
         .about-grid {
             display: grid;
@@ -241,7 +262,6 @@
         .about-image img {
             width: 110%;
             margin-left: -57px;
-            margin-top: 20px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 20px 20px 0px rgba(30, 41, 59, 0.5);
             /* Subtle shadow */
@@ -249,6 +269,7 @@
 
         .about-text p {
             margin-bottom: 20px;
+            text-align: right;
         }
 
         /* --- 6. WE HIRE (Dark Cards + STARS ANIMATION) --- */
@@ -391,7 +412,7 @@
 
         .abroad-btn {
             width: 324px;
-            margin-top: 15px;
+            margin-top: 60px;
             margin-left: 125px;
             border-radius: 40px;
             background: #18bd5b;
@@ -418,7 +439,8 @@
             cursor: pointer;
             font-weight: 700;
         }
-        .abroad-btn-support:hover{
+
+        .abroad-btn-support:hover {
             color: #006881;
             background: white;
         }
@@ -445,6 +467,7 @@
 
         /* Popup Box */
         .popup-content {
+            position: relative;
             background: white;
             padding: 20px;
             width: 300px;
@@ -470,10 +493,15 @@
             color: var(--accent);
             margin-bottom: 20px;
         }
+         .projects p{
+            font-size: 16px;
+         }
+       
 
         .service-card h3 {
             margin-bottom: 15px;
             font-size: 1.5rem;
+            text-align: unset;
         }
 
         .service-card ul {
@@ -566,13 +594,23 @@
         .job-buttons {
             display: none;
             gap: 250px;
-            margin-left: 230px;
+            padding: 0 210px;
             align-items: center;
             margin-top: 40px;
-            padding: 0 20px;
         }
 
-        .job-buttons button {
+        .job-buttons2 {
+            background: #4fc37b;
+            color: #006881;
+            border-radius: 40px;
+            border: none;
+            padding: 16px 50px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .job-buttons1 {
             background: #4fc37b;
             color: #006881;
             border-radius: 40px;
@@ -582,6 +620,9 @@
             font-weight: bold;
             cursor: pointer;
         }
+        .row{
+            margin-bottom: 15px;
+        }
 
         .resume-btn {
             margin-top: 40px;
@@ -589,7 +630,7 @@
 
         .resume-btn button {
             border: none;
-            padding: 15px 30px;
+            padding: 15px 35px;
             cursor: pointer;
             border-radius: 40px;
             background: #4fc37b;
@@ -606,29 +647,56 @@
             box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
         }
 
+        .close-btn1 {
+            position: absolute;
+            top: -6px;
+            right: 15px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #4fc37b;
+        }
+
         /* --- 10. FOOTER / LETS TALK --- */
         footer {
-            background: #020617;
+            background: #FDFFFF;
             /* Almost black */
             color: #64748b;
-            padding: 80px 5% 20px;
+            padding: 34px 5% 20px;
             font-size: 0.9rem;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .career-cta-highlight {
+            font-size: 12px;
+            font-weight: 700;
+            color: #495a6d;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            border: 1px solid white;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(34, 211, 238, 0.08));
+            padding: 16px 24px;
+            border-radius: 12px;
+            display: inline-block;
+        }
+
+        .career-cta-highlight a:hover {
+            color: #18bd5b;
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 40px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            padding-bottom: 40px;
-            margin-bottom: 20px;
+            border-bottom: 1px solid rgb(30 29 29 / 5%);
+            padding-bottom: 4px;
+
         }
 
         .footer-col h4 {
             color: var(--text-heading);
             margin-bottom: 20px;
             font-family: var(--font-heading);
+            margin-top: 17px;
         }
 
         .footer-col p {
@@ -728,7 +796,10 @@
             <p>We help organizations build strong teams, streamline HR operations, and manage payroll with confidence.
                 As a trusted HR Consultancy & Payroll Management partner, we deliver practical, compliant, and
                 people‑centric solutions tailored to your business needs.</p>
-            <a href="#contact" class="btn-hero">Reach Us</a>
+            <a href="#contact" class="btn-hero" data-hover="Reach Us">
+
+                Reach Us
+            </a>
         </div>
     </section>
 
@@ -746,7 +817,7 @@
 
         <div class="about-grid">
             <div class="about-image">
-                <img src="About Us 1.jpg" style="filter: brightness(0.8) contrast(1.1);" alt="Meeting">
+                <img src="About Us 1.jpg" style="filter: brightness(0.8) contrast(1.1) ;  height: 470px;" alt="Meeting">
             </div>
             <div class="about-text">
                 <h3>Our Mission & Vision</h3>
@@ -761,8 +832,7 @@
 
                     We envision a future where businesses of all sizes operate with confidence in their HR processes,
                     supported by transparent systems, strong compliance practices, and employee-centric solutions.</p>
-                <p
-                    style="color: var(--accent); font-weight: 600; border-left: 3px solid var(--accent); padding-left: 15px;">
+                <p style="color: var(--accent); font-weight: 600; border-left: 3px solid var(--accent); ">
                     "To mutually build a globally respected Human Capital Solutions & Payroll Management Company that
                     adds tangible value to client organizations."
                 </p>
@@ -805,7 +875,8 @@
         <br>
         <div class="Hire">
             <div class="about-image">
-                <img src="how-we-work.png" style="filter: brightness(0.8) contrast(1.1);" alt="Meeting">
+                <img src="how-we-work.png" style="filter: brightness(0.8) contrast(1.1); margin-top: 30px;"
+                    alt="Meeting">
             </div>
         </div>
         </br>
@@ -832,7 +903,7 @@
                 <p>It is conducted in a common place or within educational institutes to provide jobs to students
                     pursuing or in the stage of completing the Programme/ Studies.</p>
             </div>
-            <div class="service-card">
+            <div class="service-card projects">
                 <div class="icon-box">✦</div>
                 <h3>Academic Projects</h3>
                 <p>We supports the students in their Mini & Major Projects in all Domains & Technologies for Graduates &
@@ -853,21 +924,29 @@
             </div>
         </div>
         <div class="row">
-            <button class="abroad-btn-support open-btn"  onclick="openPopup()">
+            <a class="abroad-btn-support open-btn" href="https://www.provegaa.com/" target="_blank">
                 Abroard Education Support
-            </button>
+            </a>
             <button class="abroad-btn open-btn" onclick="openPopup()">
                 Abroard Job Support
             </button>
 
             <div class="popup" id="popup">
 
+
                 <div class="popup-content">
+
+                    <span class="close-btn1" onclick="closePopup()">
+                        &times;
+                    </span>
                     <h2>Thank you for your support</h2>
                     <p>Please share your details.</p>
 
-                    <button class="close-btn" onclick="closePopup()">
-                        Close
+                    <button class="close-btn">
+                        <a href="aboardjobappli.html">
+                            Apply Now
+                        </a>
+
                     </button>
                 </div>
 
@@ -900,18 +979,25 @@
             <!-- IT & Non IT Buttons -->
             <div class="job-buttons" id="jobBox">
                 <a href="itjobs.html" target="_blank">
-                    <button>IT Jobs</button>
+                    <button class="job-buttons2">IT Jobs</button>
                 </a>
                 <a href="nonitjobs.html" target="_blank">
-                    <button>Non IT Jobs</button>
+                    <button class="job-buttons1">Non IT Jobs</button>
                 </a>
 
 
             </div>
-            <div class="resume-btn">
-                <button href="#" onclick="alert('Upload Resume Portal - Coming Soon')">Upload
-                    Resume</button>
+            <div style="margin-top: 20px;">
+                <a class="resume-btn" href="applicationform.html">
+                    <button>Upload
+                        Resume</button>
+                </a>
             </div>
+
+
+            <p class="career-cta-highlight">Grow Your Career With Us: 📩 Send your Updated Profile to:
+                <a href="mailto:careers@provegaa.com">careers@paradesisolutions.com</a> 📩
+            </p>
         </div>
 
     </section>
@@ -919,7 +1005,9 @@
     <footer id="contact">
         <div class="footer-grid">
             <div class="footer-col">
-                <div class="logo" style="margin-bottom: 20px;"><span>Paradesi Solutions</span></div>
+                <div>
+                    <img src="Screenshot 2026-06-17 165311.png" />
+                </div>
                 <p>Excellence in every line of code, and every candidate placed.</p>
             </div>
 
@@ -933,7 +1021,7 @@
                 <h4>Contact</h4>
                 <p><strong>Phone:</strong> +91 9505583679</p>
                 <p><strong>Email:</strong> info@paradesisolutions.com</p>
-                <p><strong>Jobs:</strong> careers@paradesisolutions.com</p>
+
             </div>
 
             <div class="footer-col">

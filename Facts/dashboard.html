@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Career Path Dashboard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="sidebar">
+
+        <div class="logo">
+            <h2>Career Path</h2>
+        </div>
+
+        <ul>
+
+            <li class="active navmenu">
+                <i class="fa fa-house"></i>
+                Dashboard
+            </li>
+
+            <li class="navmenu" data-link="education">
+                <i class="fa fa-user-graduate"></i>
+                Education
+            </li>
+
+            <li class="navmenu" data-link="experience">
+                <i class="fa fa-briefcase"></i>
+                Experience
+            </li>
+
+            <li class="navmenu">
+                <i class="fa fa-sliders"></i>
+                Preferences
+            </li>
+
+            <li class="navmenu" data-link="career-objective">
+                <i class="fa fa-bullseye"></i>
+                Career Objectives
+            </li>
+
+            <li class="navmenu">
+                <i class="fa fa-file"></i>
+                Resume
+            </li>
+
+            <li class="navmenu">
+                <i class="fa fa-image"></i>
+                Photo
+            </li>
+
+            <li class="navmenu">
+                <i class="fa fa-book-open"></i>
+                Mock Test
+            </li>
+
+            <li class="navmenu">
+                <i class="fa fa-briefcase"></i>
+                Job Search
+            </li>
+
+            <li class="navmenu" data-link="login">
+                <i class="fa fa-right-from-bracket"></i>
+                Logout
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="main">
+
+        <div class="topbar">
+
+            <h1>Welcome, Manga 👋</h1>
+
+            <div class="profile">
+
+                <img src="https://i.pravatar.cc/60" alt="profile">
+
+            </div>
+
+        </div>
+
+
+        <div class="progress-card" data-link="profile.html">
+
+            <h2>Profile Completion</h2>
+
+            <div class="progress">
+
+                <div class="progress-bar" id="progressBar">
+                    70%
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="status-grid">
+
+            <div class="status complete">
+                ✔ Education
+            </div>
+
+            <div class="status complete">
+                ✔ Experience
+            </div>
+
+            <div class="status complete">
+                ✔ Preferences
+            </div>
+
+            <div class="status complete">
+                ✔ Career Objectives
+            </div>
+
+            <div class="status pending">
+                Resume Upload
+            </div>
+
+            <div class="status pending">
+                Photo Upload
+            </div>
+
+            <div class="status pending">
+                Mock Test
+            </div>
+
+            <div class="status pending">
+                Job Search
+            </div>
+
+        </div>
+
+
+        <h2 class="title">Dashboard Modules</h2>
+
+        <div class="cards">
+
+            <div class="card" data-link="education">
+                <i class="fa fa-user-graduate"></i>
+                <h3>Education</h3>
+            </div>
+
+            <div class="card" data-link="experience">
+                <i class="fa fa-briefcase"></i>
+                <h3>Experience</h3>
+            </div>
+
+            <div class="card" data-link="resume-upload">
+                <i class="fa fa-file"></i>
+                <h3>Resume</h3>
+            </div>
+
+            <div class="card" data-link="mock-test">
+                <i class="fa fa-book-open"></i>
+                <h3>Mock Exam</h3>
+            </div>
+
+            <div class="card" data-link="jobs">
+                <i class="fa fa-search"></i>
+                <h3>Job Search</h3>
+            </div>
+
+            <div class="card" data-link="applied-jobs">
+                <i class="fa fa-paper-plane"></i>
+                <h3>Applied Jobs</h3>
+            </div>
+
+            <div class="card" data-link="saved-jobs">
+                <i class="fa fa-heart"></i>
+                <h3>Saved Jobs</h3>
+            </div>
+
+            <div class="card" data-link="score-card">
+                <i class="fa fa-award"></i>
+                <h3>Score Card</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

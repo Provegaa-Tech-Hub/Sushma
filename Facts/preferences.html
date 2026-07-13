@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Job Preferences</title>
+
+<link rel="stylesheet" href="css/preferences.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="form-box">
+
+<h1>
+<i class="fa-solid fa-sliders"></i>
+Job Preferences
+</h1>
+
+<form id="preferenceForm">
+
+<div class="row">
+
+<div class="input-group">
+
+<label>Preferred Role</label>
+
+<select id="role">
+
+<option value="">Select Role</option>
+
+<option>Software Tester</option>
+
+<option>Manual Tester</option>
+
+<option>Automation Tester</option>
+
+<option>Business Analyst</option>
+
+<option>Java Developer</option>
+
+<option>Frontend Developer</option>
+
+<option>Backend Developer</option>
+
+<option>HR Executive</option>
+
+<option>Content Moderator</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>Preferred Location</label>
+
+<input
+type="text"
+id="location"
+placeholder="Hyderabad">
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-group">
+
+<label>Expected Salary (LPA)</label>
+
+<input
+type="number"
+id="salary"
+placeholder="5">
+
+</div>
+
+<div class="input-group">
+
+<label>Work Mode</label>
+
+<select id="workmode">
+
+<option>Remote</option>
+
+<option>Hybrid</option>
+
+<option>Office</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-group">
+
+<label>Employment Type</label>
+
+<select id="employment">
+
+<option>Full Time</option>
+
+<option>Part Time</option>
+
+<option>Internship</option>
+
+<option>Contract</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>Preferred Shift</label>
+
+<select id="shift">
+
+<option>Day</option>
+
+<option>Night</option>
+
+<option>Flexible</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button
+type="button"
+id="saveBtn">
+
+Save
+
+</button>
+
+<button
+type="submit">
+
+Next
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+<script src="js/preferences.js"></script>
+
+</body>
+</html>

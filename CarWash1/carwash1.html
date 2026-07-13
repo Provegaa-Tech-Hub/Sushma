@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CarWash App - Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>CarWash</h1>
+    <nav id="nav">
+      <button data-view="dashboard">Dashboard</button>
+      <button data-view="cars">My Vehicles</button>
+      <button data-view="services">Services</button>
+      <button data-view="booking">Book</button>
+      <button data-view="history">Booking History</button>
+      <button data-view="membership">Membership</button>
+      <button data-view="offers">Offers</button>
+      <button data-view="reviews">Ratings</button>
+      <button data-view="admin" id="adminBtn" style="display:none">Admin</button>
+      <div class="spacer"></div>
+      <span id="userDisplay"></span>
+      <button id="authBtn">Login / Register</button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Auth / Profile -->
+    <section id="auth" class="view">
+      <div class="card">
+        <h2 id="authTitle">Login</h2>
+        <form id="authForm">
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="password" id="password" placeholder="Password" required />
+          <div class="row">
+            <button type="submit" id="authSubmit">Login</button>
+            <button type="button" id="toRegister">Register</button>
+          </div>
+        </form>
+
+        <div id="forgotWrap">
+          <button id="forgotBtn">Forgot Password</button>
+        </div>
+
+        <div id="registerForm" style="display:none">
+          <h3>Register</h3>
+          <input id="regName" placeholder="Full name" />
+          <input id="regEmail" placeholder="Email" />
+          <input id="regPassword" placeholder="Password" />
+          <button id="registerSubmit">Create Account</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="view" style="display:none">
+      <h2>Dashboard</h2>
+      <div class="grid-3">
+        <div class="card" id="upcomingCard">
+          <h3>Upcoming Bookings</h3>
+          <ul id="upcomingList"></ul>
+        </div>
+        <div class="card" id="completedCard">
+          <h3>Completed Washes</h3>
+          <ul id="completedList"></ul>
+        </div>
+        <div class="card" id="membershipCard">
+          <h3>Active Membership</h3>
+          <div id="activeMembership">None</div>
+          <h4>Reward Points</h4>
+          <div id="rewardPoints">0</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Offers</h3>
+        <ul id="dashboardOffers"></ul>
+      </div>
+    </section>
+
+    <!-- Car Management -->
+    <section id="cars" class="view" style="display:none">
+      <h2>My Vehicles</h2>
+      <div class="card">
+        <form id="carForm">
+          <input id="carImage" placeholder="Image URL (optional)" />
+          <input id="carName" placeholder="Car Name (Nickname)" required />
+          <input id="brand" placeholder="Brand" />
+          <input id="model" placeholder="Model" />
+          <input id="regNumber" placeholder="Registration Number" />
+          <input id="color" placeholder="Color" />
+          <select id="vehicleType">
+            <option>Sedan</option>
+            <option>SUV</option>
+            <option>Hatchback</option>
+            <option>Bike</option>
+          </select>
+          <div class="row">
+            <button type="submit">Add / Save Vehicle</button>
+          </div>
+        </form>
+      </div>
+      <div id="carList" class="card"></div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="view" style="display:none">
+      <h2>Services</h2>
+      <div id="servicesList" class="card"></div>
+    </section>
+
+    <!-- Booking Module -->
+    <section id="booking" class="view" style="display:none">
+      <h2>New Booking</h2>
+      <div class="card">
+        <form id="bookingForm">
+          <label>Select Vehicle</label>
+          <select id="selectVehicle"></select>
+
+          <label>Select Service</label>
+          <select id="selectService"></select>
+
+          <label>Choose Date</label>
+          <input type="date" id="serviceDate" required />
+
+          <label>Choose Time Slot</label>
+          <select id="timeSlot"></select>
+
+          <label>Address</label>
+          <textarea id="address" placeholder="House, street, landmark" required></textarea>
+
+          <label>Coupon Code (optional)</label>
+          <input id="coupon" placeholder="Coupon code" />
+
+          <label>Payment Method</label>
+          <select id="paymentMethod">
+            <option>UPI</option>
+            <option>Credit Card</option>
+            <option>Debit Card</option>
+            <option>Net Banking</option>
+            <option>Cash on Service</option>
+          </select>
+
+          <div class="row">
+            <button type="submit">Confirm Booking & Pay</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Booking History -->
+    <section id="history" class="view" style="display:none">
+      <h2>Booking History</h2>
+      <div id="historyList" class="card"></div>
+    </section>
+
+    <!-- Membership Plans -->
+    <section id="membership" class="view" style="display:none">
+      <h2>Membership Plans</h2>
+      <div class="card grid-3" id="plans">
+        <!-- plans inserted here -->
+      </div>
+    </section>
+
+    <!-- Offers & Coupons -->
+    <section id="offers" class="view" style="display:none">
+      <h2>Offers & Coupons</h2>
+      <div class="card">
+        <ul id="offersList"></ul>
+      </div>
+    </section>
+
+    <!-- Ratings & Reviews -->
+    <section id="reviews" class="view" style="display:none">
+      <h2>Ratings & Reviews</h2>
+      <div class="card">
+        <form id="reviewForm">
+          <label>Booking</label>
+          <select id="reviewBooking"></select>
+          <label>Rating</label>
+          <select id="rating">
+            <option>5</option><option>4</option><option>3</option><option>2</option><option>1</option>
+          </select>
+          <textarea id="reviewText" placeholder="Write a review"></textarea>
+          <input id="reviewPhoto" type="file" accept="image/*" />
+          <button type="submit">Submit Review</button>
+        </form>
+      </div>
+      <div id="reviewsList" class="card"></div>
+    </section>
+
+    <!-- Admin Panel -->
+    <section id="admin" class="view" style="display:none">
+      <h2>Admin Panel</h2>
+      <div class="card" id="adminUsers"></div>
+      <div class="card" id="adminBookings"></div>
+      <div class="card" id="adminServices"></div>
+      <div class="card" id="adminCoupons"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Demo CarWash App — Vanilla HTML/CSS/JS — Data stored in localStorage</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

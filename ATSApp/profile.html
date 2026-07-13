@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Career Path Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>CPB</h2>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="profile.html" class="active">My Profile</a></li>
+                    <li><a href="jobs.html">Search Jobs</a></li>
+                    <li><a href="mock-exam.html">Mock Exams</a></li>
+                    <li><a href="apply.html">Applications</a></li>
+                    <li><a href="scorecard.html">Score Card</a></li>
+                    <li><a href="index.html" onclick="logout()">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="user-info">
+                    <span id="userName">My Profile</span>
+                </div>
+            </header>
+            
+            <section class="content">
+                <h1>My Profile</h1>
+                
+                <div class="profile-container">
+                    <!-- Profile Photo Section -->
+                    <div class="profile-photo-section">
+                        <div class="photo-upload">
+                            <img id="profilePhoto" src="https://via.placeholder.com/150" alt="Profile Photo">
+                            <input type="file" id="photoInput" accept="image/*" style="display:none;">
+                            <button class="btn btn-small" onclick="document.getElementById('photoInput').click()">Upload Photo</button>
+                            <p class="hint">Passport size photo (4x6 cm)</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Profile Form -->
+                    <form id="profileForm" class="profile-form">
+                        <!-- Personal Information -->
+                        <fieldset>
+                            <legend>Personal Information</legend>
+                            
+                            <div class="form-group">
+                                <label for="fullName">Full Name:</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone:</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="dob">Date of Birth:</label>
+                                    <input type="date" id="dob" name="dob" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="location">Location:</label>
+                                    <input type="text" id="location" name="location" required>
+                                </div>
+                            </div>
+                        </fieldset>
+                        
+                        <!-- Education -->
+                        <fieldset>
+                            <legend>Education</legend>
+                            
+                            <div class="form-group">
+                                <label for="qualification">Highest Qualification:</label>
+                                <select id="qualification" name="qualification" required>
+                                    <option value="">Select Qualification</option>
+                                    <option value="12th">12th Pass</option>
+                                    <option value="diploma">Diploma</option>
+                                    <option value="bachelor">Bachelor's Degree</option>
+                                    <option value="master">Master's Degree</option>
+                                    <option value="phd">PhD</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="specialization">Specialization/Field:</label>
+                                <input type="text" id="specialization" name="specialization" placeholder="e.g., Computer Science, Electronics">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="university">University/Institution:</label>
+                                <input type="text" id="university" name="university">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="gpa">CGPA/Percentage:</label>
+                                <input type="number" id="gpa" name="gpa" step="0.01" min="0" max="10">
+                            </div>
+                        </fieldset>
+                        
+                        <!-- Experience -->
+                        <fieldset>
+                            <legend>Experience</legend>
+                            
+                            <div class="form-group">
+                                <label for="experience">Years of Experience:</label>
+                                <input type="number" id="experience" name="experience" min="0" max="60">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="jobTitle">Current Job Title:</label>
+                                <input type="text" id="jobTitle" name="jobTitle" placeholder="e.g., Junior Developer">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Current Company:</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="skills">Key Skills (comma separated):</label>
+                                <textarea id="skills" name="skills" rows="3" placeholder="e.g., Java, Python, JavaScript"></textarea>
+                            </div>
+                        </fieldset>
+                        
+                        <!-- Career Preferences -->
+                        <fieldset>
+                            <legend>Career Preferences</legend>
+                            
+                            <div class="form-group">
+                                <label for="preferredRole">Preferred Job Role:</label>
+                                <select id="preferredRole" name="preferredRole" required>
+                                    <option value="">Select Preferred Role</option>
+                                    <option value="developer">Software Developer</option>
+                                    <option value="designer">UI/UX Designer</option>
+                                    <option value="analyst">Data Analyst</option>
+                                    <option value="manager">Project Manager</option>
+                                    <option value="qa">QA Engineer</option>
+                                    <option value="devops">DevOps Engineer</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="jobType">Preferred Job Type:</label>
+                                <select id="jobType" name="jobType" required>
+                                    <option value="">Select Job Type</option>
+                                    <option value="full-time">Full Time</option>
+                                    <option value="part-time">Part Time</option>
+                                    <option value="freelance">Freelance</option>
+                                    <option value="remote">Remote</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="expectedSalary">Expected Salary (Annual LPA):</label>
+                                <input type="number" id="expectedSalary" name="expectedSalary" min="0" step="0.5">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="careerObjectives">Career Objectives:</label>
+                                <textarea id="careerObjectives" name="careerObjectives" rows="4" placeholder="What are your career goals?"></textarea>
+                            </div>
+                        </fieldset>
+                        
+                        <!-- Social Links -->
+                        <fieldset>
+                            <legend>Social Links</legend>
+                            
+                            <div class="form-group">
+                                <label for="linkedin">LinkedIn Profile:</label>
+                                <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="facebook">Facebook Profile:</label>
+                                <input type="url" id="facebook" name="facebook" placeholder="https://facebook.com/yourprofile">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="twitter">Twitter Profile:</label>
+                                <input type="url" id="twitter" name="twitter" placeholder="https://twitter.com/yourprofile">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="instagram">Instagram Profile:</label>
+                                <input type="url" id="instagram" name="instagram" placeholder="https://instagram.com/yourprofile">
+                            </div>
+                        </fieldset>
+                        
+                        <!-- Resume Upload -->
+                        <fieldset>
+                            <legend>Resume</legend>
+                            
+                            <div class="file-upload-group">
+                                <label for="resume">Upload Resume (PDF):</label>
+                                <div class="file-upload-box">
+                                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+                                    <p id="resumeStatus">No file selected</p>
+                                </div>
+                            </div>
+                        </fieldset>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Save Profile</button>
+                            <button type="reset" class="btn btn-secondary">Clear</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

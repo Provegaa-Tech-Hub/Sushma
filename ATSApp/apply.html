@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Job - Career Path Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>CPB</h2>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="profile.html">My Profile</a></li>
+                    <li><a href="jobs.html">Search Jobs</a></li>
+                    <li><a href="mock-exam.html">Mock Exams</a></li>
+                    <li><a href="apply.html" class="active">Applications</a></li>
+                    <li><a href="scorecard.html">Score Card</a></li>
+                    <li><a href="index.html" onclick="logout()">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="user-info">
+                    <span>Application Form</span>
+                </div>
+            </header>
+            
+            <section class="content">
+                <h1>Job Application Form</h1>
+                <p class="subtitle">Complete the form based on your educational background and experience</p>
+                
+                <form id="applicationForm" class="application-form">
+                    <!-- Job Information (Pre-filled) -->
+                    <fieldset>
+                        <legend>Job Details</legend>
+                        
+                        <div class="form-group">
+                            <label for="jobTitle">Position Applied For:</label>
+                            <input type="text" id="jobTitle" name="jobTitle" readonly value="">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="company">Company:</label>
+                                <input type="text" id="company" name="company" readonly value="">
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Location:</label>
+                                <input type="text" id="location" name="location" readonly value="">
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- Personal Information -->
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        
+                        <div class="form-group">
+                            <label for="fullName">Full Name:</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone:</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- Education Match -->
+                    <fieldset>
+                        <legend>Educational Background</legend>
+                        <p class="form-info">This form adapts based on your education. Please verify your information:</p>
+                        
+                        <div class="form-group">
+                            <label for="qualification">Qualification:</label>
+                            <input type="text" id="qualification" name="qualification" readonly>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="specialization">Specialization:</label>
+                                <input type="text" id="specialization" name="specialization" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="gpa">CGPA/Score:</label>
+                                <input type="text" id="gpa" name="gpa" readonly>
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- Experience & Skills -->
+                    <fieldset>
+                        <legend>Experience & Skills</legend>
+                        
+                        <div class="form-group">
+                            <label for="yearsExperience">Years of Experience:</label>
+                            <input type="number" id="yearsExperience" name="yearsExperience" min="0" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="relevantSkills">Relevant Skills for this Position:</label>
+                            <textarea id="relevantSkills" name="relevantSkills" rows="4" placeholder="List skills relevant to this job..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="workExperience">Work Experience:</label>
+                            <textarea id="workExperience" name="workExperience" rows="4" placeholder="Describe your relevant work experience..." required></textarea>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- Resume & Documents -->
+                    <fieldset>
+                        <legend>Documents</legend>
+                        
+                        <div class="file-upload-group">
+                            <label for="resume">Resume/CV:</label>
+                            <div class="file-upload-box">
+                                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                                <p id="resumeStatus">No file selected</p>
+                            </div>
+                        </div>
+                        
+                        <div class="file-upload-group">
+                            <label for="photo">Passport Size Photo (4x6 cm):</label>
+                            <div class="file-upload-box">
+                                <input type="file" id="photo" name="photo" accept="image/*" required>
+                                <p id="photoStatus">No file selected</p>
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- Additional Information -->
+                    <fieldset>
+                        <legend>Additional Information</legend>
+                        
+                        <div class="form-group">
+                            <label for="coverLetter">Cover Letter:</label>
+                            <textarea id="coverLetter" name="coverLetter" rows="5" placeholder="Tell us why you're a great fit for this role..."></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="agree" name="agree" required>
+                            <label for="agree">I agree to the terms and conditions and authorize the company to contact me</label>
+                        </div>
+                    </fieldset>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Submit Application</button>
+                        <button type="reset" class="btn btn-secondary">Clear Form</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

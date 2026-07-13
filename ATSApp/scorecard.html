@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Card - Career Path Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>CPB</h2>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="profile.html">My Profile</a></li>
+                    <li><a href="jobs.html">Search Jobs</a></li>
+                    <li><a href="mock-exam.html">Mock Exams</a></li>
+                    <li><a href="apply.html">Applications</a></li>
+                    <li><a href="scorecard.html" class="active">Score Card</a></li>
+                    <li><a href="index.html" onclick="logout()">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="user-info">
+                    <span>Score Card & Results</span>
+                </div>
+            </header>
+            
+            <section class="content">
+                <h1>Your Score Card</h1>
+                <p class="subtitle">Review your mock exam results and performance</p>
+                
+                <!-- Filter Options -->
+                <div class="scorecard-filters">
+                    <input type="text" id="examSearch" placeholder="Search exams..." class="search-input">
+                    <select id="sortBy">
+                        <option value="recent">Most Recent</option>
+                        <option value="highest">Highest Score</option>
+                        <option value="lowest">Lowest Score</option>
+                        <option value="name">Exam Name</option>
+                    </select>
+                </div>
+                
+                <!-- Scorecards Container -->
+                <div class="scorecards-container" id="scorecardsContainer">
+                    <!-- Scorecards will be loaded dynamically -->
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Detailed Score Modal -->
+    <div id="scoreModal" class="modal">
+        <div class="modal-content large">
+            <span class="close" onclick="closeScoreModal()">&times;</span>
+            <div id="scoreDetails"></div>
+            <button class="btn btn-primary" onclick="downloadScorecard()">Download Score Card</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

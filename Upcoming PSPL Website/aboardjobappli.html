@@ -1,0 +1,993 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Abroad Job Application — Pan/Aadhaar conditional for India</title>
+    <style>
+        :root {
+            --bg: #f3f7fb;
+            --card-bg: #ffffff;
+            --accent: #0b66d1;
+            --accent-2: #7c3aed;
+            --muted: #6b7280;
+            --section-border: #e6eefc;
+            --field-border: #d6dce6;
+            --radius: 14px;
+            --max-width: 980px;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            color: #0f172a;
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            background:
+                radial-gradient(600px 200px at 10% 10%, rgba(124, 58, 237, 0.06), transparent 8%),
+                radial-gradient(500px 180px at 90% 85%, rgba(11, 102, 209, 0.04), transparent 8%),
+                var(--bg);
+            display: block;
+            padding: 40px 20px;
+            box-sizing: border-box;
+            background-image: url(passport2.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+
+        .stage {
+            position: relative;
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            padding: 24px;
+            box-sizing: border-box;
+        }
+
+        .side-vertical {
+            width: 72px;
+            flex: 0 0 72px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .vertical-label {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-weight: 800;
+            color: var(--accent-2);
+            letter-spacing: 4px;
+            font-size: 14px;
+            text-transform: uppercase;
+            background: linear-gradient(180deg, rgba(124, 58, 237, 0.06), transparent);
+            padding: 12px 6px;
+            border-radius: 12px;
+            border: 1px solid rgba(124, 58, 237, 0.06);
+            box-shadow: 0 6px 18px rgba(124, 58, 237, 0.06);
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: 0 18px 60px rgba(13, 38, 76, 0.08);
+            border: 1px solid rgba(11, 102, 209, 0.06);
+            overflow: visible;
+            flex: 1 1 auto;
+            position: relative;
+            min-width: 320px;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 66%;
+            left: 50%;
+            width: 540px;
+            height: 423px;
+            background-image: url("PSPL logo with Name.jpeg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 519px 400px;
+            transform: translate(-50%, -50%);
+            opacity: 0.09;
+            z-index: 0;
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 96px;
+            height: 96px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+            transform-origin: top right;
+            border-bottom-left-radius: 10px;
+            color: #fff;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            pointer-events: none;
+        }
+
+        .ribbon-text {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 11px;
+            transform: rotate(25deg);
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            pointer-events: none;
+        }
+
+        .card-header {
+            padding: 22px 28px;
+            border-bottom: 1px solid var(--section-border);
+            background: linear-gradient(90deg, rgba(11, 102, 209, 0.03), transparent);
+        }
+
+        .card-header h1 {
+            margin: 0;
+            font-size: 1.25rem;
+            letter-spacing: -0.2px;
+            color: var(--accent);
+        }
+
+        .card-body {
+            padding: 20px 26px 18px;
+        }
+
+        fieldset {
+            border: 1px solid var(--section-border);
+            padding: 12px 14px;
+            border-radius: 10px;
+            margin-bottom: 14px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(250, 253, 255, 0.98));
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+        }
+
+        legend {
+            padding: 0 8px;
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 0.95rem
+        }
+
+        label {
+            display: block;
+            margin: 8px 0 6px;
+            font-weight: 600;
+            color: #0f172a;
+            font-size: 0.95rem
+        }
+
+        .submit-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .submit-section button {
+            background: #4fc37b;
+            color: white;
+            border: none;
+            padding: 12px 40px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px
+        }
+
+        .row-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px
+        }
+
+        .full {
+            grid-column: 1/-1
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea,
+        input[type="file"] {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--field-border);
+            border-radius: 8px;
+            background: #fff;
+            font-size: 0.95rem;
+            color: #0f172a;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            min-height: 84px;
+            resize: vertical
+        }
+
+        .small {
+            font-size: 0.9rem;
+            color: var(--muted)
+        }
+
+        .hint {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-top: 6px
+        }
+
+        .input-field {
+            width: 100%;
+        }
+
+        #resume {
+            width: 300px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: 12px;
+            flex-wrap: wrap
+        }
+
+        button {
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            padding: 10px 14px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 700
+        }
+
+
+        button.secondary {
+            background: #374151
+        }
+
+        button.ghost {
+            background: transparent;
+            border: 1px solid var(--section-border);
+            color: var(--accent)
+        }
+
+        footer {
+            margin-top: 14px;
+            color: var(--muted);
+            font-size: 0.9rem
+        }
+
+        .side-emblem {
+            width: 84px;
+            flex: 0 0 84px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .emblem {
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(11, 102, 209, 0.12), rgba(124, 58, 237, 0.08));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(11, 102, 209, 0.06);
+            box-shadow: 0 8px 20px rgba(11, 102, 209, 0.03);
+        }
+
+        .emblem svg {
+            width: 36px;
+            height: 36px;
+            opacity: 0.95
+        }
+
+        @media (max-width:980px) {
+            .stage {
+                padding: 18px
+            }
+        }
+
+        @media (max-width:820px) {
+            .stage {
+                flex-direction: column;
+                align-items: center
+            }
+
+            .side-vertical,
+            .side-emblem {
+                display: none
+            }
+
+            .card {
+                max-width: 680px
+            }
+        }
+
+        @media (max-width:420px) {
+            .row {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="page-intro" aria-hidden="false" style="max-width:980px;margin:0 auto 18px;padding:0 24px;">
+        <p style="font-size:1.05rem;color:#24314a;margin:0;">
+            Welcome — please complete the form below to apply for international positions. Fields marked * are required.
+        </p>
+    </section>
+    <div class="stage" role="main" aria-label="Application stage">
+        <div class="side-vertical" aria-hidden="true">
+            <div class="vertical-label">Apply Abroad</div>
+        </div>
+
+        <div class="card" role="region" aria-label="Abroad job application form">
+            <div class="card-header">
+                <h1>Abroad Job Application</h1>
+                <div class="ribbon-text" aria-hidden="true">International</div>
+            </div>
+
+            <div class="card-body">
+                <form id="appForm" method="post" action="#" enctype="multipart/form-data" novalidate>
+                    <fieldset>
+                        <legend>Personal & Contact</legend>
+
+                        <label for="fullName">Full Name *</label>
+                        <input id="fullName" name="full_name" type="text" required />
+
+                        <div class="row">
+                            <div>
+                                <label for="email">Email *</label>
+                                <input id="email" name="email" type="email" required />
+                            </div>
+                            <div>
+                                <label for="mobile">Mobile Number *</label>
+                                <input id="mobile" name="mobile" type="tel" placeholder="+44 7000 000000" required />
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top:6px">
+                            <div>
+                                <label for="dob">Date of Birth *</label>
+                                <input id="dob" name="date_of_birth" type="date" />
+                            </div>
+                            <div>
+                                <label for="nationality">Nationality *</label>
+                                <input id="nationality" name="nationality" type="text" />
+                            </div>
+                        </div>
+
+                        <!-- Pan/Aadhaar wrapper: hidden unless Country = India -->
+                        <div class="row" style="margin-top:8px">
+                            <div id="panWrap" style="display:none">
+                                <label for="panAadhar">Pan / Aadhar Card Number *</label>
+                                <input id="panAadhar" name="pan_aadhar_number" type="text"
+                                    placeholder="PAN (10 chars) or Aadhaar (12 digits)" />
+                                <div class="hint">This is sensitive government ID information — provide only if required
+                                    and ensure secure submission.</div>
+                            </div>
+
+                            <div>
+                                <label for="presentLocation">Present Location *</label>
+                                <input id="presentLocation" name="present_location" type="text"
+                                    placeholder="City, Country" />
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Passport & Country</legend>
+                        <div class="row">
+                            <div>
+                                <label for="passportNumber">Passport Number *</label>
+                                <input id="passportNumber" name="passport_number" type="text" />
+                            </div>
+                            <div>
+                                <label for="passportExpiry">Passport Expiry Date *</label>
+                                <input id="passportExpiry" name="passport_expiry" type="date" />
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top:6px">
+                            <div>
+                                <label for="countryApplying">Country Applying For *</label>
+                                <select id="countryApplying" name="country_applying_for" required>
+                                    <option value="">Select country</option>
+                                    <option value="India">India</option>
+                                    <option value="United Kingdom">United Kingdom</option>
+                                    <option value="United States">United States</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="UAE">United Arab Emirates</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div id="otherCountryWrap" style="display:none">
+                                <label for="otherCountry">If Other, specify country</label>
+                                <input id="otherCountry" name="other_country" type="text" />
+                            </div>
+                        </div>
+
+                        <div id="countrySpecific" class="full" style="margin-top:10px"></div>
+                    </fieldset>
+
+                    <fieldset>
+
+                        <legend>Position & Skills</legend>
+                        <div class="row">
+                            <div>
+                                <label for="lookingFor">Looking for Job As *</label>
+                                <select id="lookingFor" name="looking_for_job_as" type="text" required>
+                                    <option value="">Please Select</option>
+                                    <option value="Fresher (0-23 Months)"> Fresher (0-23 Months) </option>
+                                    <option value="Experienced(2+ Years)"> Experienced(2+ Years) </option>
+                                    <option value="Contract"> Contract </option>
+                                    <option value="Freelancing"> Freelancing </option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="jobRole">Job Role *</label>
+                                <select id="jobRole" name="job_role" required>
+                                    <option value="">Select Job Role</option>
+                                    <option value="Developer">Developer</option>
+                                    <option value="Tester">Tester</option>
+                                    <option value="Data">Data & Analytics</option>
+                                    <option value="Cloud">Cloud & DevOps</option>
+                                    <option value="Other">Other</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top:8px">
+                            <div>
+                                <label for="jobRole">Specialization *</label>
+                                <select id="jobRole" name="job_role" required>
+                                    <option value="">Please Select</option>
+
+                                    <optgroup label="Software Development">
+                                        <option>Software Engineer</option>
+                                        <option>Software Developer</option>
+                                        <option>Full Stack Developer</option>
+                                        <option>Frontend Developer</option>
+                                        <option>Backend Developer</option>
+                                        <option>Web Developer</option>
+                                        <option>Mobile App Developer</option>
+                                        <option>Java Developer</option>
+                                        <option>Python Developer</option>
+                                        <option>.NET Developer</option>
+                                        <option>PHP Developer</option>
+                                        <option>Node.js Developer</option>
+                                        <option>React Developer</option>
+                                        <option>Angular Developer</option>
+                                        <option>iOS Developer</option>
+                                        <option>Android Developer</option>
+                                    </optgroup>
+
+                                    <optgroup label="Data & Analytics">
+                                        <option>Data Analyst</option>
+                                        <option>Business Analyst</option>
+                                        <option>Data Scientist</option>
+                                        <option>Data Engineer</option>
+                                        <option>BI Developer</option>
+                                        <option>Machine Learning Engineer</option>
+                                        <option>AI Engineer</option>
+                                        <option>Research Analyst</option>
+                                    </optgroup>
+
+                                    <optgroup label="Testing & Quality Assurance">
+                                        <option>QA Engineer</option>
+                                        <option>Manual Tester</option>
+                                        <option>Automation Tester</option>
+                                        <option>Performance Tester</option>
+                                        <option>Test Lead</option>
+                                        <option>SDET</option>
+                                    </optgroup>
+
+                                    <optgroup label="Cloud & DevOps">
+                                        <option>DevOps Engineer</option>
+                                        <option>Cloud Engineer</option>
+                                        <option>AWS Engineer</option>
+                                        <option>Azure Engineer</option>
+                                        <option>Google Cloud Engineer</option>
+                                        <option>Site Reliability Engineer (SRE)</option>
+                                        <option>Kubernetes Engineer</option>
+                                        <option>Platform Engineer</option>
+                                    </optgroup>
+
+                                    <optgroup label="Cyber Security">
+                                        <option>Cyber Security Analyst</option>
+                                        <option>Security Engineer</option>
+                                        <option>Information Security Analyst</option>
+                                        <option>Penetration Tester</option>
+                                        <option>Security Consultant</option>
+                                        <option>SOC Analyst</option>
+                                    </optgroup>
+
+                                    <optgroup label="Infrastructure & Networking">
+                                        <option>Network Engineer</option>
+                                        <option>System Administrator</option>
+                                        <option>Linux Administrator</option>
+                                        <option>Windows Administrator</option>
+                                        <option>Infrastructure Engineer</option>
+                                        <option>Technical Support Engineer</option>
+                                        <option>IT Support Specialist</option>
+                                    </optgroup>
+
+                                    <optgroup label="Database">
+                                        <option>Database Administrator (DBA)</option>
+                                        <option>SQL Developer</option>
+                                        <option>Database Engineer</option>
+                                        <option>Oracle DBA</option>
+                                        <option>MySQL DBA</option>
+                                    </optgroup>
+
+                                    <optgroup label="Design & Product">
+                                        <option>UI Designer</option>
+                                        <option>UX Designer</option>
+                                        <option>UI/UX Designer</option>
+                                        <option>Product Designer</option>
+                                        <option>Graphic Designer</option>
+                                    </optgroup>
+
+                                    <optgroup label="ERP & Enterprise Applications">
+                                        <option>SAP Consultant</option>
+                                        <option>SAP ABAP Developer</option>
+                                        <option>Salesforce Developer</option>
+                                        <option>Salesforce Administrator</option>
+                                        <option>CRM Consultant</option>
+                                        <option>ERP Consultant</option>
+                                    </optgroup>
+
+                                    <optgroup label="Management">
+                                        <option>Project Manager</option>
+                                        <option>Program Manager</option>
+                                        <option>Product Manager</option>
+                                        <option>Scrum Master</option>
+                                        <option>Technical Lead</option>
+                                        <option>Engineering Manager</option>
+                                    </optgroup>
+
+                                    <optgroup label="Emerging Technologies">
+                                        <option>Blockchain Developer</option>
+                                        <option>AR/VR Developer</option>
+                                        <option>IoT Engineer</option>
+                                        <option>Robotics Engineer</option>
+                                        <option>Generative AI Engineer</option>
+                                    </optgroup>
+
+                                    <optgroup label="Entry Level">
+                                        <option>Intern</option>
+                                        <option>Graduate Trainee</option>
+                                        <option>Associate Software Engineer</option>
+                                        <option>Fresher</option>
+                                    </optgroup>
+
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="english">English Proficiency *</label>
+                                <select id="english" name="english_proficiency">
+                                    <option value="">Select</option>
+                                    <option>Basic</option>
+                                    <option>Conversational</option>
+                                    <option>Fluent</option>
+                                    <option>Native</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <label for="skills" style="margin-top:10px">Skills Set *</label>
+                        <textarea id="skills" name="skills_set"
+                            placeholder="List key skills, tools, technologies, certifications..."></textarea>
+
+                        <label for="experience" style="margin-top:10px">Experience *</label>
+                        <textarea id="experience" name="experience"
+                            placeholder="Brief summary of relevant experience (years, roles, achievements)..."></textarea>
+
+                        <label style="margin-top:8px">Willing to Relocate *</label>
+                        <div style="display:flex;gap:12px;margin-top:6px">
+                            <label><input type="radio" name="relocate" value="yes"> Yes</label>
+                            <label><input type="radio" name="relocate" value="no"> No</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Employment & Salary</legend>
+
+                        <div class="row">
+                            <div>
+                                <label for="currentOrg">Current Organization *</label>
+                                <input id="currentOrg" name="current_organization" type="text"
+                                    placeholder="Company name" />
+                            </div>
+                            <div>
+                                <label for="currentCtc">Current CTC *</label>
+                                <input id="currentCtc" name="current_ctc" type="text"
+                                    placeholder="e.g., INR 6,00,000 / USD 40,000" />
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top:8px">
+                            <div>
+                                <label for="expectedCtc">Expected CTC *</label>
+                                <input id="expectedCtc" name="expected_ctc" type="text"
+                                    placeholder="e.g., INR 8,00,000 / USD 55,000" />
+                            </div>
+                            <div>
+                                <label for="noticePeriod">Notice Period *</label>
+                                <select id="noticePeriod" name="notice_period">
+                                    <option value="">Select notice period</option>
+                                    <option value="Immediate">Immediate</option>
+                                    <option value="7 days">7 days</option>
+                                    <option value="15 days">15 days</option>
+                                    <option value="30 days">30 days</option>
+                                    <option value="45 days">45 days</option>
+                                    <option value="60 days">60 days</option>
+                                    <option value="90 days">90 days</option>
+                                    <option value="More than 90 days">More than 90 days</option>
+                                    <option value="Other">Other (specify)</option>
+                                </select>
+
+                                <div id="noticeCustomWrap" style="display:none;margin-top:8px">
+                                    <label for="noticeCustom">Specify notice period</label>
+                                    <input id="noticeCustom" name="notice_period_custom" type="text"
+                                        placeholder="e.g., 10 business days, End of month" />
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Resume</legend>
+                        <label for="resume">Resume Upload (PDF) *</label>
+                        <input class="input-field" id="resume" name="resume" type="file" accept=".pdf," required />
+                        <div class="hint">Files are not submitted — change form action to your server endpoint to
+                            receive uploads. Protect sensitive IDs (Aadhaar/PAN) and collect only when necessary.</div>
+                    </fieldset>
+
+                    <div class="actions">
+                        <a href="submitappli.html">
+                            <button type="submit">Submit Application</button>
+                        </a>
+                        <button type="reset" class="secondary">Reset</button>
+                        <button type="button" class="ghost" onclick="window.print()">Print</button>
+                    </div>
+
+                    <footer>
+                        <p class="small">Privacy note: Pan/Aadhaar numbers and other government IDs are sensitive data.
+                            Collect them only when necessary, submit over secure HTTPS to your backend, store encrypted,
+                            and follow applicable laws (e.g., GDPR, India data protection guidance).</p>
+                    </footer>
+                </form>
+            </div>
+        </div>
+
+        <div class="side-emblem" aria-hidden="true">
+            <div class="emblem" title="Global work">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <circle cx="32" cy="32" r="30" stroke="url(#g1)" stroke-width="2" fill="rgba(11,102,209,0.02)" />
+                    <path d="M16 44c6-6 22-12 32-10" stroke="url(#g2)" stroke-width="2.5" stroke-linecap="round" />
+                    <path d="M42 18l6 6-12 4" stroke="url(#g2)" stroke-width="2.2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <defs>
+                        <linearGradient id="g1" x1="0" x2="1">
+                            <stop offset="0" stop-color="#0b66d1" />
+                            <stop offset="1" stop-color="#7c3aed" />
+                        </linearGradient>
+                        <linearGradient id="g2" x1="0" x2="1">
+                            <stop offset="0" stop-color="#0b66d1" />
+                            <stop offset="1" stop-color="#7c3aed" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <a href="WEBSITE.html">
+            <button>
+                ← Back
+            </button>
+        </a>
+
+    </div>
+
+    <!-- Country templates (hidden) -->
+    <div id="tpl-United Kingdom" class="country-template" aria-hidden="true" style="display:none">
+        <label>Do you have the right to work in the UK?</label>
+        <div style="display:flex;gap:12px;margin-top:6px">
+            <label><input type="radio" name="uk_right_to_work" value="yes"> Yes</label>
+            <label><input type="radio" name="uk_right_to_work" value="no"> No</label>
+        </div>
+        <label for="uk_ni">National Insurance number (if available)</label>
+        <input id="uk_ni" name="uk_ni_number" type="text" placeholder="QQ 12 34 56 A" />
+        <label>Will you require employer sponsorship (Skilled Worker visa)?</label>
+        <div style="display:flex;gap:12px;margin-top:6px">
+            <label><input type="radio" name="uk_sponsorship" value="yes"> Yes</label>
+            <label><input type="radio" name="uk_sponsorship" value="no"> No</label>
+        </div>
+    </div>
+
+    <div id="tpl-United States" class="country-template" aria-hidden="true" style="display:none">
+        <label>Do you have the legal right to work in the United States?</label>
+        <div style="display:flex;gap:12px;margin-top:6px">
+            <label><input type="radio" name="us_right_to_work" value="yes"> Yes</label>
+            <label><input type="radio" name="us_right_to_work" value="no"> No</label>
+        </div>
+        <label>Will you require employer sponsorship (e.g., H-1B)?</label>
+        <select name="us_sponsorship_type">
+            <option value="">Select</option>
+            <option>Yes — H-1B</option>
+            <option>Yes — L-1</option>
+            <option>Yes — O</option>
+            <option>Yes — Other</option>
+            <option>No</option>
+        </select>
+        <label for="us_state_pref">Preferred US state (if any)</label>
+        <input id="us_state_pref" name="us_state_preference" type="text" />
+    </div>
+
+    <div id="tpl-Canada" class="country-template" aria-hidden="true" style="display:none">
+        <label>Are you a Canadian citizen or permanent resident?</label>
+        <div style="display:flex;gap:12px;margin-top:6px">
+            <label><input type="radio" name="canada_status" value="citizen"> Citizen</label>
+            <label><input type="radio" name="canada_status" value="permanent_resident"> Permanent resident</label>
+            <label><input type="radio" name="canada_status" value="temporary"> Temporary resident / work permit</label>
+        </div>
+        <label>Will you require employer sponsorship for a work permit?</label>
+        <div style="display:flex;gap:12px;margin-top:6px">
+            <label><input type="radio" name="canada_sponsorship" value="yes"> Yes</label>
+            <label><input type="radio" name="canada_sponsorship" value="no"> No</label>
+        </div>
+    </div>
+
+    <div id="tpl-Australia" class="country-template" aria-hidden="true" style="display:none">
+        <label>Are you an Australian citizen / permanent resident / visa holder?</label>
+        <select name="australia_status">
+            <option value="">Select</option>
+            <option>Citizen</option>
+            <option>Permanent resident</option>
+            <option>Temporary visa holder</option>
+            <option>None</option>
+        </select>
+        <label>Will employer sponsorship be required?</label>
+        <div style="display:flex;gap:12px;margin-top:6px">
+            <label><input type="radio" name="australia_sponsorship" value="yes"> Yes</label>
+            <label><input type="radio" name="australia_sponsorship" value="no"> No</label>
+        </div>
+    </div>
+
+    <div id="tpl-Germany" class="country-template" aria-hidden="true" style="display:none">
+        <label>German language proficiency</label>
+        <select name="germany_language">
+            <option value="">Select</option>
+            <option>None</option>
+            <option>Basic</option>
+            <option>Conversational</option>
+            <option>Fluent</option>
+            <option>Native</option>
+        </select>
+        <label>Have your professional qualifications been recognized in Germany?</label>
+        <div style="display:flex;gap:12px;margin-top:6px">
+            <label><input type="radio" name="germany_recognized" value="yes"> Yes</label>
+            <label><input type="radio" name="germany_recognized" value="no"> No</label>
+        </div>
+        <label>Will you require employer sponsorship / work permit?</label>
+        <div style="display:flex;gap:12px;margin-top:6px">
+            <label><input type="radio" name="germany_sponsorship" value="yes"> Yes</label>
+            <label><input type="radio" name="germany_sponsorship" value="no"> No</label>
+        </div>
+    </div>
+
+    <div id="tpl-UAE" class="country-template" aria-hidden="true" style="display:none">
+        <label>Do you currently hold a UAE employment visa / Emirates ID?</label>
+        <div style="display:flex;gap:12px;margin-top:6px">
+            <label><input type="radio" name="uae_visa" value="yes"> Yes</label>
+            <label><input type="radio" name="uae_visa" value="no"> No</label>
+        </div>
+        <label>Will employer sponsorship be required?</label>
+        <div style="display:flex;gap:12px;margin-top:6px">
+            <label><input type="radio" name="uae_sponsorship" value="yes"> Yes</label>
+            <label><input type="radio" name="uae_sponsorship" value="no"> No</label>
+        </div>
+    </div>
+
+    <div id="tpl-Other" class="country-template" aria-hidden="true" style="display:none">
+        <label>Do you have legal authorization to work in the selected country?</label>
+        <div style="display:flex;gap:12px;margin-top:6px">
+            <label><input type="radio" name="other_right_to_work" value="yes"> Yes</label>
+            <label><input type="radio" name="other_right_to_work" value="no"> No</label>
+        </div>
+        <label for="other_work_details">If available, provide work authorization details (visa type, expiry,
+            notes)</label>
+        <textarea id="other_work_details" name="other_work_details"></textarea>
+        <label>Will you require employer sponsorship?</label>
+        <div style="display:flex;gap:12px;margin-top:6px">
+            <label><input type="radio" name="other_sponsorship" value="yes"> Yes</label>
+            <label><input type="radio" name="other_sponsorship" value="no"> No</label>
+        </div>
+    </div>
+
+    <script>
+        const jobRole = document.getElementById("jobRole");
+        const specialization = document.getElementById("specialization");
+
+        const options = {
+            Developer: [
+                "Java Developer",
+                "Python Developer",
+                "React Developer",
+                "Angular Developer",
+                ".NET Developer",
+                "Full Stack Developer",
+                "PHP Developer"
+            ],
+            Tester: [
+                "Manual Testing",
+                "Automation Testing",
+                "Selenium Testing",
+                "Performance Testing",
+                "API Testing"
+            ],
+            Data: [
+                "Data Analyst",
+                "Data Scientist",
+                "Data Engineer",
+                "Machine Learning Engineer",
+                "Business Analyst"
+            ],
+            Cloud: [
+                "AWS",
+                "Azure",
+                "Google Cloud",
+                "DevOps",
+                "Kubernetes",
+                "Site Reliability Engineer"
+            ]
+        };
+
+        jobRole.addEventListener("change", function () {
+            specialization.innerHTML =
+                '<option value="">Select Specialization</option>';
+
+            if (options[this.value]) {
+                options[this.value].forEach(item => {
+                    specialization.innerHTML +=
+                        `<option value="${item}">${item}</option>`;
+                });
+            }
+        });
+        // Country-specific display logic + India Pan/Aadhaar conditional
+        const countrySelect = document.getElementById('countryApplying');
+        const countrySpecific = document.getElementById('countrySpecific');
+        const otherWrap = document.getElementById('otherCountryWrap');
+
+        const panWrap = document.getElementById('panWrap');
+        const panInput = document.getElementById('panAadhar');
+
+        function showTemplate(country) {
+            countrySpecific.innerHTML = '';
+            otherWrap.style.display = 'none';
+            // Pan/Aadhaar handling: show only for India
+            if (country === 'India') {
+                panWrap.style.display = 'block';
+                panInput.required = true;
+            } else {
+                panWrap.style.display = 'none';
+                panInput.required = false;
+                panInput.value = '';
+            }
+
+            if (!country) return;
+            if (country === 'Other') otherWrap.style.display = 'block';
+
+            const tpl = document.getElementById('tpl-' + country);
+            if (tpl) {
+                const clone = tpl.cloneNode(true);
+                clone.style.display = 'block';
+                clone.id = '';
+                clone.removeAttribute('aria-hidden');
+                countrySpecific.appendChild(clone);
+            } else if (country !== 'Other' && country !== '') {
+                const generic = document.getElementById('tpl-Other').cloneNode(true);
+                generic.style.display = 'block';
+                generic.id = '';
+                generic.removeAttribute('aria-hidden');
+                countrySpecific.appendChild(generic);
+            }
+        }
+        countrySelect.addEventListener('change', function () { showTemplate(this.value); });
+
+        // Notice period custom logic
+        const noticeSelect = document.getElementById('noticePeriod');
+        const noticeCustomWrap = document.getElementById('noticeCustomWrap');
+        const noticeCustomInput = document.getElementById('noticeCustom');
+
+        noticeSelect.addEventListener('change', function () {
+            if (this.value === 'Other') {
+                noticeCustomWrap.style.display = 'block';
+                noticeCustomInput.required = true;
+            } else {
+                noticeCustomWrap.style.display = 'none';
+                noticeCustomInput.required = false;
+                noticeCustomInput.value = '';
+            }
+        });
+
+        // Submission UX & validation
+        const form = document.getElementById('appForm');
+        form.addEventListener('submit', function (e) {
+            if (!this.checkValidity()) {
+                e.preventDefault();
+                this.reportValidity();
+                return;
+            }
+            // Extra safety: if India ensure PAN/Aadhaar provided
+            if (countrySelect.value === 'India' && panInput.value.trim() === '') {
+                e.preventDefault();
+                panInput.required = true;
+                panInput.reportValidity();
+                return;
+            }
+            const submitBtn = this.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            // Replace action="#" with your endpoint to actually submit.
+        });
+
+        // Reset handler
+        form.addEventListener('reset', function () {
+            setTimeout(() => {
+                countrySpecific.innerHTML = '';
+                otherWrap.style.display = 'none';
+                noticeCustomWrap.style.display = 'none';
+                noticeCustomInput.required = false;
+                noticeCustomInput.value = '';
+                panWrap.style.display = 'none';
+                panInput.required = false;
+                panInput.value = '';
+                countrySelect.value = '';
+            }, 0);
+        });
+
+        // If the page loads with a pre-selected country (e.g., form repopulation), handle initial state:
+        document.addEventListener('DOMContentLoaded', function () {
+            if (countrySelect.value) showTemplate(countrySelect.value);
+        });
+    </script>
+</body>
+
+</html>

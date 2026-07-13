@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Exams - Career Path Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>CPB</h2>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="profile.html">My Profile</a></li>
+                    <li><a href="jobs.html">Search Jobs</a></li>
+                    <li><a href="mock-exam.html" class="active">Mock Exams</a></li>
+                    <li><a href="apply.html">Applications</a></li>
+                    <li><a href="scorecard.html">Score Card</a></li>
+                    <li><a href="index.html" onclick="logout()">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="user-info">
+                    <span>Mock Exams</span>
+                </div>
+            </header>
+            
+            <section class="content">
+                <h1>Mock Exams</h1>
+                
+                <!-- Exam Category Filter -->
+                <div class="exam-filters">
+                    <button class="filter-btn active" onclick="filterExams('all')">All Exams</button>
+                    <button class="filter-btn" onclick="filterExams('fresher')">Fresher Tests</button>
+                    <button class="filter-btn" onclick="filterExams('technical')">Technical</button>
+                    <button class="filter-btn" onclick="filterExams('aptitude')">Aptitude</button>
+                    <button class="filter-btn" onclick="filterExams('interview')">Interview Prep</button>
+                </div>
+                
+                <!-- Exam List -->
+                <div class="exams-container" id="examsContainer">
+                    <!-- Exams will be loaded here -->
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Exam Modal -->
+    <div id="examModal" class="modal">
+        <div class="modal-content large">
+            <span class="close" onclick="closeExamModal()">&times;</span>
+            <div id="examContent"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

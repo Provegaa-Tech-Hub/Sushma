@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Jobs - Career Path Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>CPB</h2>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="profile.html">My Profile</a></li>
+                    <li><a href="jobs.html" class="active">Search Jobs</a></li>
+                    <li><a href="mock-exam.html">Mock Exams</a></li>
+                    <li><a href="apply.html">Applications</a></li>
+                    <li><a href="scorecard.html">Score Card</a></li>
+                    <li><a href="index.html" onclick="logout()">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="user-info">
+                    <span>Job Search</span>
+                </div>
+            </header>
+            
+            <section class="content">
+                <h1>Search Jobs</h1>
+                
+                <!-- Search Filters -->
+                <div class="search-filters">
+                    <div class="filter-group">
+                        <input type="text" id="jobSearch" placeholder="Search by job title, company..." class="search-input">
+                    </div>
+                    
+                    <div class="filter-row">
+                        <div class="filter-group">
+                            <label for="locationFilter">Location:</label>
+                            <select id="locationFilter">
+                                <option value="">All Locations</option>
+                                <option value="bangalore">Bangalore</option>
+                                <option value="delhi">Delhi</option>
+                                <option value="mumbai">Mumbai</option>
+                                <option value="hyderabad">Hyderabad</option>
+                                <option value="remote">Remote</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="roleFilter">Job Role:</label>
+                            <select id="roleFilter">
+                                <option value="">All Roles</option>
+                                <option value="developer">Software Developer</option>
+                                <option value="designer">UI/UX Designer</option>
+                                <option value="analyst">Data Analyst</option>
+                                <option value="qa">QA Engineer</option>
+                                <option value="devops">DevOps Engineer</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="experienceFilter">Experience Level:</label>
+                            <select id="experienceFilter">
+                                <option value="">All Levels</option>
+                                <option value="fresher">Fresher</option>
+                                <option value="junior">Junior (1-3 years)</option>
+                                <option value="mid">Mid Level (3-5 years)</option>
+                                <option value="senior">Senior (5+ years)</option>
+                            </select>
+                        </div>
+                        
+                        <button class="btn btn-small" onclick="filterJobs()">Search</button>
+                    </div>
+                    
+                    <div class="filter-row">
+                        <div class="filter-group">
+                            <label for="salaryFilter">Salary Range (LPA):</label>
+                            <input type="range" id="salaryFilter" min="0" max="50" value="25">
+                            <span id="salaryValue">Upto 25 LPA</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Similar Jobs Suggestion (Based on Education) -->
+                <div class="similar-jobs">
+                    <h3>🎯 Jobs Similar to Your Education</h3>
+                    <p class="subtitle">We found these jobs matching your educational background</p>
+                </div>
+                
+                <!-- Job Listings -->
+                <div class="jobs-container" id="jobsContainer">
+                    <!-- Jobs will be loaded here dynamically -->
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Job Detail Modal -->
+    <div id="jobModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeJobModal()">&times;</span>
+            <div id="jobDetails"></div>
+            <button class="btn btn-primary" onclick="applyForJob()">Apply Now</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -16,242 +16,366 @@
         .header {
             background: #006881;
             color: white;
-
             padding: 20px;
-
             font-size: 28px;
             font-weight: bold;
+            text-align: center;
+        }
+
+        .left-content,
+        .right-content {
+            width: 250px;
+
+            background: #ffffff;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+            border-top: 5px solid #18bd5b;
 
             text-align: center;
         }
 
+        .left-content h2,
+        .right-content h2 {
+            color: #18bd5b;
+            margin-bottom: 20px;
+        }
+
+        .left-content p,
+        .right-content p {
+            font-style: italic;
+            line-height: 28px;
+            color: #555;
+        }
+
         /* Form Box */
 
-        .form-container {
+        .job-form {
             width: 90%;
-            max-width: 700px;
-            border-top: 4px solid #18bd5b;
+            max-width: 900px;
             background: white;
             margin: 30px auto;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
         }
 
-        /* Labels */
+        .job-form::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 540px;
+            height: 423px;
+            background-image: url("PSPL logo with Name.jpeg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 519px 400px;
+            transform: translate(-50%, -50%);
+            opacity: 0.09;
+            z-index: 0;
+        }
 
-        label {
+        .job-form>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            flex: 1;
+        }
+
+        .form-group label {
             display: block;
-            margin-top: 20px;
             margin-bottom: 8px;
-            font-size: 20px;
             font-weight: bold;
         }
 
-        /* Important star */
-
-        .required {
+        .form-group span,
+        .upload-section span {
             color: red;
         }
 
-        /* Inputs */
-
         input,
-        select,
-        textarea {
+        select {
             width: 100%;
-            padding: 14px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 18px;
+            padding: 10px;
             box-sizing: border-box;
+
         }
 
-        /* Submit Button */
-
-        .submit-btn {
+        .upload-section {
             width: 100%;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .upload-section label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .upload-section input {
+            display: block;
+            width: auto;
+            padding-left: 40%;
+        }
+
+        .submit-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .submit-section button {
             background: #4fc37b;
             color: white;
             border: none;
-            padding: 18px;
-            border-radius: 40px;
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 30px;
+            padding: 12px 40px;
+            border-radius: 5px;
             cursor: pointer;
+        }
+
+        .page-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            margin: 30px;
+        }
+
+        .left-content,
+        .right-content {
+            width: 250px;
+            position: sticky;
+            top: 20px;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Header -->
-
     <div class="header">
         Job Portal Form
     </div>
+    <div class="page-container">
+
+        <div class="left-content">
 
 
-    <!-- Form -->
+            <p>
+                "Choose a job you love, and you will never
+                have to work a day in your life."
+            </p>
 
-    <div class="form-container">
+            <p>
+                "Success is where preparation and
+                opportunity meet."
+            </p>
+        </div>
 
-        <form>
+        <!-- Form -->
 
-            <label>
-                Full Name
-                <span class="required">*</span>
-            </label>
+        <form class="job-form">
 
-            <input type="text" required>
+            <div class="form-row">
 
+                <div class="form-group">
+                    <label>Full Name <span>*</span></label>
+                    <input type="text" placeholder="First Name" required>
+                </div>
 
-            <label>
-                Mobile Number
-                <span class="required">*</span>
-            </label>
+                <div class="form-group">
+                    <label>Birth Date <span>*</span></label>
+                    <input type="date" required>
+                </div>
 
-            <input type="tel" required>
+            </div>
 
-            <label>
-                Email Address
-                <span class="required">*</span>
-            </label>
-            <input type="email" required>
+            <div class="form-row">
 
+                <div class="form-group">
+                    <label>Pan/Aadhar Card Number <span>*</span></label>
+                    <input type="text" placeholder="Pan/Aadhar Number" required>
+                </div>
 
-            <label>
-                Birth Date
-                <span class="required">*</span>
-            </label>
+                <div class="form-group">
+                    <label>Email Address <span>*</span></label>
+                    <input type="email" placeholder="example@gmail.com" required>
+                </div>
 
-            <input type="text" required>
+            </div>
 
+            <div class="form-row">
 
-            <label>
-                Pan/Aadhar Card Number
-                <span class="required">*</span>
-            </label>
+                <div class="form-group">
+                    <label>Phone Number <span>*</span></label>
+                    <input type="tel" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <label>Looking for Job As <span>*</span></label>
+                    <select required>
+                        <option value="">Please Select</option>
+                        <option value="Fresher (0-23 Months)"> Fresher (0-23 Months) </option>
+                        <option value="Experienced(2+ Years)"> Experienced(2+ Years) </option>
+                        <option value="Contract"> Contract </option>
+                        <option value="Freelancing"> Freelancing </option>
+                    </select>
+                </div>
 
-            <input type="number" required>
 
+            </div>
+            <div class="form-row">
 
+                <div class="form-group">
+                    <label>Skills Set / Job Title <span>*</span></label>
+                    <input type="text" placeholder="Eg: PHP, HTML, Java..." required>
+                </div>
 
+                <div class="form-group">
+                    <label>Experience <span>*</span></label>
+                    <input type="text" placeholder="Experience">
+                </div>
 
-            <label>
-                Looking for job as
-                <span class="required">*</span>
-            </label>
+            </div>
 
-            <select required>
+            <div class="form-row">
 
+                <div class="form-group">
+                    <label>Current Organization <span>*</span></label>
+                    <input type="text" placeholder="Current Organization">
+                </div>
 
-                <option value="" disabled selected>
-                    Select Please
-                </option>
+                <div class="form-group">
+                    <label>Notice Period <span>*</span></label>
+                    <select required>
+                        <option value=""> Please Select </option>
+                        <option value="Immediate"> Immediate </option>
+                        <option value="15 Days"> 15 Days </option>
+                        <option value="1 Month"> 1 Month </option>
+                        <option value="2 Month"> 2 Month </option>
+                        <option value="3 Month"> 3 Month </option>
+                        <option value="&gt;3 Month"> &gt;3 Month </option>
+                    </select>
+                </div>
 
-                <option>Fresher </option>
 
-                <option>Experienced</option>
 
-                <option>Contract</option>
+            </div>
 
-                <option>FreeLancing</option>
+            <div class="form-row">
 
-            </select>
 
-            <label>
-                Skills Set / Job Title
-                <span class="required">*</span>
-            </label>
+                <div class="form-group">
+                    <label>Current CTC <span>*</span></label>
+                    <input type="text" placeholder="Current CTC">
+                </div>
+                <div class="form-group">
+                    <label>Expected CTC <span>*</span></label>
+                    <input type="text" placeholder="Expected CTC">
+                </div>
 
-            <textarea rows="1" placeholder="Eg: PHP, HTML, React, Java..." required>
-</textarea>
 
+            </div>
 
-            <label>
-                Current Organization
-            </label>
+            <div class="form-row">
 
-            <input type="text">
 
 
-            <label>
-                Current Annual Salary
-                <span class="required">*</span>
-            </label>
+                <div class="form-group">
+                    <label>Present Location <span>*</span></label>
+                    <input type="text" placeholder="Present Location">
+                </div>
 
-            <input type="text">
+                <div class="form-group">
+                    <label>Willing To Relocate <span>*</span></label>
+                    <select required>
+                        <option value="">Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+            </div>
 
+            <!-- Upload Resume Center -->
+            <div class="upload-section">
 
-            <label>
-                Expected Annual Salary
-                <span class="required">*</span>
-            </label>
+                <label for="resume">
+                    Upload Your CV <span>*</span>
+                </label>
 
-            <input type="text">
+                <input type="file" id="resume" required>
+            </div>
 
 
-            <label>
-                Notice Period
-            </label>
+            <div class="submit-section">
+                <a href="submitappli.html">
+                    <button type="submit">
+                        Submit
+                    </button>
+                </a>
 
-            <select required>
 
 
-                <option value="" disabled selected>
-                    Select Please
-                </option>
-
-                <option>Immediate </option>
-
-                <option>15 days</option>
-
-                <option>1 month</option>
-
-                <option>> 3 month</option>
-
-            </select>
-
-
-
-            <label>
-                Present Location
-                <span class="required">*</span>
-            </label>
-
-            <input type="text" required>
-
-
-            <label>
-                Willing To Relocate
-            </label>
-
-            <select>
-
-                <option>Yes</option>
-
-                <option>No</option>
-
-            </select>
-
-
-            <label>
-                Upload Resume
-                <span class="required">*</span>
-            </label>
-
-            <input type="file" required>
-
-
-            <button class="submit-btn">
-                Submit Application
-            </button>
+            </div>
 
         </form>
 
+        <div class="right-content">
+
+
+
+            <p>
+                "Your dream job does not exist.
+                You must create it."
+            </p>
+
+            <p>"Every expert was once a beginner."</p>
+
+            <p>
+                "Opportunities don't happen,
+                you create them."
+            </p>
+
+            <p>
+                "The future depends on what
+                you do today."
+            </p>
+
+        </div>
+
+
+
+        <!-- Header -->
+
+
+
+
+
     </div>
+
+    <div class="submit-section">
+        <a href="WEBSITE.html">
+            <button>
+                Back to Home
+            </button>
+        </a>
+
+    </div>
+
 
 </body>
 

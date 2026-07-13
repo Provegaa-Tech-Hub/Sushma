@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Family Box Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="tree-container">
+        <h1>Family Box Test</h1>
+
+        <div class="tree" id="familyTree">
+            <ul>
+                <!-- Parent with spouse in family box -->
+                <li data-id="1" data-level="1" data-gender="male" data-spouse-id="2">
+                    <!-- Family Box containing couple -->
+                    <div class="family-box">
+                        <div class="couple-container">
+                            <!-- Person 1 -->
+                            <div class="person level-1 gender-male">
+                                <div class="photo-container empty"></div>
+                                <div class="name">John Smith</div>
+                                <div class="gender-badge">♂</div>
+                                <div class="dates">1950-Present</div>
+                            </div>
+                            <!-- Person 2 (Spouse) -->
+                            <div class="person level-1 gender-female spouse-person" data-id="2">
+                                <div class="photo-container empty"></div>
+                                <div class="name">Jane Smith</div>
+                                <div class="gender-badge">♀</div>
+                                <div class="dates">1952-Present</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Children of the couple -->
+                    <ul>
+                        <li data-id="3" data-level="2" data-gender="female">
+                            <div class="person level-2 gender-female">
+                                <div class="photo-container empty"></div>
+                                <div class="name">Sarah Smith</div>
+                                <div class="gender-badge">♀</div>
+                                <div class="dates">1980-Present</div>
+                            </div>
+                        </li>
+                        <li data-id="4" data-level="2" data-gender="male">
+                            <div class="person level-2 gender-male">
+                                <div class="photo-container empty"></div>
+                                <div class="name">Tom Smith</div>
+                                <div class="gender-badge">♂</div>
+                                <div class="dates">1982-Present</div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 30px; padding: 20px; background: #f0f0f0; border-radius: 10px;">
+            <h3>Expected Result:</h3>
+            <ul>
+                <li>✅ John and Jane appear side-by-side in a pink-bordered box</li>
+                <li>✅ "Family Unit" label appears above the box</li>
+                <li>✅ Heart (💕) appears between them</li>
+                <li>✅ Sarah and Tom appear as children below the family box</li>
+                <li>✅ Connecting lines work properly</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

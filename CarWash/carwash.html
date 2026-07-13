@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Wash Pro - Professional Car Cleaning Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🚗 Car Wash Pro</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('booking')">Booking</a></li>
+                <li><a href="#" onclick="showSection('membership')">Membership</a></li>
+                <li><a href="#" onclick="showSection('history')">History</a></li>
+                <li class="dropdown">
+                    <a href="#" onclick="toggleDropdown(event)">Account</a>
+                    <div class="dropdown-content" id="dropdownMenu">
+                        <a href="#" onclick="showSection('profile')">Profile</a>
+                        <a href="#" onclick="showSection('cars')">My Cars</a>
+                        <a href="#" onclick="showSection('admin'); return false;">Admin Panel</a>
+                        <a href="#" onclick="logout()">Logout</a>
+                    </div>
+                </li>
+                <li class="notification-bell">
+                    <span onclick="showNotifications()">🔔</span>
+                    <span class="notification-count" id="notificationCount">0</span>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Authentication Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAuthModal()">&times;</span>
+            <div class="auth-container">
+                <div class="auth-toggle">
+                    <button onclick="switchAuthMode('login')" id="loginBtn" class="active">Login</button>
+                    <button onclick="switchAuthMode('register')" id="registerBtn">Register</button>
+                </div>
+
+                <!-- Login Form -->
+                <form id="loginForm" class="auth-form active">
+                    <h2>Login to Your Account</h2>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <label><input type="checkbox"> Remember me</label>
+                    <button type="submit">Login</button>
+                    <p><a href="#" onclick="showForgotPassword()">Forgot Password?</a></p>
+                </form>
+
+                <!-- Register Form -->
+                <form id="registerForm" class="auth-form">
+                    <h2>Create New Account</h2>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                    <label><input type="checkbox" required> I agree to terms and conditions</label>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home/Dashboard Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <h1>Welcome to Car Wash Pro 🚗</h1>
+                <p>Professional car cleaning services at your doorstep</p>
+                <button onclick="showSection('booking')" class="btn btn-primary">Book Now</button>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Upcoming Bookings -->
+                <div class="dashboard-card">
+                    <h3>📅 Upcoming Bookings</h3>
+                    <div id="upcomingBookings" class="booking-list">
+                        <p>No upcoming bookings</p>
+                    </div>
+                </div>
+
+                <!-- Completed Washes -->
+                <div class="dashboard-card">
+                    <h3>✅ Completed Washes</h3>
+                    <div id="completedWashes" class="wash-count">
+                        <span class="count">0</span>
+                    </div>
+                </div>
+
+                <!-- Active Membership -->
+                <div class="dashboard-card">
+                    <h3>💳 Active Membership</h3>
+                    <div id="activeMembership">
+                        <p>No active membership</p>
+                        <button onclick="showSection('membership')" class="btn btn-small">Upgrade</button>
+                    </div>
+                </div>
+
+                <!-- Reward Points -->
+                <div class="dashboard-card">
+                    <h3>⭐ Reward Points</h3>
+                    <div id="rewardPoints" class="points-display">
+                        <span class="points">0</span> Points
+                    </div>
+                </div>
+
+                <!-- Offers -->
+                <div class="dashboard-card">
+                    <h3>🎉 Active Offers</h3>
+                    <div id="activeOffers" class="offers-list">
+                        <p>Loading offers...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Car Management Section -->
+        <section id="cars" class="section">
+            <div class="section-header">
+                <h2>My Vehicles</h2>
+                <button onclick="showAddCarForm()" class="btn btn-primary">+ Add Vehicle</button>
+            </div>
+
+            <div id="carsList" class="cars-grid">
+                <p>No vehicles added yet</p>
+            </div>
+
+            <!-- Add Car Modal -->
+            <div id="carModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeCarModal()">&times;</span>
+                    <form id="carForm" class="form-grid">
+                        <h2>Add New Vehicle</h2>
+                        <input type="text" placeholder="Car Name" id="carName" required>
+                        <select id="carBrand" required>
+                            <option value="">Select Brand</option>
+                            <option value="Maruti">Maruti</option>
+                            <option value="Hyundai">Hyundai</option>
+                            <option value="Tata">Tata</option>
+                            <option value="Honda">Honda</option>
+                            <option value="BMW">BMW</option>
+                            <option value="Audi">Audi</option>
+                            <option value="Mercedes">Mercedes</option>
+                        </select>
+                        <input type="text" placeholder="Model" id="carModel" required>
+                        <input type="text" placeholder="Registration Number" id="carReg" required>
+                        <input type="text" placeholder="Color" id="carColor" required>
+                        <select id="carType" required>
+                            <option value="">Select Vehicle Type</option>
+                            <option value="Sedan">Sedan</option>
+                            <option value="SUV">SUV</option>
+                            <option value="Hatchback">Hatchback</option>
+                            <option value="Bike">Bike</option>
+                        </select>
+                        <input type="file" id="carImage" accept="image/*">
+                        <button type="submit" class="btn btn-primary">Save Vehicle</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section id="booking" class="section">
+            <div class="section-header">
+                <h2>Book a Service</h2>
+            </div>
+
+            <div class="booking-container">
+                <div class="booking-steps">
+                    <div class="step active" onclick="goToStep(1)">
+                        <span class="step-number">1</span>
+                        <span class="step-name">Vehicle</span>
+                    </div>
+                    <div class="step" onclick="goToStep(2)">
+                        <span class="step-number">2</span>
+                        <span class="step-name">Service</span>
+                    </div>
+                    <div class="step" onclick="goToStep(3)">
+                        <span class="step-number">3</span>
+                        <span class="step-name">Date & Time</span>
+                    </div>
+                    <div class="step" onclick="goToStep(4)">
+                        <span class="step-number">4</span>
+                        <span class="step-name">Address</span>
+                    </div>
+                    <div class="step" onclick="goToStep(5)">
+                        <span class="step-number">5</span>
+                        <span class="step-name">Payment</span>
+                    </div>
+                </div>
+
+                <!-- Step 1: Vehicle Selection -->
+                <div id="step1" class="booking-step active">
+                    <h3>Select Your Vehicle</h3>
+                    <div id="vehicleOptions" class="options-grid">
+                        <p>No vehicles found. <a href="#" onclick="showSection('cars')">Add a vehicle</a></p>
+                    </div>
+                </div>
+
+                <!-- Step 2: Service Selection -->
+                <div id="step2" class="booking-step">
+                    <h3>Select Service</h3>
+                    <div id="serviceOptions" class="services-grid">
+                        <!-- Services will be populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Step 3: Date & Time -->
+                <div id="step3" class="booking-step">
+                    <h3>Choose Date & Time</h3>
+                    <div class="date-time-container">
+                        <div class="form-group">
+                            <label>Select Date</label>
+                            <input type="date" id="bookingDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Select Time Slot</label>
+                            <select id="timeSlot" required>
+                                <option value="">Choose a time slot</option>
+                                <option value="08:00-09:00">08:00 AM - 09:00 AM</option>
+                                <option value="09:00-10:00">09:00 AM - 10:00 AM</option>
+                                <option value="10:00-11:00">10:00 AM - 11:00 AM</option>
+                                <option value="11:00-12:00">11:00 AM - 12:00 PM</option>
+                                <option value="14:00-15:00">02:00 PM - 03:00 PM</option>
+                                <option value="15:00-16:00">03:00 PM - 04:00 PM</option>
+                                <option value="16:00-17:00">04:00 PM - 05:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Address -->
+                <div id="step4" class="booking-step">
+                    <h3>Service Address</h3>
+                    <form class="form-grid">
+                        <input type="text" placeholder="Street Address" id="address" required>
+                        <input type="text" placeholder="Apartment, Suite, etc." id="apartment">
+                        <input type="text" placeholder="City" id="city" required>
+                        <input type="text" placeholder="State" id="state" required>
+                        <input type="text" placeholder="Postal Code" id="postalCode" required>
+                        <textarea placeholder="Special Instructions" id="instructions" rows="3"></textarea>
+                    </form>
+                </div>
+
+                <!-- Step 5: Payment -->
+                <div id="step5" class="booking-step">
+                    <h3>Payment Method</h3>
+                    <div class="payment-methods">
+                        <div class="payment-option">
+                            <input type="radio" name="payment" value="upi" id="upi" checked>
+                            <label for="upi">💳 UPI</label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" name="payment" value="credit" id="credit">
+                            <label for="credit">💳 Credit Card</label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" name="payment" value="debit" id="debit">
+                            <label for="debit">💳 Debit Card</label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" name="payment" value="netbanking" id="netbanking">
+                            <label for="netbanking">🏦 Net Banking</label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" name="payment" value="cash" id="cash">
+                            <label for="cash">💵 Cash on Service</label>
+                        </div>
+                    </div>
+
+                    <!-- Coupon Code -->
+                    <div class="coupon-section">
+                        <label>Apply Coupon Code</label>
+                        <div class="coupon-input">
+                            <input type="text" placeholder="Enter coupon code" id="couponCode">
+                            <button type="button" onclick="applyCoupon()" class="btn btn-small">Apply</button>
+                        </div>
+                        <div id="couponMessage"></div>
+                    </div>
+
+                    <!-- Booking Summary -->
+                    <div class="booking-summary">
+                        <h4>Booking Summary</h4>
+                        <div class="summary-item">
+                            <span>Service:</span>
+                            <span id="summaryService">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Date:</span>
+                            <span id="summaryDate">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Time:</span>
+                            <span id="summaryTime">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Amount:</span>
+                            <span id="summaryAmount">₹0</span>
+                        </div>
+                        <div class="summary-item discount">
+                            <span>Discount:</span>
+                            <span id="summaryDiscount">₹0</span>
+                        </div>
+                        <div class="summary-item total">
+                            <span>Total:</span>
+                            <span id="summaryTotal">₹0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="booking-nav">
+                    <button onclick="previousStep()" class="btn btn-secondary" id="prevBtn" style="display:none;">← Previous</button>
+                    <button onclick="nextStep()" class="btn btn-primary" id="nextBtn">Next →</button>
+                    <button onclick="confirmBooking()" class="btn btn-success" id="confirmBtn" style="display:none;">Confirm Booking</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Membership Section -->
+        <section id="membership" class="section">
+            <div class="section-header">
+                <h2>Membership Plans</h2>
+            </div>
+
+            <div class="membership-cards">
+                <div class="membership-card">
+                    <h3>Silver</h3>
+                    <div class="price">₹999</div>
+                    <div class="period">/month</div>
+                    <ul class="benefits">
+                        <li>✓ 4 Basic Washes</li>
+                        <li>✓ 5% Discount on Services</li>
+                        <li>✓ Priority Booking</li>
+                        <li>✗ Free Detailing</li>
+                    </ul>
+                    <button onclick="purchaseMembership('Silver', 999)" class="btn btn-primary">Subscribe Now</button>
+                </div>
+
+                <div class="membership-card featured">
+                    <div class="badge">Popular</div>
+                    <h3>Gold</h3>
+                    <div class="price">₹1999</div>
+                    <div class="period">/month</div>
+                    <ul class="benefits">
+                        <li>✓ 8 Premium Washes</li>
+                        <li>✓ 10% Discount on Services</li>
+                        <li>✓ Free Interior Cleaning (2x)</li>
+                        <li>✓ Free Exterior Polish</li>
+                    </ul>
+                    <button onclick="purchaseMembership('Gold', 1999)" class="btn btn-primary">Subscribe Now</button>
+                </div>
+
+                <div class="membership-card">
+                    <h3>Platinum</h3>
+                    <div class="price">₹4999</div>
+                    <div class="period">/month</div>
+                    <ul class="benefits">
+                        <li>✓ Unlimited Basic Washes</li>
+                        <li>✓ 20% Discount on All Services</li>
+                        <li>✓ Free Monthly Detailing</li>
+                        <li>✓ Premium 24/7 Support</li>
+                    </ul>
+                    <button onclick="purchaseMembership('Platinum', 4999)" class="btn btn-primary">Subscribe Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking History Section -->
+        <section id="history" class="section">
+            <div class="section-header">
+                <h2>Booking History</h2>
+            </div>
+
+            <div class="history-filters">
+                <select id="statusFilter" onchange="filterHistory()">
+                    <option value="">All Status</option>
+                    <option value="completed">Completed</option>
+                    <option value="cancelled">Cancelled</option>
+                    <option value="pending">Pending</option>
+                </select>
+            </div>
+
+            <div id="historyList" class="history-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Booking ID</th>
+                            <th>Date</th>
+                            <th>Service</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyBody">
+                        <tr><td colspan="6">No bookings found</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="section">
+            <div class="section-header">
+                <h2>My Profile</h2>
+            </div>
+
+            <div class="profile-container">
+                <div class="profile-card">
+                    <h3>Personal Information</h3>
+                    <form id="profileForm" class="form-grid">
+                        <input type="text" placeholder="Full Name" id="fullName" value="John Doe">
+                        <input type="email" placeholder="Email" id="email" value="john@example.com">
+                        <input type="tel" placeholder="Phone" id="phone" value="+91 9876543210">
+                        <textarea placeholder="Address" id="profileAddress" rows="3">123 Main St, City</textarea>
+                        <button type="submit" class="btn btn-primary">Update Profile</button>
+                    </form>
+                </div>
+
+                <div class="profile-card">
+                    <h3>Account Settings</h3>
+                    <form id="settingsForm" class="form-grid">
+                        <label>
+                            <input type="checkbox" checked> Email Notifications
+                        </label>
+                        <label>
+                            <input type="checkbox" checked> SMS Notifications
+                        </label>
+                        <label>
+                            <input type="checkbox"> Marketing Emails
+                        </label>
+                        <button type="submit" class="btn btn-primary">Save Settings</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admin Panel -->
+        <section id="admin" class="section">
+            <div class="section-header">
+                <h2>Admin Panel</h2>
+            </div>
+
+            <div class="admin-tabs">
+                <button class="admin-tab-btn active" onclick="switchAdminTab('users')">Users</button>
+                <button class="admin-tab-btn" onclick="switchAdminTab('bookings')">Bookings</button>
+                <button class="admin-tab-btn" onclick="switchAdminTab('services')">Services</button>
+                <button class="admin-tab-btn" onclick="switchAdminTab('coupons')">Coupons</button>
+                <button class="admin-tab-btn" onclick="switchAdminTab('reports')">Reports</button>
+            </div>
+
+            <!-- Users Tab -->
+            <div id="usersTab" class="admin-tab active">
+                <h3>User Management</h3>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Bookings</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usersBody">
+                        <tr>
+                            <td>1</td>
+                            <td>John Doe</td>
+                            <td>john@example.com</td>
+                            <td>+91 9876543210</td>
+                            <td>5</td>
+                            <td><button class="btn btn-small">Edit</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Bookings Tab -->
+            <div id="bookingsTab" class="admin-tab">
+                <h3>Booking Management</h3>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Booking ID</th>
+                            <th>User</th>
+                            <th>Service</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bookingsBody">
+                        <tr>
+                            <td>B001</td>
+                            <td>John Doe</td>
+                            <td>Premium Wash</td>
+                            <td>2024-07-15</td>
+                            <td><span class="status completed">Completed</span></td>
+                            <td><button class="btn btn-small">View</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Services Tab -->
+            <div id="servicesTab" class="admin-tab">
+                <h3>Service Management</h3>
+                <button onclick="showAddServiceForm()" class="btn btn-primary">+ Add Service</button>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Service Name</th>
+                            <th>Duration</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="servicesBody">
+                        <!-- Will be populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Coupons Tab -->
+            <div id="couponsTab" class="admin-tab">
+                <h3>Coupon Management</h3>
+                <button onclick="showAddCouponForm()" class="btn btn-primary">+ Add Coupon</button>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Discount</th>
+                            <th>Type</th>
+                            <th>Usage Limit</th>
+                            <th>Used</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="couponsBody">
+                        <!-- Will be populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Reports Tab -->
+            <div id="reportsTab" class="admin-tab">
+                <h3>Reports & Analytics</h3>
+                <div class="reports-grid">
+                    <div class="report-card">
+                        <h4>Total Revenue</h4>
+                        <div class="report-value">₹45,000</div>
+                    </div>
+                    <div class="report-card">
+                        <h4>Total Bookings</h4>
+                        <div class="report-value">125</div>
+                    </div>
+                    <div class="report-card">
+                        <h4>Active Users</h4>
+                        <div class="report-value">89</div>
+                    </div>
+                    <div class="report-card">
+                        <h4>Completion Rate</h4>
+                        <div class="report-value">94%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Notification Panel -->
+    <div id="notificationPanel" class="notification-panel">
+        <h3>Notifications</h3>
+        <div id="notificationsList"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Car Wash Pro. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

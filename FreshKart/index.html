@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickCart - Food & Grocery Delivery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header/Navbar -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <i class="fas fa-bag-shopping"></i>
+                <span>FreshKart</span>
+            </div>
+            <div class="navbar-search">
+                <input type="text" id="searchInput" placeholder="Search products...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="navbar-icons">
+                <div class="location-btn" onclick="getLocation()">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span id="locationText">Deliver to</span>
+                </div>
+
+                <script>
+                    function getLocation() {
+                        if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(
+                                function (position) {
+                                    document.getElementById("locationText").innerHTML =
+                                        position.coords.latitude.toFixed(4) + ", " +
+                                        position.coords.longitude.toFixed(4);
+                                },
+                               
+                            );
+                        } else {
+                            alert("Geolocation is not supported by your browser.");
+                        }
+                    }
+                </script>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+                <a href="login.html" class="user-icon">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Sidebar Categories -->
+        <aside class="sidebar">
+            <div class="categories">
+                <h3>Categories</h3>
+                <div class="category-list">
+                    <div class="category-item active" data-category="all">
+                        <i class="fas fa-th"></i>
+                        <span>All Products</span>
+                    </div>
+                    <div class="category-item" data-category="vegetables">
+                        <i class="fas fa-leaf"></i>
+                        <span>Vegetables</span>
+                    </div>
+                    <div class="category-item" data-category="fruits">
+                        <i class="fas fa-apple-alt"></i>
+                        <span>Fruits</span>
+                    </div>
+                    <div class="category-item" data-category="dairy">
+                        <i class="fas fa-cheese"></i>
+                        <span>Dairy & Eggs</span>
+                    </div>
+                    <div class="category-item" data-category="snacks">
+                        <i class="fas fa-cookie"></i>
+                        <span>Snacks</span>
+                    </div>
+                    <div class="category-item" data-category="beverages">
+                        <i class="fas fa-mug-hot"></i>
+                        <span>Beverages</span>
+                    </div>
+                    <div class="category-item" data-category="bakery">
+                        <i class="fas fa-bread-slice"></i>
+                        <span>Bakery</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="products-header">
+                <h2 id="sectionTitle">All Products</h2>
+                <div class="sort-filters">
+                    <select id="sortFilter" class="sort-dropdown">
+                        <option value="popular">Most Popular</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="newest">Newest</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+
+        <div class="cart-summary">
+            <div class="summary-item">
+                <span>Subtotal</span>
+                <span id="subtotal">₹0</span>
+            </div>
+            <div class="summary-item">
+                <span>Delivery Fee</span>
+                <span id="deliveryFee">₹0</span>
+            </div>
+            <div class="summary-item discount">
+                <span>Discount</span>
+                <span id="discount">₹0</span>
+            </div>
+            <div class="summary-item total">
+                <span>Total</span>
+                <span id="total">₹0</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </aside>
+
+    <!-- Product Detail Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalProductImage" src="" alt="Product">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modalProductName"></h2>
+                    <div class="modal-rating">
+                        <div class="stars" id="modalRating"></div>
+                        <span id="modalReviews"></span>
+                    </div>
+                    <p id="modalProductDescription" class="description"></p>
+                    <div class="modal-info">
+                        <div class="info-item">
+                            <span>Available Quantity</span>
+                            <span id="modalStock"></span>
+                        </div>
+                        <div class="info-item">
+                            <span>Delivery Time</span>
+                            <span>10-15 mins</span>
+                        </div>
+                    </div>
+                    <div class="modal-pricing">
+                        <span class="original-price" id="modalOriginalPrice"></span>
+                        <span class="price" id="modalPrice"></span>
+                        <span class="discount-badge" id="modalDiscount"></span>
+                    </div>
+                    <div class="modal-actions">
+                        <div class="quantity-selector">
+                            <button id="decreaseQty">-</button>
+                            <input type="number" id="modalQuantity" value="1" min="1">
+                            <button id="increaseQty">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" id="addToCartBtn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <span id="notificationText"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

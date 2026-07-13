@@ -1,0 +1,151 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#eef5ee;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.register-container{
+    width:950px;
+    display:flex;
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.left-panel{
+    width:40%;
+    background:#2E7D32;
+    color:#fff;
+    padding:50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.left-panel h1{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.left-panel p{
+    line-height:28px;
+    font-size:18px;
+}
+
+.right-panel{
+    width:60%;
+    padding:40px;
+}
+
+.right-panel h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#2E7D32;
+}
+
+.input-box{
+    position:relative;
+    margin-bottom:18px;
+}
+
+.input-box i{
+    position:absolute;
+    left:15px;
+    top:16px;
+    color:#2E7D32;
+}
+
+.input-box input{
+    width:100%;
+    padding:14px 15px 14px 45px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+.input-box input:focus{
+    outline:none;
+    border-color:#2E7D32;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:8px;
+    background:#2E7D32;
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:10px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#1B5E20;
+}
+
+.divider{
+    text-align:center;
+    margin:20px 0;
+    color:#888;
+}
+
+.google-btn{
+    background:#fff;
+    color:#444;
+    border:1px solid #ddd;
+}
+
+.google-btn:hover{
+    background:#f6f6f6;
+}
+
+.google-btn i{
+    color:#DB4437;
+    margin-right:10px;
+}
+
+.login-link{
+    text-align:center;
+    margin-top:20px;
+}
+
+.login-link a{
+    color:#2E7D32;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+@media(max-width:768px){
+
+.register-container{
+    width:95%;
+    flex-direction:column;
+}
+
+.left-panel,
+.right-panel{
+    width:100%;
+}
+
+.left-panel{
+    text-align:center;
+    padding:30px;
+}
+
+.right-panel{
+    padding:30px;
+}
+
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Search Jobs</title>
+
+<link rel="stylesheet" href="css/jobs.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>
+<i class="fa-solid fa-briefcase"></i>
+Search Jobs
+</h1>
+
+<!-- Search -->
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search Jobs (Software Tester)">
+
+<button id="searchBtn">
+
+<i class="fa fa-search"></i>
+
+Search
+
+</button>
+
+</div>
+
+<!-- Filters -->
+
+<div class="filters">
+
+<select id="experience">
+
+<option>Experience</option>
+<option>Fresher</option>
+<option>1 Year</option>
+<option>2 Years</option>
+<option>3 Years</option>
+<option>5+ Years</option>
+
+</select>
+
+<select id="location">
+
+<option>Location</option>
+<option>Hyderabad</option>
+<option>Bangalore</option>
+<option>Chennai</option>
+<option>Pune</option>
+
+</select>
+
+<select id="salary">
+
+<option>Salary</option>
+<option>3 LPA</option>
+<option>5 LPA</option>
+<option>8 LPA</option>
+<option>10+ LPA</option>
+
+</select>
+
+<select id="skills">
+
+<option>Skills</option>
+<option>Manual Testing</option>
+<option>Automation</option>
+<option>Java</option>
+<option>SQL</option>
+
+</select>
+
+<select id="company">
+
+<option>Company</option>
+<option>Amazon</option>
+<option>Google</option>
+<option>Infosys</option>
+<option>TCS</option>
+
+</select>
+
+<select id="mode">
+
+<option>Work Mode</option>
+<option>Remote</option>
+<option>Hybrid</option>
+<option>WFH</option>
+<option>Office</option>
+
+</select>
+
+</div>
+
+<!-- Job Cards -->
+
+<div class="job-grid" id="jobGrid">
+
+</div>
+
+</div>
+
+<script src="js/jobs.js"></script>
+
+</body>
+
+</html>
