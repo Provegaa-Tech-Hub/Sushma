@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Spouse Layout</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Debug styling to see the structure */
+        .debug-info {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 12px;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <div class="tree-container">
+        <h1>Spouse Connection Test</h1>
+
+        <div class="debug-info">
+            <strong>Test Case:</strong><br>
+            - Person 1 (John) + Spouse<br>
+            - Person 2 (Child)<br>
+            Lines should connect properly
+        </div>
+
+        <div class="tree" id="familyTree">
+            <ul>
+                <li data-id="1" data-level="1" data-gender="male" data-spouse-id="2">
+                    <div class="person level-1 gender-male">
+                        <div class="photo-container empty"></div>
+                        <div class="name">John Smith</div>
+                        <div class="gender-badge">♂</div>
+                        <div class="dates">1950-Present</div>
+                    </div>
+                    <ul>
+                        <li data-id="3" data-level="2" data-gender="female">
+                            <div class="person level-2 gender-female">
+                                <div class="photo-container empty"></div>
+                                <div class="name">Child 1</div>
+                                <div class="gender-badge">♀</div>
+                                <div class="dates">1980-Present</div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li data-id="2" data-level="1" data-gender="female" data-spouse-id="1" class="spouse">
+                    <div class="person level-1 gender-female">
+                        <div class="photo-container empty"></div>
+                        <div class="name">Jane Smith</div>
+                        <div class="gender-badge">♀</div>
+                        <div class="dates">1952-Present</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
